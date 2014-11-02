@@ -1,10 +1,35 @@
 source 'https://rubygems.org'
 
 
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
+gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+	gem 'sqlite3'
+	gem 'rspec-rails'
+	gem 'spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
+	gem 'rspec-its'
+end
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :test do
+	gem 'capybara'
+	gem 'selenium-webdriver'
+	gem 'factory_girl_rails'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
