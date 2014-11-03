@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'articles/new'
-
+  resources :articles
+  
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
