@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   	end
   end
   def index
-  	redirect_to root_path
+    @articles = Article.paginate(page: params[:page], :per_page => 5)
   end
 
   private
