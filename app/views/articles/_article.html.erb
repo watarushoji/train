@@ -1,0 +1,3 @@
+<h2 class="underline"><%= article.title %></h2>
+ <p>カテゴリー: <%= link_to article.category, '#' %></p>
+ <%= link_to image_tag("AST.png", alt: "AST", size: "100*30"), article_path(:article) %>
