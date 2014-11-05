@@ -6,13 +6,10 @@ FactoryGirl.define do
     content    "コンテンツ1"
     category	"カテゴリー1"
   end
-<<<<<<< HEAD
   factory :user do
   	name "tarotaro"
   	email "taro@example.com"
   	password "foobar"
   	password_confirmation "foobar"
   end
-=======
->>>>>>> ArticlePostingLayout
 end
