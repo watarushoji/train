@@ -1,6 +1,9 @@
 require 'spec_helper'
 require 'rails_helper'
 
+# 一応作ったが、Factoryで管理ユーザを作成するので
+# signup page（users/new）を実際に使うことはない。。
+
 describe "User pages" do
 
   subject { page }
