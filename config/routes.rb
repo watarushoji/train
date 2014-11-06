@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root 'articles#index'
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to:'users#new', via:'get'

@@ -8,6 +8,9 @@
       <li><%= link_to "About", '#'   %></li>
       <li><%= link_to "Contact", '#' %></li>
       <li><%= link_to "Admin", signin_path %></li>
+      <% if signed_in? %>
+      <li><%= link_to "SignOut", signout_path, method: "delete" %></li>
+      <% end %>
     </ul>
   </nav>
 </footer>

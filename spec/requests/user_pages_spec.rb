@@ -13,4 +13,5 @@ describe "User pages" do
 
     it { should have_content('Sign up') }
   end
+  
 end

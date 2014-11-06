@@ -1,5 +1,3 @@
-spec.factories.rb
-
 FactoryGirl.define do
   factory :article do
     title     "タイトル1"
