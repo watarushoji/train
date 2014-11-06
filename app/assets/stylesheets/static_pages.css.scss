@@ -4,83 +4,128 @@
 @import "bootstrap";
 
 
-  $grayMediumLight: #eaeaea;
-  $grayLight: #999;
-  $grayDarker: #222;
-  $grayLighter: #fefefe;
+$grayMediumLight: #eaeaea;
+$grayLight: #999;
+$grayDarker: #222;
+$grayLighter: #fefefe;
 
 
-  html {
-    overflow-y: scroll;
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: $grayLighter;
+  font-size:94%;
+  padding: 0% 4% 0%;
+  margin: 8px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+ul {
+ list-style-type: none;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
   }
+}
 
-  body {
-    padding-top: 5px;
-    background-color: $grayLighter;
-  }
+/* header */
 
-  section {
+#logo {
+  font-size: 1.7em;
+  color: $gray;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 0px;
+  font-weight: bold;
+  line-height: 1;
+}
+#header {
+  margin-bottom: 5px;
+  position: relative;
+  padding: 1%;
+  width: 98%;
+  margin-bottom: 10px;
     overflow: auto;
+}
+.intro {
+  margin-top:10px;
+  margin-left:150px;
+  margin-bottom:10px;
+}
+.guide_pc {
+  text-align:right;
+  margin-bottom:4px;
+  ul{
+    list-style-type:none;
   }
+  li{
+      display:inline;
+  }
+}
+/*navbar*/
+.nav{
+  font-weight:bolder;
+  font-size:1.1em;
+}
 
-  textarea {
-    resize: vertical;
+/*sidebar*/
+.sidebar {
+  float: left;
+  overflow: y;
+  width: 22%;
+}
+
+/*content*/
+.content {
+  float: right;
+  overflow: auto;
+  background-color: #FFFFFF;
+  border: solid 1px #660033;
+  padding: 1%;
+  margin-bottom: 10px; 
+  width: 75%;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $grayDarker;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
   }
   ul {
-  	list-style-type: none;
-  }
-
-  .center {
-    text-align: center;
-    h1 {
-      margin-bottom: 10px;
-    }
-  }
-
-   /* header */
-
-  #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: $gray;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 0px;
-    font-weight: bold;
-    line-height: 1;
-    &:hover {
-      color: red;
-      text-decoration: none;
-    }
-  }
-
-  /* footer */
-
-  footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $grayMediumLight;
-    color: $grayLight;
-    a {
-      color: $grayDarker;
-      &:hover {
-        color: $grayDarker;
-      }
-    }
-    small {
+    float: right;
+    list-style: none;
+    li {
       float: left;
-    }
-    ul {
-      float: right;
-      list-style: none;
-      li {
-        float: left;
-        margin-left: 10px;
-      }
+      margin-left: 10px;
     }
   }
-  #error_explanation {
+}
+
+/*errors*/
+
+#error_explanation {
   color: #f00;
   ul {
     list-style: none;
