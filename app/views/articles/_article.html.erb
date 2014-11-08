@@ -1,3 +1,36 @@
-<h2 class="underline"><%= article.title %></h2>
- <p>カテゴリー: <%= link_to article.category, '#' %></p>
- <%= link_to image_tag("AST.png", alt: "AST", size: "100*30"), article_path(:article) %>
+
+<div class="article-box">
+
+	<h3 class="title-container">
+		<%= link_to "#{article.title}", article_path(article.id) %>
+	</h3>
+	<div class="entry-image">
+		<%= link_to image_tag("AST.png", alt:"AST", size: "350x190"), article_path(article.id) %>
+	</div>
+	<ul class="entry-data">
+		<li class="description">
+			<p><%= "#{article.content}"%></p>
+		</li>
+		<li class="readmore">
+			<%= link_to "[動画を見る]", article_path(article.id) %>
+		</li>
+		<li class="category">
+			<a><%= link_to "#{article.category}", '#' %></a>
+		</li>
+		<li class="date">
+			<%= "#{article.created_at.getlocal}"%>
+		</li>
+	</ul>
+	<ul class="entry-meta">
+		<li class="domain">
+			<a class="domain">
+				xvideos.com
+			</a>
+		</li>
+	</ul>
+
+
+</div>
+<div class="box3_1"></div>
+<div class="box1_1"></div>
+

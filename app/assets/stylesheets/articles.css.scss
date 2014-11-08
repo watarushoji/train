@@ -1,3 +1,64 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-box{
+	display:inline-block;
+	vertical-align:top;
+	width: 100%;
+	min-height: 280px;
+}
+
+.title-container{
+	display:block;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	line-height: 30px;
+	overflow:scroll;
+}
+
+.entry-image{
+	float:right;
+}
+
+ul.entry-data{
+	zoom: 1;
+}
+li.description{
+	min-height:130px;
+	float:none;
+	overflow:scroll;
+	padding-right:6px;
+}
+li.category{
+	margin: 0px 0 0px 0;
+	font-size: 0.7em;
+		a {
+		background-color:#e0e0e0;
+	}
+}
+li.date{
+	line-height: 12px;
+	font-size:0.7em;
+	margin: 4px 0 4px 0;
+}				
+ul.entry-meta{
+	padding: 10px 220px 10px 22px;
+	border-bottom: 1px dotted #ECECEC;
+}
+li.domain{
+	margin-right: 20px;
+	font-family: 'Arial';
+	font-size: 12px;
+	height: 16px;
+}
+a.domain{
+	color: #999999;
+	line-height: 16px;
+	text-decoration: none;
+	display: inline-block;
+	height: 17px;
+	width: 100%;
+	max-width: 230px;
+	white-space: nowrap;
+}
+	
+/*class="box3_1"
+class="box1_1"*/

@@ -13,14 +13,16 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(article_params)
 		if @article.save
-			flash[:success] = "Successfully Posted!"
-			render 'new'
+			flash.now[:success] = "Successfully Posted!"
+			redirect_to new_article_path
 		else
 			render 'new'
 		end
 	end
 	def index
-		@articles = Article.paginate(page: params[:page], :per_page => 5)
+		# @articles = Article.paginate(page: params[:page], :per_page => 5)
+		@articles = Article.order("created_at DESC")
+		# @first_article = @orderd_article.first
 	end
 
 	private

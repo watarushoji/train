@@ -1,11 +1,4 @@
 
 <% provide(:title, '新着情報') %>
-<h2>All Articles</h2>
 
-<%= will_paginate @articles %>
-
-<ul class="articles">
     <%= render @articles %>
-</ul>
-
-<%= will_paginate @articles %>

@@ -11,7 +11,7 @@ $grayLighter: #fefefe;
 
 
 html {
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 body {
@@ -30,6 +30,7 @@ textarea {
 }
 ul {
  list-style-type: none;
+ margin-left:0px;
 }
 
 .center {
@@ -43,15 +44,14 @@ ul {
 
 #logo {
   font-size: 1.7em;
-  color: $gray;
+  color: #a0a0a0;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 0px;
   font-weight: bold;
   line-height: 1;
 }
-#header {
-  margin-bottom: 5px;
+.hd {
   position: relative;
   padding: 1%;
   width: 98%;
@@ -62,14 +62,16 @@ ul {
   margin-top:10px;
   margin-left:150px;
   margin-bottom:10px;
+  font-size:0.8em;
+  text-align:right;
 }
 .guide_pc {
   text-align:right;
   margin-bottom:4px;
-  ul{
+  ul {
     list-style-type:none;
   }
-  li{
+  li {
       display:inline;
   }
 }
@@ -79,22 +81,15 @@ ul {
   font-size:1.1em;
 }
 
-/*sidebar*/
-.sidebar {
-  float: left;
-  overflow: y;
-  width: 22%;
-}
 
 /*content*/
 .content {
-  float: right;
   overflow: auto;
-  background-color: #FFFFFF;
-  border: solid 1px #660033;
-  padding: 1%;
+  background-color: #fdfdfd;
+  border: solid 1px #f0f0f0;
+  padding: 8px 8px 8px 8px ;
   margin-bottom: 10px; 
-  width: 75%;
+  width: 98%;
 }
 
 /* footer */
@@ -103,6 +98,7 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
+  font-size: 0.7em;
   color: $grayLight;
   a {
     color: $grayDarker;
