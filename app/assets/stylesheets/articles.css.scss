@@ -4,32 +4,46 @@
 	vertical-align:top;
 	width: 100%;
 	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
 }
 
 .title-container{
 	display:block;
 	margin: 0 0 10px 0;
-	font-size: 20px;
-	line-height: 30px;
-	overflow:scroll;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight:bold;
+	background-color: #f5f5f5;
 }
 
 .entry-image{
 	float:right;
+	width: 350px;
+	height: 250px;
+	overflow: scroll;
+}
+
+.entry-movie{
+	/*youtubeの設定を引用*/
+	width: 640px;
+	height: 350px;
 }
 
 ul.entry-data{
 	zoom: 1;
 }
+/*紹介文*/
 li.description{
 	min-height:130px;
 	float:none;
 	overflow:scroll;
+	padding-top:20px;
 	padding-right:6px;
 }
 li.category{
-	margin: 0px 0 0px 0;
-	font-size: 0.7em;
+	margin: 3px 0px 0px 0;
+	font-size: 0.9em;
 		a {
 		background-color:#e0e0e0;
 	}
@@ -40,8 +54,7 @@ li.date{
 	margin: 4px 0 4px 0;
 }				
 ul.entry-meta{
-	padding: 10px 220px 10px 22px;
-	border-bottom: 1px dotted #ECECEC;
+	padding: 10px 220px 10px 3px;
 }
 li.domain{
 	margin-right: 20px;
@@ -49,7 +62,7 @@ li.domain{
 	font-size: 12px;
 	height: 16px;
 }
-a.domain{
+span.domain{
 	color: #999999;
 	line-height: 16px;
 	text-decoration: none;

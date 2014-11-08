@@ -16,16 +16,19 @@
 <body>
   <!-- ヘッダー -->
   <div class="paisea">
-  <div class="container-fluid hd"> 
+  <div class="container-fluid">
+  <div class="hd"> 
     <div class="header">
       <%= render 'layouts/header_text' %>
       <%= render 'layouts/navbar' %>
     </div>
   </div>
-  <div class="container-fluid con">
+  
+
     <div class="row-fluid">
       <!-- 記事はここから -->
       <div class="content">
+        <%= render 'layouts/ad_content' %>
         <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
         　<% end %>
@@ -33,7 +36,8 @@
       </div>
     </div>
     <%= render 'layouts/footer' %>
-  </div>
+  
+</div>
 </div>
 </body>
 <div class="container-fluid db">
