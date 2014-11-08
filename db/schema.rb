@@ -11,17 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108023200) do
+ActiveRecord::Schema.define(version: 20141108031745) do
 
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.string   "category"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "domain"
-    t.binary   "sumnail"
-  end
+# Could not dump table "articles" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "name"
