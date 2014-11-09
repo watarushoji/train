@@ -17,18 +17,18 @@
 		</li>
 		<li class="description-show">
 			<h4>＜動画詳細＞</h4>
-			<p><%= sanitize "#{@article.content}"%></p>
+			<p><%= sanitize "#{@cgrpage.content}"%></p>
 		</li>
 		<li class="category">
-			<a><%= link_to "#{@article.category}", '#' %></a>
+			<a><%= link_to "#{@cgrpage.category}", '#' %></a>
 			<% if @article.category2 %>
-			<a><%= link_to "#{@article.category2}", '#' %></a>
+			<a><%= link_to "#{@cgrpage.category2}", '#' %></a>
 			<% end %>
 			<% if @article.category3 %>
-			<a><%= link_to "#{@article.category3}", '#' %></a>
+			<a><%= link_to "#{@cgrpage.category3}", '#' %></a>
 			<% end %>
 			<% if @article.category4 %>
-			<a><%= link_to "#{@article.category4}", '#' %></a>
+			<a><%= link_to "#{@cgrpage.category4}", '#' %></a>
 			<% end %>
 		</li>
 		<li class="date">

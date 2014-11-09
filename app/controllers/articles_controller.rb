@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 	end
 	def index
 		@articles = Article.order("created_at DESC").
-		paginate(page: params[:page], :per_page => 1)
+		paginate(page: params[:page], :per_page => 5)
 		# @articles = Article.order("created_at DESC")
 		# @first_article = @orderd_article.first
 	end
@@ -29,6 +29,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :category, :content, :sumnail, :domain)
+		params.require(:article).permit(:title, :category,:category2,:category3,:category4, :content, :sumnail, :domain)
 	end
 end

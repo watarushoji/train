@@ -6,8 +6,22 @@ Rails.application.routes.draw do
   match '/signup', to:'users#new', via:'get'
   match '/signin', to:'sessions#new', via:'get'
   match '/signout', to:'sessions#destroy', via:'delete'
-  
+  match '/category', to:'cgrpages#show', via:'get'
+  match '/categories', to:'cgrpages#index', via:'get'
 
+  match '/avactless', to:'cgrpages#avactless', via:'get'
+  match '/beautifull', to:'cgrpages#beautifull', via:'get'
+  match '/nowgirls', to:'cgrpages#nowgirls', via:'get'
+  match '/amateur', to:'cgrpages#amateur', via:'get'
+  match '/planned', to:'cgrpages#planned', via:'get'
+  match '/fetish', to:'cgrpages#fetish', via:'get'
+  match '/peeping', to:'cgrpages#peeping', via:'get'
+  match '/scatology', to:'cgrpages#scatology', via:'get'
+  match '/jk', to:'cgrpages#jk', via:'get'
+  match '/jd', to:'cgrpages#jd', via:'get'
+  match '/happenings', to:'cgrpages#happenings', via:'get'
+  match '/idol', to:'cgrpages#idol', via:'get' 
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

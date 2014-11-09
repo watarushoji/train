@@ -7,6 +7,24 @@
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
 }
+.article-box-show{
+	display:inline-block;
+	vertical-align:top;
+	width: 75%;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+}
+.article-box-show-sidebar{
+	display:inline-block;
+	vertical-align:top;
+	width: 23%;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+	float:right;
+	background-color: #f5f5f5;
+}
 
 .title-container{
 	display:block;
@@ -27,11 +45,19 @@
 .entry-movie{
 	/*youtubeの設定を引用*/
 	width: 640px;
-	height: 350px;
+	height: 420px;
 }
 
 ul.entry-data{
 	zoom: 1;
+}
+li.ad-content-show{
+	background-color: #f5f5f5;
+	min-height:70px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
+	padding-right:6px;
 }
 /*紹介文*/
 li.description{
@@ -39,6 +65,14 @@ li.description{
 	float:none;
 	overflow:scroll;
 	padding-top:20px;
+	padding-right:6px;
+}
+li.description-show{
+	background-color: #f5f5f5;
+	min-height:130px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
 	padding-right:6px;
 }
 li.category{
@@ -71,6 +105,21 @@ span.domain{
 	width: 100%;
 	max-width: 230px;
 	white-space: nowrap;
+}
+
+.form-box{
+	display:inline-block;
+	vertical-align:top;
+	width: 70%;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+}
+.float-form-right{
+	float:right;
+}
+.float-form-left{
+	float:left;
 }
 	
 /*class="box3_1"

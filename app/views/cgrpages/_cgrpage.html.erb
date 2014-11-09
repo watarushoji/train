@@ -1,0 +1,42 @@
+<% provide(:title, "#{cgrpage.title}") %>
+<div class="article-box">
+
+	<h3 class="title-container">
+		<%= link_to "#{cgrpage.title}", article_path(article.id) %>
+	</h3>
+	<div class="entry-image">
+
+		<%= link_to image_tag("#{cgrpage.sumnail}", alt:"#{cgrpage.title}", size:"400x500"), article_path(article.id) %>
+	</div>
+	<ul class="entry-data">
+		<li class="description">
+			<p><%= sanitize "#{cgrpage.content}"%></p>
+		</li>
+		<li class="readmore">
+			<%= link_to "[動画を見る]", article_path(article.id) %>
+		</li>
+				<li class="category">
+			<a><%= link_to "#{cgrpage.category}", '#' %></a>
+			<% if @article.category2 %>
+			<a><%= link_to "#{cgrpage.category2}", '#' %></a>
+			<% end %>
+			<% if @article.category3 %>
+			<a><%= link_to "#{cgrpage.category3}", '#' %></a>
+			<% end %>
+			<% if @article.category4 %>
+			<a><%= link_to "#{cgrpage.category4}", '#' %></a>
+			<% end %>
+		</li>
+		<li class="date">
+			<%= "#{cgrpage.created_at.getlocal}"%>
+		</li>
+	</ul>
+	<ul class="entry-meta">
+		<li class="domain">
+			<span class="domain">
+				<%= link_to "#{cgrpage.domain}", "#{cgrpage.domain}" %>
+			</span>
+		</li>
+	</ul>
+</div>
+
