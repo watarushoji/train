@@ -37,9 +37,9 @@
 
 .entry-image{
 	float:right;
-	width: 350px;
-	height: 250px;
-	overflow: scroll;
+	width: 450px;
+	height: 300px;
+	overflow: none;
 }
 
 .entry-movie{
@@ -61,11 +61,12 @@ li.ad-content-show{
 }
 /*紹介文*/
 li.description{
-	min-height:130px;
+	min-height:80px;
 	float:none;
 	overflow:scroll;
 	padding-top:20px;
 	padding-right:6px;
+	word-wrap:break-word;
 }
 li.description-show{
 	background-color: #f5f5f5;
@@ -74,6 +75,7 @@ li.description-show{
 	overflow:scroll;
 	padding-top:5px;
 	padding-right:6px;
+	word-wrap:break-word;
 }
 li.category{
 	margin: 3px 0px 0px 0;
@@ -95,6 +97,7 @@ li.domain{
 	font-family: 'Arial';
 	font-size: 12px;
 	height: 16px;
+	word-wrap:break-word;
 }
 span.domain{
 	color: #999999;
@@ -105,6 +108,7 @@ span.domain{
 	width: 100%;
 	max-width: 230px;
 	white-space: nowrap;
+	word-wrap:break-word;
 }
 
 .form-box{

@@ -6,11 +6,11 @@
 	</h3>
 	<div class="entry-image">
 
-		<%= link_to image_tag("#{article.sumnail}", alt:"#{article.title}", size:"400x500"), article_path(article.id) %>
+		<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
 	</div>
 	<ul class="entry-data">
 		<li class="description">
-			<p><%= sanitize "#{article.content}"%></p>
+			<%= sanitize "#{article.content}"%>
 		</li>
 		<li class="readmore">
 			<%= link_to "[動画を見る]", article_path(article.id) %>
@@ -33,9 +33,9 @@
 	</ul>
 	<ul class="entry-meta">
 		<li class="domain">
-			<span class="domain">
+
 				<%= link_to "#{article.domain}", "#{article.domain}" %>
-			</span>
+
 		</li>
 	</ul>
 </div>
