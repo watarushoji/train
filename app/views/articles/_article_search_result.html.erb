@@ -1,0 +1,42 @@
+<% provide(:title, "#{article_search_result.title}") %>
+<div class="article-box">
+
+	<h3 class="title-container">
+		<%= link_to "#{article_search_result.title}", article_path(article.id) %>
+	</h3>
+	<div class="entry-image">
+
+		<%= link_to image_tag("#{article_search_result.image}", alt:"#{article_search_result.title}"), article_path(article.id) %>
+	</div>
+	<ul class="entry-data">
+		<li class="description">
+			<%= sanitize "#{article_search_result.content}"%>
+		</li>
+		<li class="readmore">
+			<%= link_to "[動画を見る]", article_path(article.id) %>
+		</li>
+		<li class="category">
+			<a><%= link_to "#{article_search_result.category}", '#' %></a>
+			<% if article.category2 %>
+			<a><%= link_to "#{article_search_result.category2}", '#' %></a>
+			<% end %>
+			<% if article.category3 %>
+			<a><%= link_to "#{article_search_result.category3}", '#' %></a>
+			<% end %>
+			<% if article.category4 %>
+			<a><%= link_to "#{article_search_result.category4}", '#' %></a>
+			<% end %>
+		</li>
+		<li class="date">
+			<%= "#{article_search_result.created_at.getlocal}"%>
+		</li>
+	</ul>
+	<ul class="entry-meta">
+		<li class="domain">
+
+				<%= link_to "#{article_search_result.domain}", "#{article_search_result.domain}" %>
+
+		</li>
+	</ul>
+</div>
+

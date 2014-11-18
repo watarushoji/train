@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'unicorn'
+gem 'therubyracer'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
@@ -10,6 +12,8 @@ gem 'bootstrap-will_paginate'
 gem 'gretel'
 gem 'rails-html-sanitizer'
 gem 'carrierwave'
+gem 'ransack'
+gem 'rails-i18n'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'

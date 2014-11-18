@@ -1,7 +1,10 @@
-
-<% provide(:title, '新着情報') %>
-
-    <%= render @articles %>
-        <%= render "layouts/ad_content_footer" %>
+<%= form_tag articles_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+<p>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
+<%= render @articles %>
+<%= render "layouts/ad_content_footer" %>
 <%= will_paginate %>
-        <%= render "layouts/ad_footer" %>
+<%= render "layouts/ad_footer" %>
