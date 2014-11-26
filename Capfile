@@ -3,6 +3,14 @@ require 'capistrano/setup'
 
 # Includes default deployment tasks
 require 'capistrano/deploy'
+# ----以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/を参照
+require 'capistrano/rails'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+require 'capistrano3/unicorn' # unicornを使っている場合のみ
+# ------------------------------------------
 
 # Includes tasks from other gems included in your Gemfile
 #

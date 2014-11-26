@@ -1,8 +1,24 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+# ssh_options[:forward_agent] = true
+
+# バージョン管理
+set :scm, :git
+# Gitリポジトリ
+set :repo_url, 'https://github.com/watarushoji/train.git'
+# Gitブランチ
+set :branch, :master
+
+# デプロイ対象外ファイル
+set :copy_exclude, [".git", ".gitignore"]
+
+# ---以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/
+set :deploy_to, '/usr/share/nginx/html/boobs'
+
+
+# set :application, 'my_app_name'
+# set :repo_url, 'git@example.com:me/my_repo.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -41,6 +57,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
+    invoke 'unicorn:restart'
     end
   end
 

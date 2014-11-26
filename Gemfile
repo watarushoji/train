@@ -14,6 +14,11 @@ gem 'rails-html-sanitizer'
 gem 'carrierwave'
 gem 'ransack'
 gem 'rails-i18n'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -27,7 +32,7 @@ group :development, :test do
 	gem 'rspec-its'
 end
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 	gem 'rails_12factor'
 end
 
