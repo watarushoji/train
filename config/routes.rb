@@ -3,9 +3,17 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
+  
+  # static_pages
+  match '/about', to:'static_pages#about', via:'get'
+  match '/contact', to:'static_pages#contact', via:'get'
+  
+  # users
   match '/signup', to:'users#new', via:'get'
+  # sessions
   match '/signin', to:'sessions#new', via:'get'
   match '/signout', to:'sessions#destroy', via:'delete'
+  # cagegories
   match '/category', to:'cgrpages#show', via:'get'
   match '/categories', to:'cgrpages#index', via:'get'
 

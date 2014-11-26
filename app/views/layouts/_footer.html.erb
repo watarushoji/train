@@ -5,8 +5,8 @@
   <nav>
     <ul>
       <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", '#'   %></li>
-      <li><%= link_to "Contact", '#' %></li>
+      <li><%= link_to "About", about_path   %></li>
+      <li><%= link_to "Contact", contact_path %></li>
       <% if signed_in? %>
       <li><%= link_to "SignOut", signout_path, method: "delete" %></li>
       <li><%= link_to "New", new_article_path %></li>
