@@ -33,4 +33,8 @@ production:
   password: kelada
   host: localhost
 
-  database: mysql2_production
+  database: db/production.mysql2
+
+staging:
+  <<: *default
+  database: db/test.sqlite3
