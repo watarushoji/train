@@ -5,11 +5,11 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 # ----以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/を参照
 require 'capistrano/rails'
+require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'capistrano/rbenv'
-require 'capistrano/bundler'
-require 'capistrano3/unicorn' # unicornを使っている場合のみ
+require 'capistrano/console'
+# require 'capistrano3/unicorn' # unicornを使っている場合のみ
 # ------------------------------------------
 
 # Includes tasks from other gems included in your Gemfile
@@ -30,4 +30,4 @@ require 'capistrano3/unicorn' # unicornを使っている場合のみ
 # require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }

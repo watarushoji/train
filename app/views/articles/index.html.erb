@@ -1,10 +1,14 @@
 <% provide(:title, " ") %>
+        
+        
+    
+<form class="form-search ">
 <%= form_tag articles_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
-<p>
 	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search", :name => nil %>
-</p>
+	<%= submit_tag "検索", :name => nil %>
 <% end %>
+</form>
+<%= will_paginate %>
 <%= render @articles %>
 <%= render "layouts/ad_content_footer" %>
 <%= will_paginate %>

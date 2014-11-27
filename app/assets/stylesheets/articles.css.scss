@@ -10,7 +10,7 @@
 .article-box-show{
 	display:inline-block;
 	vertical-align:top;
-	width: 75%;
+	width: 640px;
 	min-height: 280px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
@@ -18,12 +18,16 @@
 .article-box-show-sidebar{
 	display:inline-block;
 	vertical-align:top;
-	width: 23%;
-	min-height: 280px;
+	width: 240px;
+	min-height: 700px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
 	float:right;
+	overflow:scroll;
 	background-color: #f5f5f5;
+}
+.article-sidebar-box-show{
+	width: 900px;
 }
 
 .title-container{

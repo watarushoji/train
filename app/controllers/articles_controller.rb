@@ -24,6 +24,11 @@ class ArticlesController < ApplicationController
 		# @articles = Article.order("created_at DESC")
 		# @first_article = @orderd_article.first
     end
+    def destroy
+    	Article.find(params[:id]).destroy
+    	flash[:success] = "Article destroyed."
+    	redirect_to root_path
+    end
 		
 
 	private
