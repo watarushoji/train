@@ -6,7 +6,11 @@
 set :branch, 'master'
 set :stage, :production
 
-role :all, %w{boobs@49.212.154.42}
+
+role :app, %w{boobs@49.212.154.42}
+role :web, %w{boobs@49.212.154.42}
+role :db,  %w{boobs@49.212.154.42}
+
 
 # Extended Server Syntax
 # ======================
