@@ -29,7 +29,7 @@ production:
   reconnect: false
   pool: 5
   timeout: 5000
-  username: root
+  username: boobs
   password: kelada
   host: 49.212.154.42
 
