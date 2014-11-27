@@ -29,7 +29,8 @@ production:
   reconnect: false
   pool: 5
   timeout: 5000
-  username: production
-  password: production
+  username: root
+  password: 
+  host: 49.212.154.42
 
   database: db/production.mysql2
