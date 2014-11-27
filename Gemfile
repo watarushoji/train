@@ -18,7 +18,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv'
-gem 'activerecord-mysql2-adapter'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

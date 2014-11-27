@@ -30,7 +30,8 @@ production:
   pool: 5
   timeout: 5000
   username: root
-  password: kelada
+  password: 
+  #kelada
   host: localhost
 
-  database: db/production.mysql2
+  database: mysql2_production
