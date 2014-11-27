@@ -29,8 +29,8 @@ production:
   reconnect: false
   pool: 5
   timeout: 5000
-  username: boobs
+  username: root
   password: kelada
-  host: 49.212.154.42
+  host: localhost
 
   database: db/production.mysql2
