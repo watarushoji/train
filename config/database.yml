@@ -30,7 +30,7 @@ production:
   pool: 5
   timeout: 5000
   username: root
-  password: 
+  password: MP1rQ3jsI8$%&
   host: 49.212.154.42
 
   database: db/production.mysql2
