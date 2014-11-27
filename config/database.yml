@@ -26,7 +26,7 @@ production:
   adapter: postgresql
   host: localhost
   encoding: utf8
-  database: boobsdb_pd
+  database: boobsdb
   pool: 5
   username: boobs_pr
   password: DaIOj%ioUNa
