@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109124644) do
+ActiveRecord::Schema.define(version: 20141128083710) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content",    limit: 255
     t.string   "category"
-    t.string   "sumnail"
-    t.string   "domain"
+    t.text     "sumnail",    limit: 255
+    t.text     "domain",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category2"
