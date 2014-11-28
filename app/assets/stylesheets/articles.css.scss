@@ -18,7 +18,7 @@
 .article-box-show-sidebar{
 	display:inline-block;
 	vertical-align:top;
-	width: 240px;
+	width: 200px;
 	min-height: 700px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
@@ -43,7 +43,7 @@
 	float:right;
 	width: 450px;
 	height: 300px;
-	overflow: none;
+	overflow: scroll;
 }
 
 .entry-movie{
