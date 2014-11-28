@@ -16,8 +16,8 @@ set :copy_exclude, [".git", ".gitignore"]
 
 # ---以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/
 set :deploy_to, '/usr/share/nginx/html/boobs'
-set :rbenv_type, :user # or :system
-set :rbenv_ruby, '2.1.1-p76'
+set :rbenv_type, :system # or :user
+set :rbenv_ruby, '2.1.1'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all
@@ -53,6 +53,8 @@ set :rbenv_roles, :all
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+#From https://github.com/capistrano/rbenv/issues/33
 
 namespace :deploy do
   desc 'Upload database.yml'
