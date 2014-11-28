@@ -9,14 +9,18 @@ set :scm, :git
 set :repo_url, 'https://github.com/watarushoji/train.git'
 # Gitブランチ
 set :branch, :master
+set :keep_releases, 5
 
 # デプロイ対象外ファイル
 set :copy_exclude, [".git", ".gitignore"]
 
 # ---以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/
 set :deploy_to, '/usr/share/nginx/html/boobs'
-
-
+set :rbenv_type, :user # or :system
+set :rbenv_ruby, '2.1.1'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all
 # set :application, 'my_app_name'
 # set :repo_url, 'git@example.com:me/my_repo.git'
 
