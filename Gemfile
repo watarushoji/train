@@ -20,6 +20,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-rbenv'
 gem 'capistrano3-unicorn'
 gem 'capistrano-rails-console'
+gem 'rvm1-capistrano3', require: false
 
 
 

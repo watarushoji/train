@@ -17,10 +17,11 @@
 		</li>
 	</br></br>
 		<li class="readmore">
-			<button type = "button" class="btn btn-large">
-				<%= link_to "動画を見る", article_path(article.id) %>
+			<button type = "button" class="btn btn-large btn-default">
+				★<%= link_to "動画を見る", article_path(article.id) %>★
 			</button>
 		</li>
+	</br>
 		<li class="category">
 			<a><%= link_to "#{article.category}", '#' %></a>
 			<% if article.category2 %>
