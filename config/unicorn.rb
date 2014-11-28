@@ -1,9 +1,11 @@
-working_directory 	"/usr/share/nginx/html/boobs"
-pid 				"/usr/share/nginx/html/boobs/tmp/pids/unicorn.pid"
-stderr_path 		"/usr/share/nginx/html/boobs/log/unicorn.log"
-stdout_path 		"/usr/share/nginx/html/boobs/log/unicorn.log"
+APP_PATH = "/usr/share/nginx/html/boobs/current"
 
-listen 				"/usr/share/nginx/html/boobs/tmp/unicorn.sock"
+working_directory 	APP_PATH
+pid 				APP_PATH + "/tmp/pids/unicorn.pid"
+stderr_path 		APP_PATH + "/log/unicorn.log"
+stdout_path 		APP_PATH + "/log/unicorn.log"
+
+listen 				"/tmp/unicorn.sock"
 #listen 3000
 worker_processes 2
 timeout 30
