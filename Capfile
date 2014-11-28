@@ -9,7 +9,7 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/console'
-# require 'capistrano3/unicorn' # unicornを使っている場合のみ
+require 'capistrano3/unicorn' # unicornを使っている場合のみ
 # ------------------------------------------
 
 # Includes tasks from other gems included in your Gemfile

@@ -16,7 +16,6 @@ set :copy_exclude, [".git", ".gitignore"]
 # ---以下http://morizyun.github.io/blog/capistrano3-rails-deploy-multi-rbenv/
 set :deploy_to, '/usr/share/nginx/html/boobs'
 
-require "capistrano-unicorn"
 
 # set :application, 'my_app_name'
 # set :repo_url, 'git@example.com:me/my_repo.git'
