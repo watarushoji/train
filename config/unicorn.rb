@@ -1,13 +1,16 @@
 application = 'boobs'
-APP_PATH = "/usr/share/nginx/html/boobs/current"
+APP_PATH = File.expand_path('../../', __FILE__)
 
 working_directory 	APP_PATH
 
 stderr_path 		APP_PATH + "/log/unicorn.log"
 stdout_path 		APP_PATH + "/log/unicorn.log"
 
-listen "/var/run/unicorn_#{application}.sock"   # Unix Domain Socket
-pid "/var/run/unicorn_#{application}.pid"     #PIDファイル出力先
+listen 				APP_PATH + "/tmp/unicorn.sock"
+pid 				APP_PATH + "/tmp/unicorn.pid"
+
+# listen "/var/run/unicorn_#{application}.sock"   # Unix Domain Socket
+# pid "/var/run/unicorn_#{application}.pid"     #PIDファイル出力先
 #listen 3000
 
 worker_processes 2
