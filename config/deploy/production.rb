@@ -5,7 +5,7 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 set :branch, 'master'
 set :stage, :production
-
+set :rails_env, :production
 
 role :app, %w{boobs@49.212.154.42}
 role :web, %w{boobs@49.212.154.42}
