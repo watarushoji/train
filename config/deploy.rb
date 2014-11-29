@@ -105,6 +105,8 @@ end
  after 'deploy:publishing', 'deploy:restart'
  namespace :deploy do
    task :restart do
-     invoke 'unicorn:restart'
+     within current_path do
+      execute :bundle, :exec, :unicorn, "-c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
+    end
    end
 end
