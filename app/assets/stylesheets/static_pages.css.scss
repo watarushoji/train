@@ -50,7 +50,7 @@ ul {
 }
 
 #logo {
-  font-size: 1.7em;
+  font-size: 1.1em;
   color: #a0a0a0;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -58,7 +58,16 @@ ul {
   font-weight: bold;
   line-height: 1;
   float:left;
-  min-width: 600px;
+  min-width: 400px;
+  margin-bottom:-10px;
+  h3 {
+    line-height:20px;
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+}
+.form-search{
+  margin-bottom:-10px;
 }
 .hd {
   position: relative;
@@ -88,7 +97,10 @@ ul {
 .nav{
   font-weight:bolder;
   font-size:1.1em;
-  float:left;
+  float:none;
+  padding-bottom:0px;
+  margin-bottom:-20px;
+
 }
 
 

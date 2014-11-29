@@ -1,5 +1,5 @@
 <div id="logo">
-	<p><h2>おっぱいの海で泳ぎたい</h2>-I wanna dive in boobs-</p>
+	<p><h3>おっぱいの海で泳ぎたい</h3>-I wanna dive in boobs-</p>
 </div>
 <!-- <p class="intro">
 	安心して楽しめるシンプルなエロサイト。</br>18歳以下の方は大人になるまでもう少し辛抱してね。
@@ -14,3 +14,11 @@
 		<li><%= link_to "削除依頼", '#' %></li>
 	</ul>
 </ul> 
+
+ 
+<form class="form-search ">
+<%= form_tag articles_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "検索", :name => nil %>
+<% end %>
+</form>
