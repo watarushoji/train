@@ -46,6 +46,7 @@ ul {
 
 .header{
   background-color: #fafafa;
+  min-height: 140px;
 }
 
 #logo {
@@ -56,6 +57,8 @@ ul {
   padding-top: 0px;
   font-weight: bold;
   line-height: 1;
+  float:left;
+  min-width: 600px;
 }
 .hd {
   position: relative;
@@ -72,8 +75,8 @@ ul {
   text-align:right;
 }
 .guide_pc {
+
   text-align:right;
-  margin-bottom:4px;
   ul {
     list-style-type:none;
   }
@@ -85,6 +88,7 @@ ul {
 .nav{
   font-weight:bolder;
   font-size:1.1em;
+  float:left;
 }
 
 
