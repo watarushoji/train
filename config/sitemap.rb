@@ -22,6 +22,10 @@ SitemapGenerator::Sitemap.create do
   add '/'
   add '/contact'
   add '/categories'
+  add '/delcontacts'
+  add '/popmovies'
+  add '/news'
+  add '/sitemaps'
   
   add articles_path, :priority => 0.9, :changefreq => 'daily'
   

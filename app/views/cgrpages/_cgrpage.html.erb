@@ -16,15 +16,15 @@
 			<%= link_to "[動画を見る]", article_path(article.id) %>
 		</li>
 				<li class="category">
-			<a><%= link_to "#{cgrpage.category}", '#' %></a>
+			<a><%= link_to "#{cgrpage.category}", categories_path %></a>
 			<% if @article.category2 %>
-			<a><%= link_to "#{cgrpage.category2}", '#' %></a>
+			<a><%= link_to "#{cgrpage.category2}", categories_path %></a>
 			<% end %>
 			<% if @article.category3 %>
-			<a><%= link_to "#{cgrpage.category3}", '#' %></a>
+			<a><%= link_to "#{cgrpage.category3}", categories_path %></a>
 			<% end %>
 			<% if @article.category4 %>
-			<a><%= link_to "#{cgrpage.category4}", '#' %></a>
+			<a><%= link_to "#{cgrpage.category4}", categories_path %></a>
 			<% end %>
 		</li>
 		<li class="date">

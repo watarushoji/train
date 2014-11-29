@@ -12,25 +12,31 @@
 		<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
 	</div>
 	<ul class="entry-data">
+		<li class = "social_buttons"><a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdive-in-boobs.com%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowTransparency="true"></iframe>			
+		</li>
 		<li class="description">
 			<%= sanitize "#{article.content}"%>
 		</li>
 	</br></br>
+
 		<li class="readmore">
-			<ul class="nav nav-pills">
-   				<li roll = "presentation" class="active"><%= link_to "動画を見る", article_path(article.id) %></li>
-			</ul>
+			<button type = "button" class="btn btn-primary btn-large">
+				<a href = <%="articles/#{article.id}"%>>動画を見る</a>
+			</button>
 		</li>
 		<li class="category">
-			<a><%= link_to "#{article.category}", '#' %></a>
+			<a><%= link_to "#{article.category}", categories_path %></a>
 			<% if article.category2 %>
-			<a><%= link_to "#{article.category2}", '#' %></a>
+			<a><%= link_to "#{article.category2}", categories_path %></a>
 			<% end %>
 			<% if article.category3 %>
-			<a><%= link_to "#{article.category3}", '#' %></a>
+			<a><%= link_to "#{article.category3}", categories_path %></a>
 			<% end %>
 			<% if article.category4 %>
-			<a><%= link_to "#{article.category4}", '#' %></a>
+			<a><%= link_to "#{article.category4}", categories_path %></a>
 			<% end %>
 		</li>
 		<li class="date">

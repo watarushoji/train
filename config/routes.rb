@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+
+  match '/delcontacts', to:'delcontacts#index', via:'get'
+  match '/popmovies', to:'popmovies#index', via:'get'
+  match '/news', to:'news#index', via:'get'
+
+  match '/sitemaps', to:'sitemaps#sitemaps', via:'get'
+
   root 'articles#index'
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
