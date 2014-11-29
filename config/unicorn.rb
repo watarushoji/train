@@ -1,5 +1,6 @@
 application = 'boobs'
-APP_PATH = File.expand_path('../../', __FILE__)
+# APP_PATH = File.expand_path('../../', __FILE__)
+APP_PATH = "/usr/share/nginx/html/boobs/current"
 
 working_directory 	APP_PATH
 
