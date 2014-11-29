@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  get '/articles/:id/posts', to: 'articles#posts'
   match '/delcontacts', to:'delcontacts#index', via:'get'
   match '/popmovies', to:'popmovies#index', via:'get'
   match '/news', to:'news#index', via:'get'
