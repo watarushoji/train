@@ -82,11 +82,13 @@ namespace :deploy do
 
 
   desc 'Restart application'
+  after 'deploy:publishing', 'deploy:restart'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
       # invoke 'unicorn:restart'
+      execute :bundle, :exec, :unicorn, "-c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
     end
   end
 
@@ -102,9 +104,9 @@ namespace :deploy do
   end
 
 end
- after 'deploy:publishing', 'deploy:restart'
- namespace :deploy do
-   task :restart do
-      execute :bundle, :exec, :unicorn, "-c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
-   end
-end
+#  after 'deploy:publishing', 'deploy:restart'
+#  namespace :deploy do
+#    task :restart do
+#       execute :bundle, :exec, :unicorn, "-c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
+#    end
+# end
