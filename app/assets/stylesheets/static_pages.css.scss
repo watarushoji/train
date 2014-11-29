@@ -34,6 +34,9 @@ ul {
  list-style-type: none;
  margin-left:0px;
 }
+.paisea{
+  overflow: auto;
+}
 
 .center {
   text-align: center;
@@ -45,13 +48,13 @@ ul {
 /* header */
 
 .header{
-  background-color: #fafafa;
-  min-height: 140px;
+  background-color: #faffff;
+  min-height: 100px;
 }
 
 #logo {
   font-size: 1.1em;
-  color: #a0a0a0;
+  color: #00eeff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 0px;
@@ -67,7 +70,7 @@ ul {
   }
 }
 .form-search{
-  margin-bottom:-10px;
+  margin-bottom:-5px;
 }
 .hd {
   position: relative;
@@ -83,6 +86,7 @@ ul {
   font-size:0.8em;
   text-align:right;
 }
+
 .guide_pc {
 
   text-align:right;
@@ -99,14 +103,14 @@ ul {
   font-size:1.1em;
   float:none;
   padding-bottom:0px;
-  margin-bottom:-20px;
+  margin-bottom:0px;
 
 }
 
 
 /*content*/
 .content {
-  overflow: auto;
+  overflow: hidden;
   background-color: #fafafa;
   border: solid 1px #f0f0f0;
   padding: 8px 8px 8px 8px ;

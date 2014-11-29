@@ -1,26 +1,27 @@
 source 'https://rubygems.org'
 
-gem 'unicorn'
-gem 'therubyracer'
+gem 'unicorn', '4.8.3'
+gem 'therubyracer', '0.12.1'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '3.1.5'
 gem 'faker'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'gretel'
 gem 'rails-html-sanitizer'
-gem 'carrierwave'
+gem 'carrierwave', '0.10.0'
 gem 'ransack'
-gem 'rails-i18n'
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rbenv'
-gem 'capistrano3-unicorn'
-gem 'capistrano-rails-console'
+gem 'rails-i18n', '4.0.3'
+gem 'capistrano', '3.2.1'
+gem 'capistrano-rails', '1.1.2'
+gem 'capistrano-bundler', '1.1.3'
+gem 'capistrano-rbenv', '2.0.2'
+gem 'capistrano3-unicorn', '0.2.1'
+gem 'capistrano-rails-console', '0.2.0'
 gem 'rvm1-capistrano3', require: false
+gem 'sitemap_generator'
 
 
 
@@ -37,7 +38,7 @@ group :development, :test do
 end
 group :production do
 	gem 'rails_12factor'
-	gem 'pg'
+	gem 'pg', '0.17.1'
 end
 
 group :test do
