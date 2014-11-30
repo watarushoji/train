@@ -14,7 +14,7 @@
      <li><%= link_to "放尿/脱糞" ,:controller => "cgrpages", :action => "scatology" %></li>
      <li><%= link_to "女子高生" ,:controller => "cgrpages", :action => "jk" %></li>
      <li><%= link_to "女子大生" ,:controller => "cgrpages", :action => "jd" %></li>
-     <li class="active"><%= link_to "お宝/ハプニング", :controller => "cgrpages", :action => "happenings" %></li>
+     <li class="active"><%= link_to "お宝/ハプニング（#{@count}）", :controller => "cgrpages", :action => "happenings" %></li>
      <li><%= link_to "アイドル", :controller => "cgrpages", :action => "idol" %></li>
 </ul>
 <%= render @cgrpages %>

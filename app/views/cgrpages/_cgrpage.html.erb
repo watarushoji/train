@@ -11,6 +11,7 @@
 	<ul class="entry-data">
 		<li class="description">
 			<p><%= sanitize "#{cgrpage.content}"%></p>
+				全 <%= "#{cgrpage.count}" %> 件
 		</li>
 		<li class="readmore">
 			<%= link_to "[動画を見る]", article_path(article.id) %>

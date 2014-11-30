@@ -57,5 +57,6 @@ class CgrpagesController < ApplicationController
 	def cgrpages_get_paginate(name)
 		@cgrpages = Article.where(["category = ? or category2 = ? or category3 = ? or category4 = ?", name, name, name, name]).order("created_at DESC").
 		paginate(page: params[:page], :per_page => 5)
+		@count = @cgrpages.count
 	end
 end
