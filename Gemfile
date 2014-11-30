@@ -22,7 +22,7 @@ gem 'capistrano3-unicorn', '0.2.1'
 gem 'capistrano-rails-console', '0.2.0'
 gem 'rvm1-capistrano3', require: false
 gem 'sitemap_generator'
-gem 'google-analytics-rails'
+
 
 
 
@@ -40,6 +40,7 @@ end
 group :production do
 	gem 'rails_12factor'
 	gem 'pg', '0.17.1'
+	gem 'google-analytics-rails'
 end
 
 group :test do
