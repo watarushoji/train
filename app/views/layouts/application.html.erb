@@ -12,8 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css">
+  <head>
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="<%= request.protocol + request.host_with_port + "articles/1/posts.rss" %>" />
+  <head>
   <%= favicon_link_tag  %>
   <!-- '/assets/images/favicon.ico' -->
+     <%= analytics_init if Rails.env.production? %>
   <meta name="google-site-verification" content="UPY9nTVKhz-rlEPqt1_1pyteNjbCuHM3XR000DqgLM8" />
 </head>
 <body>
@@ -52,14 +57,3 @@
 
 
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-57209640-1', 'auto');
-  ga('send', 'pageview');
-
-</script>

@@ -90,6 +90,7 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.3)
     formatador (0.2.5)
+    google-analytics-rails (0.0.6)
     gretel (3.0.8)
       rails (>= 3.2.0)
     guard (2.6.1)
@@ -288,6 +289,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   faker
+  google-analytics-rails
   gretel
   guard-spork
   jbuilder (~> 2.0)
