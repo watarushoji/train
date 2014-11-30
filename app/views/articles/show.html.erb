@@ -1,62 +1,67 @@
 <% provide(:title, "#{@article.title}") %>
 <div class="article-sidebar-box-show">
-<div class="article-box-show">
+	<div class="article-box-show">
 
-	<h3 class="title-container">
-		<%= link_to "#{@article.title}", article_path(@article.id) %>
-	</h3>
-	<!-- 動画埋め込みタグ -->
-	<div class="entry-movie">
-		<%= @article.sumnail.html_safe %>
+		<h3 class="title-container">
+			<%= link_to "#{@article.title}", article_path(@article.id) %>
+		</h3>
+		<!-- 動画埋め込みタグ -->
+		<div class="entry-movie">
+			<%= @article.sumnail.html_safe %>
+		</div>
+
+
+		<!-- 動画埋め込みここまで -->
+		<ul class="entry-data">
+			<li class="ad-content-show">
+				<%= render 'ad_content_show' %>
+			</li>
+			<li class="description-show">
+				<h4>動画詳細</h4>
+				<span class = "social_button">
+					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{@article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{@article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdive-in-boobs.com%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowTransparency="true"></iframe>
+				</span>
+				<p><%= sanitize "#{@article.content}"%>
+				</p>
+			</li>
+			<li class="category">
+				<a><%= link_to "#{@article.category}", '#' %></a>
+				<% if @article.category2 %>
+				<a><%= link_to "#{@article.category2}", '#' %></a>
+				<% end %>
+				<% if @article.category3 %>
+				<a><%= link_to "#{@article.category3}", '#' %></a>
+				<% end %>
+				<% if @article.category4 %>
+				<a><%= link_to "#{@article.category4}", '#' %></a>
+				<% end %>
+			</li>
+			<li class="date">
+				<%= "#{@article.created_at.getlocal}"%>
+			</li>
+		</ul>
+		<ul class="entry-meta">
+			<li class="domain">
+				<span class="domain">
+					<%= link_to "#{@article.domain}", "#{@article.domain}" %>
+				</span>
+			</li>
+		</ul>
+		<!--エロ動画アンテナ-->
+<div class="eroan_embed" data-category="video" data-direction="horizontal"></div><script src="http://ero-an.net/system/blogparts.js" charset="UTF-8"></script>
 	</div>
 
-
-	<!-- 動画埋め込みここまで -->
-	<ul class="entry-data">
-		<li class="ad-content-show">
-			<%= render 'ad_content_show' %>
-		</li>
-		<li class="description-show">
-			<h4>動画詳細</h4>
-			<span class = "social_button">
-			<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{@article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{@article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdive-in-boobs.com%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowTransparency="true"></iframe>
-</span>
-			<p><%= sanitize "#{@article.content}"%>
-			</p>
-		</li>
-		<li class="category">
-			<a><%= link_to "#{@article.category}", '#' %></a>
-			<% if @article.category2 %>
-			<a><%= link_to "#{@article.category2}", '#' %></a>
-			<% end %>
-			<% if @article.category3 %>
-			<a><%= link_to "#{@article.category3}", '#' %></a>
-			<% end %>
-			<% if @article.category4 %>
-			<a><%= link_to "#{@article.category4}", '#' %></a>
-			<% end %>
-		</li>
-		<li class="date">
-			<%= "#{@article.created_at.getlocal}"%>
-		</li>
-	</ul>
-	<ul class="entry-meta">
-		<li class="domain">
-			<span class="domain">
-				<%= link_to "#{@article.domain}", "#{@article.domain}" %>
-			</span>
-		</li>
-	</ul>
-</div>
-
-<div class="article-box-show-sidebar">
-	<ul>
-		<li><div id="sekurosu_vertical"></div><script src="http://sekurosu.com/embed?num=6&height=180&type=vertical&genre=all"></script><p class="sekurosu_parts_copyright">powered by <a href="http://sekurosu.com" target="_blank" title="セクロスあんてな">セクロスあんてな</a></p></li>
-		<li><a href="http://click.dtiserv2.com/Click/1018005-18-174083" target="_blank"><img src="http://affiliate.dtiserv.com/image/1pondo/18-150-01.jpg" border="0"></a></li>
-		<li><a href="http://click.dtiserv2.com/Click2/1292008-292-174083" target="_blank"><img src="http://affiliate.dtiserv.com/image/10musume/292-150-01.jpg" border="0"></a>	</li>
-	</ul>
-</div>
+	<div class="article-box-show-sidebar">
+		<ul>
+			<!--セクロスあんてな-->
+			<li><div id="sekurosu_vertical"></div><script src="http://sekurosu.com/embed?num=6&height=180&type=vertical&genre=all"></script><p class="sekurosu_parts_copyright">powered by <a href="http://sekurosu.com" target="_blank" title="セクロスあんてな">セクロスあんてな</a></p></li>
+			<!--広告1 -->
+			<li><a href="http://click.dtiserv2.com/Click/1018005-18-174083" target="_blank"><img src="http://affiliate.dtiserv.com/image/1pondo/18-150-01.jpg" border="0"></a></li>
+			<!--広告2 -->
+			<li><a href="http://click.dtiserv2.com/Click2/1292008-292-174083" target="_blank"><img src="http://affiliate.dtiserv.com/image/10musume/292-150-01.jpg" border="0"></a>	</li>
+		</ul>
+	</div>
 </div>
 
