@@ -35,21 +35,33 @@
     <!-- <div class="row"> -->
     <!-- 記事はここから -->
     <div class="content">
-      <%= render 'layouts/ad_content' %>
-      <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
-      　<% end %>
-      <%= yield %>
+      <div class="maincol_index">
+        <div class="maincol_index_header">
+          <%= render 'layouts/ad_content' %>
+          <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+          <% end %>
+        </div>
+        <div class="maincol_index_content">
+          <%= yield %>
+        </div>
+        
+      </div>
+
+      <div class="maincol_index_sidebar">
+        <%= render 'layouts/sidebar_ads'%>
+      </div>
     </div>
+
     <!-- </div> -->
     <%= render 'layouts/footer' %>
     
   </div>
 
 </body>
-<div class="container-fluid db">
-  <%= debug(params) if Rails.env.development? %>
-</div>
+
 </html>
 
 

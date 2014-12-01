@@ -20,7 +20,7 @@ body {
   font-size:94%;
   padding: 0% 0% 0% 0%;
   margin: 8px;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 section {
@@ -35,7 +35,7 @@ ul {
  margin-left:0px;
 }
 .paisea{
-  overflow: auto;
+  overflow: none;
 }
 
 .center {
@@ -50,6 +50,7 @@ ul {
 .header{
   background-color: #faffff;
   min-height: 100px;
+  max-width: 1100px;
 }
 
 #logo {
@@ -63,22 +64,17 @@ ul {
   float:left;
   min-width: 400px;
   margin-bottom:-10px;
-  h3 {
+  h1 {
     line-height:20px;
     margin-top:0px;
     margin-bottom:0px;
+    font-size:1.5em;
   }
 }
 .form-search{
   margin-bottom:-5px;
 }
-.hd {
-  position: relative;
-  padding: 1%;
-  width: 98%;
-  margin-bottom: 10px;
-    overflow: auto;
-}
+
 .intro {
   margin-top:10px;
   margin-left:150px;
@@ -110,29 +106,33 @@ ul {
 /*content*/
 .content {
   overflow: hidden;
-  background-color: #fafafa;
-  border: solid 1px #f0f0f0;
-  padding: 8px 8px 8px 8px ;
-  margin-bottom: 10px; 
-  width: 98%;
+  margin-top:10px;
+  width: 1100px;
+  float:none;
 }
 
-/*about_us*/
-.About_Contact{
-  width: 75%;
-  
-  h3{
-    color: #cccccc;
-  }
-  h4{
-    color: #ddddcc;
-  }
+/*main_content*/
+.maincol_index{
+  width:890px;
+  float:left;
+
 }
-.s{
-  font-size: 1.1em;
-  font-weight: bolder;
+.maincol_index_sidebar{
+  width: 200px;
+  float:right;
+  margin-left:10px;
+  background-color:white;
+}
+.maincol_index_header{
+  max-width:900px;
+  background-color:white;
+
 }
 
+.maincol_index_content{
+  width:890px;
+
+}
 
 /* footer */
 

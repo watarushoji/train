@@ -1,13 +1,7 @@
 
-.article-box{
-	display:inline-block;
-	vertical-align:top;
-	width: 100%;
-	min-height: 280px;
-	border-bottom: 2px solid #ECECEC;
-	margin-bottom: 10px;
-	background-color: white;
-}
+
+/*show-box*/
+
 .article-box-show{
 	display:inline-block;
 	vertical-align:top;
@@ -30,6 +24,41 @@
 }
 .article-sidebar-box-show{
 	width: 900px;
+}
+/*show-content*/
+li.description-show{
+	background-color: #f5f5f5;
+	min-height:130px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
+	padding-right:6px;
+	word-wrap:break-word;
+	h4{
+	border-width:0px 0px 1px 0px;
+	border-color: #cc0000;
+	border-style:solid;
+	}
+}
+li.ad-content-show{
+	background-color: #f5f5f5;
+	min-height:70px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
+	padding-right:6px;
+}
+
+
+
+.article-box{
+	display:inline-block;
+	vertical-align:top;
+	width: 100%;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+	background-color: white;
 }
 
 h3.title-container{
@@ -61,15 +90,7 @@ h3.title-container{
 ul.entry-data{
 	zoom: 1;
 }
-li.ad-content-show{
-	background-color: #f5f5f5;
-	min-height:70px;
-	float:none;
-	overflow:scroll;
-	padding-top:5px;
-	padding-right:6px;
-}
-/*紹介文*/
+
 li.description{
 	min-height:80px;
 	float:none;
@@ -78,20 +99,7 @@ li.description{
 	padding-right:6px;
 	word-wrap:break-word;
 }
-li.description-show{
-	background-color: #f5f5f5;
-	min-height:130px;
-	float:none;
-	overflow:scroll;
-	padding-top:5px;
-	padding-right:6px;
-	word-wrap:break-word;
-	h4{
-	border-width:0px 0px 1px 0px;
-	border-color: #cc0000;
-	border-style:solid;
-	}
-}
+
 .social_buttons{
 }
 .readmore{
@@ -136,6 +144,24 @@ span.domain{
 	white-space: nowrap;
 }
 
+/*about_us*/
+.About_Contact{
+  width: 75%;
+  
+  h3{
+    color: #cccccc;
+  }
+  h4{
+    color: #ddddcc;
+  }
+}
+.s{
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+
+/*form*/
 .form-box{
 	display:inline-block;
 	vertical-align:top;
