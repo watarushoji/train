@@ -22,7 +22,7 @@
 
  
 <form class="form-search ">
-<span class = "search_description">早くて正確！</span>
+<span class = "search_description"></span>
 <%= form_tag articles_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "全文検索", :name => nil %>
