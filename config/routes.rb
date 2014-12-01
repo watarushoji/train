@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
-  
+
   # static_pages
   match '/about', to:'static_pages#about', via:'get'
   match '/contact', to:'static_pages#contact', via:'get'

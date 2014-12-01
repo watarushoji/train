@@ -12,40 +12,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css">
-  <head>
   <link rel="alternate" type="application/rss+xml" title="RSS"
-    href="<%= request.protocol + request.host_with_port + "articles/1/posts.rss" %>" />
-  <head>
+  href="<%= request.protocol + request.host_with_port + "articles/1/posts.rss" %>" />
   <%= favicon_link_tag  %>
   <!-- '/assets/images/favicon.ico' -->
-     <%= analytics_init if Rails.env.production? %>
   <meta name="google-site-verification" content="UPY9nTVKhz-rlEPqt1_1pyteNjbCuHM3XR000DqgLM8" />
+  <%= analytics_init if Rails.env.production? %>
+
 </head>
 <body>
   <!-- ヘッダー -->
   <div class="paisea">
 
-  <div class="hd"> 
-    <div class="header">
-      <%= render 'layouts/header_text' %>
-      <%= render 'layouts/navbar' %>
+    <div class="hd"> 
+      <div class="header">
+        <%= render 'layouts/header_text' %>
+        <%= render 'layouts/navbar' %>
+      </div>
     </div>
-  </div>
-  
+    
 
     <!-- <div class="row"> -->
-      <!-- 記事はここから -->
-      <div class="content">
-        <%= render 'layouts/ad_content' %>
-        <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-        　<% end %>
-        <%= yield %>
-      </div>
+    <!-- 記事はここから -->
+    <div class="content">
+      <%= render 'layouts/ad_content' %>
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+      　<% end %>
+      <%= yield %>
+    </div>
     <!-- </div> -->
     <%= render 'layouts/footer' %>
-  
-</div>
+    
+  </div>
 
 </body>
 <div class="container-fluid db">
