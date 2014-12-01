@@ -18,7 +18,7 @@ role :db,  %w{boobs@49.212.154.42}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '49.212.154.42', user: 'boobs', port: 61203, roles: %w{web app db}
+server 'boobs@49.212.154.42', user: 'boobs', port: 61203, roles: %w{web app db}
 
 
 # Custom SSH Options
