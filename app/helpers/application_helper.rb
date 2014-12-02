@@ -7,6 +7,10 @@ module ApplicationHelper
 		end
 	end
 
+	def cgrpages_count(name)
+		Article.where(["category = ? or category2 = ? or category3 = ? or category4 = ?", name, name, name, name]).count
+	end
+
 	class CommentScrubber < Rails::Html::PermitScrubber
  		def allowed_node?(node)
     		!%w(form script comment blockquote).include?(node.name)
