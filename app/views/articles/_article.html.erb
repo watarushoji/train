@@ -2,7 +2,7 @@
 <div class="article-box">
 
 	<h3 class="title-container">
-		<%= link_to "#{article.title}", article_path(article.id) %>
+		<%= link_to "#{article.title} ", article_path(article.id) %>
 		<% if signed_in? %>
 		| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
 		| <%= link_to "編集", edit_article_path(article), method: "put" %>

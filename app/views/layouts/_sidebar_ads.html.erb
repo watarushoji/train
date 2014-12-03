@@ -5,7 +5,7 @@
 
 <!--カテゴリ-->
 <div class="category_sidebar">
-	<h4 class=title-container >カテゴリ</h3>
+	<h4 class="title-container" >カテゴリ</h4>
 	 <ul>
      	<li><%= link_to "おっぱい（#{cgrpages_count("おっぱい")}）" ,:controller => "cgrpages", :action => "index" %></li>
      	<li><%= link_to "AV女優（#{cgrpages_count("AV女優")}）",:controller => "cgrpages", :action => "avactless" %></li>
@@ -22,10 +22,16 @@
     	 <li><%= link_to "アイドル（#{cgrpages_count("アイドル")}）", :controller => "cgrpages", :action => "idol" %></li>
 	</ul>
 </div>
+<div class="popular_sidebar">
+	<h4 class="title-container">最新の人気記事</h4>
+	<ul>
+		<% popular_sidebar %>
+		<% @popular.first(10).each do |popular| %>
+		<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+		<% end %>
+	</ul>
+</div>
 <div class = "sidebar_index">
-		<!-- admax -->
-<script src="http://adm.shinobi.jp/s/a42a8f7bca3abb89ca25ccfe987a5f62"></script>
-<!-- admax -->
 	<!-- 逆アクセスランキングツール -->
 	<div id="blz_rank_629_123">
 		<script type="text/javascript">

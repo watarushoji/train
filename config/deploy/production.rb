@@ -29,7 +29,7 @@ server 'boobs@49.212.154.42', user: 'boobs', port: 61203, roles: %w{web app db}
 # Global options
 # --------------
 set :ssh_options, {
-    keys: %w(/.ssh/id_rsa),
+    keys: %w(~/.ssh/id_rsa),
     forward_agent: false,
     auth_methods: %w(publickey)
 }

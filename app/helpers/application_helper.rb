@@ -11,6 +11,10 @@ module ApplicationHelper
 		Article.where(["category = ? or category2 = ? or category3 = ? or category4 = ?", name, name, name, name]).count
 	end
 
+	def popular_sidebar
+		@popular = Article.where(:created_at=> 1.months.ago..Time.now).order("pv DESC")
+	end
+
 	class CommentScrubber < Rails::Html::PermitScrubber
  		def allowed_node?(node)
     		!%w(form script comment blockquote).include?(node.name)

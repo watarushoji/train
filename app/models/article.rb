@@ -6,6 +6,7 @@ class Article < ActiveRecord::Base
 	validates :category, presence: true
 	validates :domain, presence: true
 	validates :sumnail, presence: true
+  validates :image, presence: true
 
 	mount_uploader :image, ImageUploader
 

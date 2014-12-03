@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130171332) do
+ActiveRecord::Schema.define(version: 20141203053127) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20141130171332) do
     t.string   "category3"
     t.string   "category4"
     t.string   "image"
+    t.integer  "pv",                     default: 0
   end
 
   create_table "inquiries", force: true do |t|

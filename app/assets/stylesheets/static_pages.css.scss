@@ -102,6 +102,27 @@ ul {
   margin-bottom:0px;
 }
 
+/*sidebar*/
+.category_sidebar{
+  ul{
+    list-style-image: url(/assets/list.gif);
+    list-style-position: inside;
+  }
+  li{
+    margin-top: 3px;
+    padding-left: 5px;
+  }
+}
+.popular_sidebar{
+   ul{
+    list-style-image: url(/assets/list_popular.gif);
+    list-style-position: inside;
+  }
+  li{
+    margin-top: 3px;
+    padding-left: 5px;
+  } 
+}
 
 /*content*/
 .content {

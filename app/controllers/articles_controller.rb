@@ -21,6 +21,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@article.increment(:pv, by = 1)
+		@article.save
 	end
 	def create
 		@article = Article.new(article_params)
@@ -53,7 +55,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :category,:category2,:category3,:category4, :content, :sumnail, :domain, :image)
+		params.require(:article).permit(:title, :category,:category2,:category3,:category4, :content, :sumnail, :domain, :image, :pv)
 	end
 
 end
