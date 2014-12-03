@@ -1,5 +1,5 @@
 
-
+@media screen and (min-width: 640px){
 /*show-box*/
 
 .article-box-show{
@@ -48,63 +48,6 @@ li.ad-content-show{
 	padding-top:5px;
 	padding-right:6px;
 }
-
-/*article*/
-
-.article-box{
-	display:inline-block;
-	vertical-align:top;
-	width: 100%;
-	min-height: 280px;
-	border-bottom: 2px solid #ECECEC;
-	margin-bottom: 10px;
-	background-color: white;
-}
-
-h3.title-container{
-    display:block;
-	margin: 0 0 10px 0;
-	font-size: 30px;
-	line-height: 40px;
-	font-weight:bold;
-	background-color: #fcfcff;
-	border-width:0px 0px 1px 5px;
-	border-color: #cc0000;
-	border-style:solid;
-	padding:0px 0px 0px 3px;
-}
-h2.title-container{
-    display:block;
-	margin: 0 0 10px 0;
-	font-size: 20px;
-	line-height: 30px;
-	font-weight:bold;
-	background-color: #fcfcff;
-	border-width:0px 0px 1px 0px;
-	border-color: #cccccc;
-	border-style:solid;
-	padding:0px 0px 0px 3px;
-}
-h4.title-container{
-    display:block;
-	margin: 0 0 10px 0;
-	font-size: 15px;
-	line-height: 20px;
-	font-weight:bold;
-	background-color: #eeffff;
-	border-width:0px 0px 1px 0px;
-	border-color: #cccccc;
-	border-style:solid;
-	padding:0px 0px 0px 3px;
-}
-
-.entry-image{
-	float:right;
-	width: 450px;
-	height: 300px;
-	overflow: scroll;
-}
-
 .entry-movie{
 	/*youtubeの設定を引用*/
 	width: 640px;
@@ -112,21 +55,34 @@ h4.title-container{
 	overflow: auto;
 }
 
-ul.entry-data{
-	zoom: 1;
+/*article*/
+
+.article-box{
+	display:inline-block;
+	vertical-align:top;
+	max-width: 407px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
 }
 
-li.description{
-	min-height:80px;
-	float:none;
-	overflow:scroll;
-	padding-top:20px;
-	padding-right:6px;
-	word-wrap:break-word;
+.article-content{
+	margin-left:5px;
+	margin-right:5px;
 }
 
-.social_buttons{
+.entry-image{
+	float:left;
+	width: 230px;
+	height: 150px;
+	overflow: scroll;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
+
+.entry-data{
+	min-height: 150px;
+}
+
 .readmore{
 	a{
 		color:white;
@@ -136,20 +92,20 @@ li.description{
       }
 	}	
 }
-li.category{
-	margin: 3px 0px 0px 0;
+ul.category{
+	margin: 5px 0px 5px 0;
 	font-size: 0.9em;
-		a {
-		background-color:#e0e0e0;
+		li {
+			display:inline-block;
+			background-color:#f0ffff;
 	}
 }
-li.date{
+p.date{
 	line-height: 12px;
 	font-size:0.7em;
-	margin: 4px 0 4px 0;
 }				
-ul.entry-meta{
-	padding: 10px 220px 10px 3px;
+.entry-meta{
+
 }
 li.domain{
 	margin-right: 20px;
@@ -158,15 +114,13 @@ li.domain{
 	height: 16px;
 	overflow: hidden;
 }
-span.domain{
-	color: #999999;
-	line-height: 16px;
-	text-decoration: none;
-	display: inline-block;
-	height: 17px;
-	width: 100%;
-	max-width: 230px;
-	white-space: nowrap;
+p.domain{
+
+}
+ul.social_buttons{
+	li{
+		display:inline-block;
+	}
 }
 
 /*about_us*/
@@ -247,3 +201,5 @@ span.domain{
     height: 1%; }
   *:first-child + html .digg_pagination {
     overflow: hidden; }
+
+}

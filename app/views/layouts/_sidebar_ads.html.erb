@@ -1,29 +1,25 @@
 
-	<!-- admax -->
-<script src="http://adm.shinobi.jp/s/15da1ebd75a2c77eeeebc8619f1bce32"></script>
-<!-- admax -->
-
 <!--カテゴリ-->
 <div class="category_sidebar">
-	<h4 class="title-container" >カテゴリ</h4>
-	 <ul>
-     	<li><%= link_to "おっぱい（#{cgrpages_count("おっぱい")}）" ,:controller => "cgrpages", :action => "index" %></li>
-     	<li><%= link_to "AV女優（#{cgrpages_count("AV女優")}）",:controller => "cgrpages", :action => "avactless" %></li>
-     	<li><%= link_to "美少女（#{cgrpages_count("美少女")}）" ,:controller => "cgrpages", :action => "beautifull" %></li>
-     	<li><%= link_to "ギャル（#{cgrpages_count("ギャル")}）" ,:controller => "cgrpages", :action => "nowgirls" %></li>
-     	<li><%= link_to "素人（#{cgrpages_count("素人")}）", :controller => "cgrpages", :action => "amateur" %></li>
-     	<li><%= link_to "企画（#{cgrpages_count("企画")}）" ,:controller => "cgrpages", :action => "planned" %></li>
-     	<li><%= link_to "フェチ（#{cgrpages_count("フェチ")}）" ,:controller => "cgrpages", :action => "fetish" %></li>
-     	<li><%= link_to "盗撮（#{cgrpages_count("盗撮")}）" ,:controller => "cgrpages", :action => "peeping" %></li>
-     	<li><%= link_to "放尿/脱糞（#{cgrpages_count("放尿/脱糞")}）" ,:controller => "cgrpages", :action => "scatology" %></li>
-     	<li><%= link_to "女子高生（#{cgrpages_count("女子高生")}）" ,:controller => "cgrpages", :action => "jk" %></li>
-     	<li><%= link_to "女子大生（#{cgrpages_count("女子大生")}）" ,:controller => "cgrpages", :action => "jd" %></li>
-     	<li><%= link_to "お宝/ハプニング（#{cgrpages_count("お宝/ハプニング")}）", :controller => "cgrpages", :action => "happenings" %></li>
-    	 <li><%= link_to "アイドル（#{cgrpages_count("アイドル")}）", :controller => "cgrpages", :action => "idol" %></li>
+	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
+	<ul>
+		<li><%= link_to "おっぱい（#{cgrpages_count("おっぱい")}）" ,:controller => "cgrpages", :action => "index" %></li>
+		<li><%= link_to "AV女優（#{cgrpages_count("AV女優")}）",:controller => "cgrpages", :action => "avactless" %></li>
+		<li><%= link_to "美少女（#{cgrpages_count("美少女")}）" ,:controller => "cgrpages", :action => "beautifull" %></li>
+		<li><%= link_to "ギャル（#{cgrpages_count("ギャル")}）" ,:controller => "cgrpages", :action => "nowgirls" %></li>
+		<li><%= link_to "素人（#{cgrpages_count("素人")}）", :controller => "cgrpages", :action => "amateur" %></li>
+		<li><%= link_to "企画（#{cgrpages_count("企画")}）" ,:controller => "cgrpages", :action => "planned" %></li>
+		<li><%= link_to "フェチ（#{cgrpages_count("フェチ")}）" ,:controller => "cgrpages", :action => "fetish" %></li>
+		<li><%= link_to "盗撮（#{cgrpages_count("盗撮")}）" ,:controller => "cgrpages", :action => "peeping" %></li>
+		<li><%= link_to "放尿/脱糞（#{cgrpages_count("放尿/脱糞")}）" ,:controller => "cgrpages", :action => "scatology" %></li>
+		<li><%= link_to "女子高生（#{cgrpages_count("女子高生")}）" ,:controller => "cgrpages", :action => "jk" %></li>
+		<li><%= link_to "女子大生（#{cgrpages_count("女子大生")}）" ,:controller => "cgrpages", :action => "jd" %></li>
+		<li><%= link_to "お宝/ハプニング（#{cgrpages_count("お宝/ハプニング")}）", :controller => "cgrpages", :action => "happenings" %></li>
+		<li><%= link_to "アイドル（#{cgrpages_count("アイドル")}）", :controller => "cgrpages", :action => "idol" %></li>
 	</ul>
 </div>
 <div class="popular_sidebar">
-	<h4 class="title-container">最新の人気記事</h4>
+	<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
 	<ul>
 		<% popular_sidebar %>
 		<% @popular.first(10).each do |popular| %>
@@ -31,6 +27,9 @@
 		<% end %>
 	</ul>
 </div>
+<!-- アダルトブログランキング -->
+<a href="http://www.adultblogranking.com/link.php?1699644" title="アダルトブログランキングへ"><img src="http://image.with2.net/img/banner/adultblogranking_banner_b.gif" width="70" height="15" border="0" /></a><br /><a href="http://www.adultblogranking.com/link.php?1699644" style="font-size:12px;"></a>
+
 <div class = "sidebar_index">
 	<!-- 逆アクセスランキングツール -->
 	<div id="blz_rank_629_123">
@@ -43,6 +42,11 @@
 	</div>
 	<!-- https://blozoo.com/ -->
 </div>
+
+<!-- admax -->
+<script src="http://adm.shinobi.jp/s/15da1ebd75a2c77eeeebc8619f1bce32"></script>
+<!-- admax -->
+
 <!-- SEOparts.2013 -->
 <ul id="seoparts">
 	<li>
