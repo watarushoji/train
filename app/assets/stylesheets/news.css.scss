@@ -1,3 +1,15 @@
+@import "bootstrap";
+
+
+$grayMediumLight: #eaeaea;
+$grayLight: #999;
+$grayDarker: #222;
+$grayLighter: #fefefe;
+
+
+
+@media screen and (min-width: 640px){
+
 .news{
 	h2{
 			border-width:0px 0px 1px 5px;
@@ -5,4 +17,6 @@
 	border-style:solid;
 	padding:0px 0px 0px 3px;
 	}
+}
+
 }

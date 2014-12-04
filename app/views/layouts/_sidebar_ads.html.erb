@@ -3,6 +3,7 @@
 <div class="category_sidebar">
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
 	<ul>
+		<div class="nav nav-pills nav-stacked">
 		<li><%= link_to "おっぱい（#{cgrpages_count("おっぱい")}）" ,:controller => "cgrpages", :action => "index" %></li>
 		<li><%= link_to "AV女優（#{cgrpages_count("AV女優")}）",:controller => "cgrpages", :action => "avactless" %></li>
 		<li><%= link_to "美少女（#{cgrpages_count("美少女")}）" ,:controller => "cgrpages", :action => "beautifull" %></li>
@@ -16,14 +17,20 @@
 		<li><%= link_to "女子大生（#{cgrpages_count("女子大生")}）" ,:controller => "cgrpages", :action => "jd" %></li>
 		<li><%= link_to "お宝/ハプニング（#{cgrpages_count("お宝/ハプニング")}）", :controller => "cgrpages", :action => "happenings" %></li>
 		<li><%= link_to "アイドル（#{cgrpages_count("アイドル")}）", :controller => "cgrpages", :action => "idol" %></li>
+	 	</div>
 	</ul>
 </div>
 <div class="popular_sidebar">
 	<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
 	<ul>
 		<% popular_sidebar %>
-		<% @popular.first(10).each do |popular| %>
-		<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+		<% @popular.first(5).each do |popular| %>
+		<div class="popular_sidebar_content">
+			<div class="popular_sidebar_image">
+				<%= link_to image_tag(popular.image), article_path(popular.id) %>
+			</div>
+			<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+		</div>
 		<% end %>
 	</ul>
 </div>

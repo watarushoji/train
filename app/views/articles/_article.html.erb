@@ -1,21 +1,24 @@
 <% provide(:title, "ホーム/新着") %>
 <div class="article-box">
 	<h3>
-			<%= "#{article.title} " %>
-			<% if signed_in? %>
-			| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
-			| <%= link_to "編集", edit_article_path(article), method: "put" %>
-			<% end %>
-		</h3>
-	<div class="article-content">		
-		<div class="entry-image">
+		<%= "#{article.title} " %>
+		<% if signed_in? %>
+		| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
+		| <%= link_to "編集", edit_article_path(article), method: "put" %>
+		<% end %>
+	</h3>
+	<div class="article-content">
+		<div class="entry-data">		
+			<div class="entry-image">
 
-			<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
-		</div>
-		<div class="entry-data">
+				<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
+			</div>
+
 
 			<p class="description">
+				
 				<%= sanitize "#{article.content}"%>
+				
 			</p>
 
 		</div>
@@ -29,16 +32,16 @@
 		<div class="entry-meta">
 			<ul class="category">
 				<li>カテゴリ：</li>
-					<li><%= link_to "#{article.category}", categories_path %></li>
-					<% if article.category2 %>
-					<li><%= link_to "#{article.category2}", categories_path %></li>
-					<% end %>
-					<% if article.category3 %>
-					<li><%= link_to "#{article.category3}", categories_path %></li>
-					<% end %>
-					<% if article.category4 %>
-					<li><%= link_to "#{article.category4}", categories_path %></li>
-					<% end %>
+				<li><%= link_to "#{article.category}", categories_path %></li>
+				<% if article.category2 %>
+				<li><%= link_to "#{article.category2}", categories_path %></li>
+				<% end %>
+				<% if article.category3 %>
+				<li><%= link_to "#{article.category3}", categories_path %></li>
+				<% end %>
+				<% if article.category4 %>
+				<li><%= link_to "#{article.category4}", categories_path %></li>
+				<% end %>
 			</ul>
 			<p class="date">
 				最終更新: <%= "#{article.created_at.getlocal.to_formatted_s}"%>

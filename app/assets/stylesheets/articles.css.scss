@@ -63,6 +63,9 @@ li.ad-content-show{
 	max-width: 400px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
+	border-width:1px 1px 1px 1px;
+    border-color: #cccccc;
+    border-style:solid;
 }
 
 .article-content{
@@ -81,6 +84,9 @@ li.ad-content-show{
 
 .entry-data{
 	min-height: 150px;
+}
+p.description{
+
 }
 
 .readmore{
@@ -124,20 +130,199 @@ ul.social_buttons{
 	}
 }
 
-/*about_us*/
-.About_Contact{
-  width: 75%;
-  
-  h3{
-    color: #cccccc;
-  }
-  h4{
-    color: #ddddcc;
-  }
+
+/*form*/
+.form-box{
+	display:inline-block;
+	vertical-align:top;
+	width: 70%;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
 }
-.s{
-  font-size: 1.1em;
-  font-weight: bolder;
+.float-form-right{
+	float:right;
+}
+.float-form-left{
+	float:left;
+}
+.digg_pagination {
+  background: #faffff;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+
+}
+@media screen and (max-width: 640px){
+
+.article-box-show{
+	display:inline-block;
+	vertical-align:top;
+	width: 640px;
+	min-height: 280px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+}
+.article-box-show-sidebar{
+	display:none;
+	vertical-align:top;
+	margin-top:5px;
+	width: 200px;
+	min-height: 700px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+	float:right;
+	overflow:scroll;
+	background-color: #f5f5f5;
+}
+.article-sidebar-box-show{
+	width: 890px;
+}
+/*show-content*/
+li.description-show{
+	background-color: #f5f5f5;
+	min-height:130px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
+	padding-right:6px;
+	word-wrap:break-word;
+	h4{
+	border-width:0px 0px 1px 0px;
+	border-color: #cc0000;
+	border-style:solid;
+	}
+}
+li.ad-content-show{
+	background-color: #f5f5f5;
+	min-height:70px;
+	float:none;
+	overflow:scroll;
+	padding-top:5px;
+	padding-right:6px;
+}
+.entry-movie{
+	/*youtubeの設定を引用*/
+	max-width: 600px;
+	max-height: 420px;
+	overflow: auto;
+}
+
+/*article*/
+
+.article-box{
+	display:inline-block;
+	vertical-align:top;
+	max-width: 310px;
+	border-bottom: 2px solid #ECECEC;
+	margin-bottom: 10px;
+	border-width:1px 1px 1px 1px;
+    border-color: #cccccc;
+    border-style:solid;
+}
+
+.article-content{
+	margin-top:20px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.entry-image{
+	float:left;
+	width: 200px;
+	height: 140px;
+	overflow: scroll;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.entry-data{
+	min-height: 150px;
+}
+p.description{
+
+}
+
+.readmore{
+	a{
+		color:white;
+	   &:hover {
+      color: #ccffff;
+      text-decoration: underline;
+      }
+	}	
+}
+ul.category{
+	margin: 5px 0px 5px 0;
+	font-size: 0.9em;
+		li {
+			display:inline-block;
+			background-color:#f0ffff;
+	}
+}
+p.date{
+	line-height: 12px;
+	font-size:0.7em;
+}				
+.entry-meta{
+
+}
+li.domain{
+	margin-right: 20px;
+	font-family: 'Arial';
+	font-size: 12px;
+	height: 16px;
+	overflow: hidden;
+}
+p.domain{
+	overflow: hidden;
+
+}
+ul.social_buttons{
+	li{
+		display:inline-block;
+	}
 }
 
 

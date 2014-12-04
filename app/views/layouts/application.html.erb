@@ -8,13 +8,15 @@
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!-- bootstrap -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css">
   <link rel="alternate" type="application/rss+xml" title="RSS"
   href="<%= request.protocol + request.host_with_port + "articles/1/posts.rss" %>" />
-  <%= favicon_link_tag  %>
   <!-- '/assets/images/favicon.ico' -->
+  <%= favicon_link_tag  %>
+  <!-- google_verification --> 
   <meta name="google-site-verification" content="UPY9nTVKhz-rlEPqt1_1pyteNjbCuHM3XR000DqgLM8" />
   <%= analytics_init if Rails.env.production? %>
 
@@ -31,8 +33,10 @@
 
     <div class="hd"> 
       <div class="header">
+
         <%= render 'layouts/header_text' %>
         <%= render 'layouts/navbar' %>
+
       </div>
     </div>
     
@@ -42,7 +46,9 @@
     <div class="content">
       <div class="maincol_index">
         <div class="maincol_index_header">
+
           <%= render 'layouts/content_header' %>
+
           <% flash.each do |key, value| %>
           <div class="alert alert-<%= key %>">
             <%= value %>
@@ -55,8 +61,15 @@
 
       </div>
 
-      <div class="maincol_index_sidebar">
+      <div class="maincol_index_sidebar display_only_pc">
+
         <%= render 'layouts/sidebar_ads'%>
+
+      </div>
+      <div class="maincol_index_sidebar_sp display_only_sp">
+
+        <%= render 'layouts/sidebar_sp' %>
+      
       </div>
     </div>
 

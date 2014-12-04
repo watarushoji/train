@@ -1,44 +1,66 @@
-<% provide(:title, "#{cgrpage.title}") %>
+<% provide(:title, "#{@name}") %>
 <div class="article-box">
-
-	<h3 class="title-container">
-		<%= link_to "#{cgrpage.title}", article_path(article.id) %>
+	<h3>
+		<%= "#{cgrpage.title} " %>
+		<% if signed_in? %>
+		| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
+		| <%= link_to "編集", edit_article_path(article), method: "put" %>
+		<% end %>
 	</h3>
-	<div class="entry-image">
+	<div class="article-content">
+		<div class="entry-data">		
+			<div class="entry-image">
 
-		<%= link_to image_tag("#{cgrpage.image}", alt:"#{cgrpage.title}", size:"400x500"), article_path(article.id) %>
-	</div>
-	<ul class="entry-data">
-		<li class="description">
-			<p><%= sanitize "#{cgrpage.content}"%></p>
-				全 <%= "#{cgrpage.count}" %> 件
-		</li>
-		<li class="readmore">
-			<%= link_to "[動画を見る]", article_path(article.id) %>
-		</li>
-				<li class="category">
-			<a><%= link_to "#{cgrpage.category}", categories_path %></a>
-			<% if @article.category2 %>
-			<a><%= link_to "#{cgrpage.category2}", categories_path %></a>
-			<% end %>
-			<% if @article.category3 %>
-			<a><%= link_to "#{cgrpage.category3}", categories_path %></a>
-			<% end %>
-			<% if @article.category4 %>
-			<a><%= link_to "#{cgrpage.category4}", categories_path %></a>
-			<% end %>
-		</li>
-		<li class="date">
-			<%= "#{cgrpage.created_at.getlocal}"%>
-		</li>
-	</ul>
-	<ul class="entry-meta">
-		<li class="domain">
-			<span class="domain">
+				<%= link_to image_tag("#{cgrpage.image}", alt:"#{cgrpage.title}"), article_path(article.id) %>
+			</div>
+
+
+			<p class="description">
+				
+				<%= sanitize "#{cgrpage.content}"%>
+				
+			</p>
+
+		</div>
+		<div class="readmore">
+			<button type = "button" class="btn btn-primary btn-large">
+				<a href = <%="cgrpage/#{cgrpage.id}"%>>動画を見る</a>
+			</button>
+
+		</div>
+
+		<div class="entry-meta">
+			<ul class="category">
+				<li>カテゴリ：</li>
+				<li><%= link_to "#{cgrpage.category}", categories_path %></li>
+				<% if article.category2 %>
+				<li><%= link_to "#{cgrpage.category2}", categories_path %></li>
+				<% end %>
+				<% if article.category3 %>
+				<li><%= link_to "#{cgrpage.category3}", categories_path %></li>
+				<% end %>
+				<% if article.category4 %>
+				<li><%= link_to "#{cgrpage.category4}", categories_path %></li>
+				<% end %>
+			</ul>
+			<p class="date">
+				最終更新: <%= "#{cgrpage.created_at.getlocal.to_formatted_s}"%>
+			</p>
+			<p class="domain">
+
 				<%= link_to "#{cgrpage.domain}", "#{cgrpage.domain}" %>
-			</span>
-		</li>
-	</ul>
-</div>
 
+			</p>
+			<ul class = "social_buttons">
+				<li>
+					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+				</li>
+				<li>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>		
+			</ul>
+		</div>
+	</div>
+</div>
 
