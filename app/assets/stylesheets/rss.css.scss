@@ -33,24 +33,28 @@ $grayLighter: #fefefe;
 .blogroll-channel {
     max-height: 300px;
     margin-bottom: 15px;
-    padding: 10px;
-    border: solid 1px #999;
+    padding: 15px;
+    border-top: solid 1px #ECECEC;
+    border-bottom: solid 1px #ECECEC;
     background: #fff;
     overflow-y: scroll;
 }
 
 .blogroll-channel .blogroll-list-wrap {
     margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    list-style-position: outside;
 }
 
 .blogroll-channel .blogroll-list {
     list-style-type: none;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 15px;
-    line-height: 1.3;
+    font-size: 17px;
+    line-height: 1.4;
+    border-bottom: 1px;
+    border-style: dotted;
+    border-color: #ECECEC;
+
 }
 
 .blogroll-channel .blogroll-list img {
@@ -89,11 +93,12 @@ $grayLighter: #fefefe;
 .blogroll-channel .blogroll-ad-img {
 }
 
-.blogroll-channel .blogroll-ad-text {
+.blogroll-channel .blogroll-ad-default {
     margin-top: 0px;
     color: #ccc;
     font-size: 4px;
     text-align:right;
+    display:block;
 }
 }
 
@@ -111,22 +116,28 @@ $grayLighter: #fefefe;
 }
 .blogroll-channel {
     max-height: 300px;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: solid 1px #999;
+    margin-bottom: 5x;
+    padding: 15px;
+    border-top: solid 1px #ECECEC;
+    border-bottom: solid 1px #ECECEC;
     background: #fff;
     overflow-y: scroll;
 }
 
 .blogroll-channel .blogroll-list-wrap {
     margin-bottom: 5px;
+    list-style-position: outside;
 }
 
 .blogroll-channel .blogroll-list {
     list-style-type: none;
-    margin-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 15px;
     line-height: 1.3;
+    border-bottom: 1px;
+    border-style: dotted;
+    border-color: #ECECEC;
 }
 
 .blogroll-channel .blogroll-list img {

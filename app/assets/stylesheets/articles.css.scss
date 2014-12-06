@@ -194,9 +194,15 @@ ul.social_buttons{
     overflow: hidden; }
 
 }
+
+
+
+
+
+
 @media screen and (max-width: 640px){
 
-.article-box-show{
+.article-box-show-maincol{
 	display:inline-block;
 	vertical-align:top;
 	width: 640px;
@@ -208,7 +214,7 @@ ul.social_buttons{
 	display:none;
 	vertical-align:top;
 	margin-top:5px;
-	width: 200px;
+	width: 174px;
 	min-height: 700px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
@@ -216,8 +222,8 @@ ul.social_buttons{
 	overflow:scroll;
 	background-color: #f5f5f5;
 }
-.article-sidebar-box-show{
-	width: 890px;
+.article-box-show{
+	width: 814px;
 }
 /*show-content*/
 li.description-show{
