@@ -11,21 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203053127) do
+ActiveRecord::Schema.define(version: 20141210150054) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
-    t.text     "content",    limit: 255
+    t.text     "content",     limit: 255
     t.string   "category"
-    t.text     "sumnail",    limit: 255
-    t.text     "domain",     limit: 255
+    t.text     "sumnail",     limit: 255
+    t.text     "domain",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category2"
     t.string   "category3"
     t.string   "category4"
-    t.string   "image"
-    t.integer  "pv",                     default: 0
+    t.text     "image",       limit: 255
+    t.integer  "pv",                      default: 0
+    t.boolean  "from_crawl",              default: false
+    t.text     "crawl_image"
+    t.string   "site"
+  end
+
+  create_table "crawlsites", force: true do |t|
+    t.text     "thumb"
+    t.string   "title"
+    t.text     "uri"
+    t.text     "embed"
+    t.string   "time"
+    t.string   "sitename"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "inquiries", force: true do |t|

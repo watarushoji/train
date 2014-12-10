@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
 
-  get '/articles/:id/posts', to: 'articles#posts'
+  root 'articles#index'
+
+  #resources
+  resources :articles
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :crawlsites, only: [:index, :create]
+
+  #crawlsites
+  get '/crawlsites/:id/new', to:'crawlsites#new'
+
+  #misceranious
   match '/delcontacts', to:'delcontacts#index', via:'get'
   match '/popmovies', to:'popmovies#index', via:'get'
   match '/news', to:'news#index', via:'get'
-
-  match '/articles/:id/edit', to: 'articles#edit', via: 'put'
-
   match '/sitemaps', to:'sitemaps#sitemaps', via:'get'
 
-  root 'articles#index'
-  resources :articles
-  resources :sessions, only: [:new, :create, :destroy]
-
+  #??
+  match '/articles/:id/edit', to: 'articles#edit', via: 'put'
+  get '/articles/:id/posts', to: 'articles#posts'
+ 
   # static_pages
   match '/about', to:'static_pages#about', via:'get'
   match '/contact', to:'static_pages#contact', via:'get'
@@ -25,7 +32,7 @@ Rails.application.routes.draw do
   # cagegories
   match '/category', to:'cgrpages#show', via:'get'
   match '/categories', to:'cgrpages#index', via:'get'
-
+  # categories_each
   match '/avactless', to:'cgrpages#avactless', via:'get'
   match '/beautifull', to:'cgrpages#beautifull', via:'get'
   match '/nowgirls', to:'cgrpages#nowgirls', via:'get'

@@ -1,16 +1,18 @@
 
 <h2>Create Article</h2>
 
-
 <div class="form-box">
 		<%= form_for @article do |f| %>
 		<%= render 'shared/error_messages' %>
 		<div class="float-form-left">
 	
-		<% @article.title = "a" %>
-		<% @article.content = "a" %>
-        <% @article.domain = "abc" %>
-   		<% @article.sumnail = "a" %>
+		<% @article.title = "#{@crawl.title}" %>
+		<% @article.content = "" %>
+        <% @article.domain = "#{@crawl.uri}" %>
+   		<% @article.sumnail = "<iframe src=\"#{@crawl.embed}\" frameborder=0 width=510 height=400 scrolling=no></iframe>" %>
+   		<% @article.crawl_image = "#{@crawl.thumb}" %>
+   		<% @article.site = "#{@crawl.sitename}" %>
+   		<%= image_tag "#{@crawl.thumb}" %>
 
 
 		<%= f.label :title %>
@@ -36,11 +38,16 @@
 
 		<%= f.label :sumnail %>
 		<%= f.text_field :sumnail, :size => "100x15" %>
-		<%= f.label :image %>
-		<%= f.file_field :image %>
-				<%= f.submit "Create an Article", class: "btn btn-small" %>
+
+		<%= f.label :crawl_image %>
+		<%= f.text_field :crawl_image %>
+
+		<%= f.label :site %>
+		<%= f.text_field :site %>
+
+		<%= f.submit "Create an Article", class: "btn btn-small" %>
 	</div>
 
-		<% end %>
-	</div>
+	<% end %>
+</div>
 

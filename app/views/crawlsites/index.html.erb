@@ -1,0 +1,72 @@
+<h2>Xvideos新着情報</h2>
+<% @crawl_data.each do |post| %>
+	<p>---------------------------</p>
+	<ul>
+		<li><%= post.id %></li>
+		<li><%= image_tag(post.thumb) %></li>
+		<li><%= post.title %></li>
+		<li><%= post.uri %></li>
+		<li><%= post.embed %></li>
+		<li><%= post.time %></li>
+		<li><%= post.sitename %></li>
+		<li><%= link_to "選択", "/crawlsites/#{post.id}/new", method: "get",data: { confirm: "You sure?" } %></li>
+	</ul>
+<% end %>
+<!-- 正規表現でマッチした文字列を指定の文字列に変更 -->
+<!-- str.gsub(pattern, replacement) -->
+<!-- マウスオーバーで画像を切り替えるjavascript -->
+<div><IMG SRC="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.4.jpg" id="show"
+onmouseover="Over()" onmouseout="Out()"></div>
+<script type='text/javascript'>
+var i=1;
+img=new Array(10);
+img[1]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.1.jpg";
+img[2]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.2.jpg";
+img[3]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.3.jpg";
+img[4]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.4.jpg";
+img[5]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.5.jpg";
+img[6]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.6.jpg";
+img[7]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.7.jpg";
+img[8]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.8.jpg";
+img[9]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.9.jpg";
+img[10]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.10.jpg";
+img[11]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.11.jpg";
+img[12]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.12.jpg";
+img[13]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.13.jpg";
+img[14]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.14.jpg";
+img[15]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.15.jpg";
+img[16]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.16.jpg";
+img[17]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.17.jpg";
+img[18]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.18.jpg";
+img[19]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.19.jpg";
+img[20]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.20.jpg";
+img[21]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.21.jpg";
+img[22]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.22.jpg";
+img[23]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.23.jpg";
+img[24]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.24.jpg";
+img[25]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.25.jpg";
+img[26]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.26.jpg";
+img[27]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.27.jpg";
+img[28]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.28.jpg";
+img[29]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.29.jpg";
+img[30]="http://img100-837.xvideos.com/videos/thumbs/7c/6f/be/7c6fbe71cb51a20ce74d4f8e26569da7/7c6fbe71cb51a20ce74d4f8e26569da7.30.jpg";
+var tid = null;
+
+function Over() {
+if (! tid) {
+tid = setInterval(Switch, 500);
+}
+}
+function Out() { 
+if (tid) {
+clearInterval(tid);
+tid = null;
+}
+}
+
+function Switch() {
+document.getElementById("show").src=img[i];
+i=i+1;
+if(i>30){i=1;}
+}
+</script>

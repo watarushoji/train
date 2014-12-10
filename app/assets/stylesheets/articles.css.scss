@@ -23,7 +23,7 @@
 	background-color: #f5f5f5;
 }
 .article-sidebar-box-show{
-	width: 890px;
+	width: 814px;
 }
 /*show-content*/
 li.description-show{
@@ -60,10 +60,10 @@ li.ad-content-show{
 .article-box{
 	display:inline-block;
 	vertical-align:top;
-	max-width: 400px;
+	width: 794px;
 	border-bottom: 2px solid #ECECEC;
 	margin-bottom: 10px;
-	border-width:1px 1px 1px 1px;
+	border-width:0px 0px 1px 0px;
     border-color: #cccccc;
     border-style:solid;
 }
@@ -111,6 +111,7 @@ p.date{
 	font-size:0.7em;
 }				
 .entry-meta{
+	text-align:right;
 
 }
 li.domain{

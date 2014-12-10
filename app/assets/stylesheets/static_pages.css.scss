@@ -10,7 +10,7 @@ $grayDarker: #222;
 $grayLighter: #fefefe;
 
 
-
+/*-------PC--------*/
 @media screen and (min-width: 640px){
 
   .display_only_sp{
@@ -25,7 +25,7 @@ $grayLighter: #fefefe;
   body {
     background-color: #fafafa;
     font-size:94%;
-    margin: 8px;
+    margin: 0 auto;
     max-width: 1024px;
   }
 
@@ -142,7 +142,7 @@ h4{
 .content {
   overflow: hidden;
   margin-top:10px;
-  width: 1024px;
+  width: 1044px;
   float:none;
 }
 
@@ -150,16 +150,19 @@ h4{
 /*sidebar_content*/
 
 .maincol_index_sidebar{
-  width: 200px;
+  width: 196px;
   float:left;
-  background-color:white;
-  border-width:1px 1px 1px 1px;
-  border-color: #cccccc;
-  border-style:solid;
+  background-color:#fafafa;
 
 }
 
 .category_sidebar{
+  background-color:white;
+  border-width:2px 2px 2px 2px;
+  border-color: #cccccc;
+  border-style:solid;
+  margin-bottom:10px;
+
   ul{
     list-style-image: url(/assets/list.gif);
     list-style-position: inside;
@@ -170,6 +173,10 @@ h4{
   }
 }
 .popular_sidebar{
+  border-width:2px 2px 2px 2px;
+  border-color: #cccccc;
+  border-style:solid;
+  background-color:white;
  ul{
   list-style-image: url(/assets/list_popular.gif);
   list-style-position: inside;
@@ -180,19 +187,21 @@ li{
 } 
 }
 .popular_sidebar_content{
-  width:190px;
-  height:190px;
-  margin:5px 5px 5px 5px;
+  width:170px;
+  height:170px;
+  margin:0px 10px 0px 10px;
   border-width:1px 1px 1px 1px;
   border-color: #cccccc;
   border-style:solid;
+  background-color:white;
   li{
     overflow:hidden;
+    max-height:40px;
   }
 }
 .popular_sidebar_image{
-  width: 190px;
-  height: 140px;
+  width: 170px;
+  height: 128px;
   overflow: hidden;
 }
 
@@ -200,10 +209,12 @@ li{
 .maincol_index{
   max-width:814px;
   float:right;
-  background-color:white;
-  border-width:1px 1px 1px 1px;
+  padding-left:10px;
+  padding-right:10px;
+  border-width:2px 2px 2px 2px;
   border-color: #cccccc;
   border-style:solid;
+  background-color:white;
 }
 
 .maincol_index_header{
@@ -409,7 +420,7 @@ h4{
 .content {
   overflow: hidden;
   margin-top:10px;
-  width: 630px;
+  width: auto;
   float:none;
 }
 
@@ -417,7 +428,7 @@ h4{
 /*sidebar_content*/
 
 .maincol_index_sidebar{
-  width: 200px;
+  width: auto;
   float:left;
   background-color:white;
   border-width:1px 1px 1px 1px;
@@ -425,7 +436,7 @@ h4{
   border-style:solid;
 }
 .maincol_index_sidebar_sp{
-  width: 630px;
+  width: auto;
   background-color:white;
   border-width:1px 0px 1px 0px;
   margin-top: 10px;
@@ -487,7 +498,7 @@ li{
 
 /*main_content*/
 .maincol_index{
-  max-width:630px;
+  width:auto;
   float:none;
   background-color:white;
   border-width:1px 1px 1px 1px;
@@ -496,12 +507,12 @@ li{
 }
 
 .maincol_index_header{
-  max-width:630px;
+  width:auto;
   background-color:white;
 }
 
 .maincol_index_content{
-  max-width:630px;
+  width:auto;
 
 }
 
@@ -533,7 +544,7 @@ footer {
 }
 /*about_us*/
 .About_Contact{
-  width: 630px;  
+  width: auto;  
 }
 .content_description{
   margin-left: 20px;
