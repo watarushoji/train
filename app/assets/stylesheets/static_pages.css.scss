@@ -304,6 +304,15 @@ footer {
 
 @media screen and (max-width: 640px){
 
+ /*ads*/
+ .ad_sp{
+    max-height:250px;
+    min-height:100px;
+    max-width:640px;
+    min-width:400px;
+ }
+
+
   .display_only_pc{
     display:none;
   }
@@ -318,6 +327,9 @@ footer {
     font-size:94%;
     max-width:640px;
     min-width:400px;
+    margin:0 auto;
+      margin-left:10px;
+  margin-right:10px;
   }
 
   section {
@@ -332,7 +344,8 @@ footer {
    margin-left:0px;
  }
  .paisea{
-  overflow: none;
+  max-width:640px;
+  min-width:400px;
 }
 
 h1{
@@ -426,7 +439,7 @@ h4{
 /*navbar*/
 .nav{
   font-weight:bolder;
-  font-size:0.1em;
+  font-size:0.8em;
   float:none;
   padding-bottom:0px;
   margin-bottom:0px;
@@ -436,9 +449,8 @@ h4{
 .content {
   overflow: hidden;
   margin-top:10px;
-  max-width: 640px;
-  min-width: 400px;
   float:none;
+  width:100%;
 }
 
 
@@ -515,7 +527,7 @@ li{
 
 /*main_content*/
 .maincol_index{
-  width:98%;
+  width:100%;
   float:none;
   background-color:white;
   border-width:1px 0px 1px 0px;

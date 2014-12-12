@@ -27,9 +27,10 @@
 			</p>
 		</div>
 		<div class="readmore">
-			<button type = "button" class="btn btn-primary btn-large">
-				<a href = <%="articles/#{article.id}"%>>動画を見る</a>
-			</button>
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="active"><a href=<%="#{article_path(article.id)}" %>>動画を見る</a></li>
+			
+			</ul>
 
 		</div>
 

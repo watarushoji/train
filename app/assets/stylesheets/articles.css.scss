@@ -71,6 +71,7 @@ li.ad-content-show{
 .article-content{
 	margin-left:5px;
 	margin-right:5px;
+	margin-top:25px;
 }
 
 .entry-image{
@@ -90,6 +91,8 @@ p.description{
 }
 
 .readmore{
+	width:30%;
+	text-align:center;
 	a{
 		color:white;
 	   &:hover {
@@ -279,7 +282,7 @@ li.ad-content-show{
 }
 
 .article-content{
-	margin-top:20px;
+	margin-top:25px;
 	margin-left:5px;
 	margin-right:5px;
 }
@@ -301,6 +304,8 @@ p.description{
 }
 
 .readmore{
+	width:60%;
+	text-align:center;
 	a{
 		color:white;
 	   &:hover {
