@@ -14,63 +14,12 @@
 				<% if article.crawl_image == nil then %>				
 				<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
 	
-				<!-- *****************change xvideos sumnail within seconds*********************** -->
 				<% elsif article.site == "xvideos" %>
-				<div>
-					<img src=<%="#{article.crawl_image}"%> id="show"onmouseover="Over()" onmouseout="Out()">
-					<% sumnail_imgs = Array.new(5) %>
-					<!-- 画像配列にサムネイルを投入 -->
-					<!-- 正規表現でマッチした文字列を指定の文字列に変更 -->
-					<% sumnail_imgs[1] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.2\.") %>
-					<% sumnail_imgs[2] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.5\.") %>
-					<% sumnail_imgs[3] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.8\.") %>
-					<% sumnail_imgs[4] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.11\.") %>
-					<% sumnail_imgs[5] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.14\.") %>
-					<% sumnail_imgs[6] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.17\.") %>
-					<% sumnail_imgs[7] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.20\.") %>
-					<% sumnail_imgs[8] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.23\.") %>
-					<% sumnail_imgs[9] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.26\.") %>
-					<% sumnail_imgs[10] = "#{article.crawl_image}".gsub(/\.([1-9][0-9]*)\./, "\.29\.") %>
+				
+					<img src=<%="#{article.crawl_image}"%> >
 
-
-					<!-- 以下、javascript -->
-					<script type='text/javascript'>
-					var i=1;
-					img = new Array(10);
-					img[1]= <%= sumnail_imgs[1].to_json.html_safe %>;
-					img[2]= <%= sumnail_imgs[2].to_json.html_safe %>;
-					img[3]= <%= sumnail_imgs[3].to_json.html_safe %>;
-					img[4]= <%= sumnail_imgs[4].to_json.html_safe %>;
-					img[5]= <%= sumnail_imgs[5].to_json.html_safe %>;
-					img[6]= <%= sumnail_imgs[6].to_json.html_safe %>;
-					img[7]= <%= sumnail_imgs[7].to_json.html_safe %>;
-					img[8]= <%= sumnail_imgs[8].to_json.html_safe %>;
-					img[9]= <%= sumnail_imgs[9].to_json.html_safe %>;
-					img[10]= <%= sumnail_imgs[10].to_json.html_safe %>;
-					
-					var tid = null;
-
-					function Over() {
-						if (! tid) {
-							tid = setInterval(Switch, 500);
-						}
-					}
-					function Out() { 
-						if (tid) {
-							clearInterval(tid);
-							tid = null;
-						}
-					}
-
-					function Switch() {
-						document.getElementById("show").src=img[i] ;
-						i=i+1;
-						if(i>10){i=1;}
-					}
-					</script>
-				</div>
 				<% end %>
-				<!-- *****************change ●●●● sumnail within seconds*********************** -->
+
 
 			</div>
 			<p class="description">
@@ -102,9 +51,7 @@
 				最終更新: <%= "#{article.created_at.getlocal.to_formatted_s}"%>
 			</p>
 			<p class="domain">
-
 				<%= link_to "#{article.domain}", "#{article.domain}" %>
-
 			</p>
 			<ul class = "social_buttons">
 				<li>
@@ -120,21 +67,6 @@
 </div>
 
 
-
-
-
-<!-- サイトごとのサムネイル数を編集  -->
-<!-- xvideos -->
-
-<!-- xHamster -->
-
-<!-- redtube -->
-
-<!-- pornhost -->
-
-<!-- FC2 -->
-
-<!-- dailymotion -->
 
 
 <!-- サイトごとのサムネイル数を編集 ここまで-->					
