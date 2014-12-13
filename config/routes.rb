@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   #??
   match '/articles/:id/edit', to: 'articles#edit', via: 'put'
-  get '/articles/:id/posts', to: 'articles#posts'
+  # rss feeds
+  resources :feeds, :format => 'atom', only:[:index]
+  # match '/feed', to: 'feeds#feed', via: 'get'
  
   # static_pages
   match '/about', to:'static_pages#about', via:'get'

@@ -14,7 +14,7 @@
 				<% if article.crawl_image == nil then %>				
 				<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
 	
-				<% elsif article.site == "xvideos" %>
+				<% else%>
 				
 					<img src=<%="#{article.crawl_image}"%> >
 

@@ -43,6 +43,10 @@ $grayLighter: #fefefe;
  .paisea{
   overflow: none;
 }
+p{
+  color:#24248F;
+  line-height:1.7em;
+}
 
 h1{
   display:block;
@@ -55,9 +59,8 @@ h1{
 }
 h2{
   display:block;
-  margin: 10px 5px 10px 5px;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight:bold;
   background-color: #f4f4ff;
   border-width:0px 0px 0px 5px;
@@ -136,6 +139,15 @@ h4{
   float:none;
   padding-bottom:0px;
   margin-bottom:0px;
+}
+/*はじめにお読み下さい*/
+.first_read{
+  max-height:300px;
+  overflow:scroll;
+  p{
+    padding-left:15px;
+    padding-right:15px;
+  }
 }
 
 /*content*/
@@ -268,7 +280,25 @@ footer {
   font-weight: bolder;
 }
 
+/*contacts*/
+.Contacts{
+  margin-bottom:80px;
+  p{ 
+    padding-left:20px;
+    padding-right:20px;
+    color: black;
+  }
+  ul{
+    padding-left:20px;
+    padding-right:20px;
+    list-style-image:url(/assets/list_popular.gif);
+  }
+  li{
+      line-height:1.9em;
+      list-style-position:inside;
+  }
 
+}
 
 /*errors*/
 
@@ -445,6 +475,12 @@ h4{
   margin-bottom:0px;
 }
 
+/*はじめにお読み下さい*/
+.first_read{
+  max-height:400px;
+  overflow:scroll;
+}
+
 /*content*/
 .content {
   overflow: hidden;
@@ -453,7 +489,26 @@ h4{
   width:100%;
 }
 
+/*contacts*/
 
+.Contacts{
+  margin-bottom:80px;
+  p{ 
+    padding-left:20px;
+    padding-right:20px;
+    color: black;
+  }
+  ul{
+    padding-left:20px;
+    padding-right:20px;
+    list-style-image:url(/assets/list_popular.gif);
+  }
+  li{
+      line-height:1.9em;
+      list-style-position:inside;
+  }
+
+}
 /*sidebar_content*/
 
 .maincol_index_sidebar{

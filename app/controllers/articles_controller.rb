@@ -44,14 +44,8 @@ class ArticlesController < ApplicationController
     	flash[:success] = "Article destroyed."
     	redirect_to root_path
     end
-    def posts
-    	@posts = Article.order("created_at DESC")
-    	respond_to do |format|
-    		format.rss { render :layout => false }
-    	end
-    end
-		
 
+		
 	private
 
 	def article_params
