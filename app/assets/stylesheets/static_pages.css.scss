@@ -19,7 +19,6 @@ $grayLighter: #fefefe;
 
   html {
     overflow: auto;
-    font-family: arial, sans-serif;
   }
 
   body {
@@ -27,6 +26,7 @@ $grayLighter: #fefefe;
     font-size:94%;
     margin: 0 auto;
     max-width: 1024px;
+   font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
   }
 
   section {
@@ -92,6 +92,9 @@ h4{
   border-color: #cccccc;
   border-style:solid;
   padding:0px 0px 0px 3px;
+}
+iframe{
+  width:100%;
 }
 
 /* header */
@@ -351,7 +354,6 @@ footer {
 
   html {
     overflow: auto;
-    font-family: arial, sans-serif;
   }
 
   body {
@@ -361,7 +363,8 @@ footer {
     min-width:400px;
     margin:0 auto;
       margin-left:10px;
-  margin-right:10px;
+    margin-right:10px;
+    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
   }
 
   section {
@@ -429,6 +432,9 @@ h4{
   border-color: #cccccc;
   border-style:solid;
   padding:0px 0px 0px 3px;
+}
+iframe{
+  width:100%;
 }
 
 /* header */

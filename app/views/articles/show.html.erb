@@ -1,64 +1,113 @@
 <% provide(:title, "#{@article.title}") %>
-<div class="article-sidebar-box-show">
-	<div class="article-box-show-maincol">
 
-		<h3>
-			<%= "#{@article.title}" %>
-		</h3>
-		<!-- 動画埋め込みタグ -->
+<h3>
+	<%= "#{@article.title}" %>
+</h3>
+<div class="entry-box">
+	<!-- 動画埋め込みタグ -->
+	<div class="entry-main">
 		<div class="entry-movie">
 			<%= @article.sumnail.html_safe %>
 		</div>
+		<div class="entry-original">
+			<p>見れない場合はこちらから（元サイトへ）→ <%= link_to "#{@article.domain}", "#{@article.domain}" %></p>
+		</div>
 
-
-		<!-- 動画埋め込みここまで -->
-		<ul class="entry-data">
-			<li class="ad-content-show">
+		<div class="entry-data">
+			<div class="ad-content-show">
 				<%= render 'ad_content_show' %>
-			</li>
-			<li class="description-show">
+			</div>
+			<div class="entry-description">
 				<h4>動画詳細</h4>
-				<span class = "social_button">
-					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{@article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{@article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+				<span class = "entry-social_button">
+					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/articles/#{@article.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{@article.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdive-in-boobs.com%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowTransparency="true"></iframe>
 				</span>
-				<p><%= sanitize "#{@article.content}"%>
+				<p>
+					<%= sanitize "#{@article.content}"%>
 				</p>
-			</li>
-			<li class="category">
-				<a><%= link_to "#{@article.category}", '#' %></a>
+			</div>
+			<ul class="entry-category">
+				<li><%= link_to "#{@article.category}", '#' %></li>
 				<% if @article.category2 %>
-				<a><%= link_to "#{@article.category2}", '#' %></a>
+				<li><%= link_to "#{@article.category2}", '#' %></li>
 				<% end %>
 				<% if @article.category3 %>
-				<a><%= link_to "#{@article.category3}", '#' %></a>
+				<li><%= link_to "#{@article.category3}", '#' %></li>
 				<% end %>
 				<% if @article.category4 %>
-				<a><%= link_to "#{@article.category4}", '#' %></a>
+				<li><%= link_to "#{@article.category4}", '#' %></li>
 				<% end %>
-			</li>
-			<li class="date">
+			</ul>
+			<p class="entry-date">
 				<%= "#{@article.created_at.getlocal}"%>
-			</li>
-		</ul>
-		<ul class="entry-meta">
-			<li class="domain">
-				<span class="domain">
-					<%= link_to "#{@article.domain}", "#{@article.domain}" %>
-				</span>
-			</li>
-		</ul>
-		<!-- オプテック -->
-		<iframe frameborder="0" marginwidth="0" width="468" height="60" src="http://www.optaffiliates.com/promo/showBanner?olgs_aff=3026&olgs_sid=89&olgs_b=1282&olgs_ct=2&olgs_tr=&olgs_str="></iframe>
-		<!--エロ動画アンテナ-->
-<div class="eroan_embed" data-category="video" data-direction="horizontal"></div><script src="http://ero-an.net/system/blogparts.js" charset="UTF-8"></script>
+			</p>
+		</div>
 	</div>
 
-	<div class="article-box-show-sidebar">
-		<ul>
-			<%= render 'ad_sidebar_show' %>
-		</ul>
+	<div class="entry-sidebar">
+		<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
+		<div class="ninja-recommend-block" id="821bb18b382c26bb047953284277f524">
+			<script type="text/javascript" src="http://rcm.shinobi.jp/js/imp.js"></script>
+			<script type="text/javascript" src="http://rcm.shinobi.jp/r/821bb18b382c26bb047953284277f524"></script>
+		</div>
 	</div>
+
 </div>
 
+<!--エロ動画アンテナ-->
+<div class="eroan_embed" data-category="video" data-direction="horizontal"></div><script src="http://ero-an.net/system/blogparts.js" charset="UTF-8"></script>
+
+<div class = "sitemaps">
+	<div class = "col1">
+		<div class = "innerblock">
+			<h2><%= link_to "ホーム/新着", root_path %></h2>
+			<ul>
+				<li>
+					<%= render :partial => "sitemaps/sitemaparticle", :collection => @sitemaparticles %>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class = "col2">
+		<div class = "innerblock">
+			<h2><%= link_to "カテゴリ", categories_path %></h2>
+			<ul>
+
+				<li><%= link_to "おっぱい" ,:controller => "cgrpages", :action => "index" %></li>
+				<li><%= link_to "AV女優",:controller => "cgrpages", :action => "avactless" %></li>
+				<li><%= link_to "美少女" ,:controller => "cgrpages", :action => "beautifull" %></li>
+				<li><%= link_to "ギャル" ,:controller => "cgrpages", :action => "nowgirls" %></li>
+				<li><%= link_to "素人", :controller => "cgrpages", :action => "amateur" %></li>
+				<li><%= link_to "企画" ,:controller => "cgrpages", :action => "planned" %></li>
+				<li><%= link_to "フェチ" ,:controller => "cgrpages", :action => "fetish" %></li>
+				<li><%= link_to "盗撮" ,:controller => "cgrpages", :action => "peeping" %></li>
+				<li><%= link_to "放尿/脱糞" ,:controller => "cgrpages", :action => "scatology" %></li>
+				<li><%= link_to "女子高生" ,:controller => "cgrpages", :action => "jk" %></li>
+				<li><%= link_to "女子大生" ,:controller => "cgrpages", :action => "jd" %></li>
+				<li><%= link_to "お宝/ハプニング", :controller => "cgrpages", :action => "happenings" %></li>
+				<li><%= link_to "アイドル", :controller => "cgrpages", :action => "idol" %></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class = "col3">
+		<div class = "innerblock">
+			<h2><%= link_to "ニュース", news_path %></h2>
+			<hr class="line010">
+			<h2><%= link_to "人気", popmovies_path %></h2>
+			<hr class="line010">
+			<h2><%= link_to "風俗入門", '#' %></h2>
+			<hr class="line010">
+			<h2><%= link_to "ヘルプ", about_path %></h2>
+			<hr class="line010">
+			<h2><%= link_to "お問い合わせ", contact_path %></h2>
+			<hr class="line010">
+			<h2><%= link_to "削除依頼", delcontacts_path %></h2>
+			<hr class="line010">
+		</div>
+	</div>
+
+</div>

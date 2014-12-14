@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.increment(:pv, by = 1)
 		@article.save
+		@sitemaparticles = Article.all.order("created_at DESC")
 	end
 	def create
 		@article = Article.new(article_params)
