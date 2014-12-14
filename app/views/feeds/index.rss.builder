@@ -13,12 +13,12 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
 				xml.title post.title
 				xml.description do
 					xml << "<![CDATA["
-				 	xml << post.content if post.content
 				 	if post.crawl_image == nil then
 				 		xml << image_tag(post.image)
 				 	else
 				 		xml << image_tag(post.crawl_image)
 				 	end
+				 	xml << post.content if post.content
 				 	xml << "]]>"
 				end
 				xml.pubDate post.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)
