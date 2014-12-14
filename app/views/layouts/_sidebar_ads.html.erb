@@ -38,11 +38,23 @@
 		<% end %>
 	</ul>
 </div>
+	<h4><%= image_tag "manulist.gif" %>メニュー</h4>
+	<div class="nav nav-pills nav-stacked">
+		<li ><%= link_to "ホーム", root_path %></li>
+		<li ><%= link_to "ニュース", news_path %></li>
+		<li ><%= link_to "人気" , popmovies_path %></li>
+		<li ><%= link_to "風俗入門", '#' %></li>
+		<li><%= link_to "ヘルプ", about_path %></li>
+		<li><%= link_to "お問い合わせ", contact_path %></li>
+		<li><%= link_to "削除依頼", delcontacts_path %></li>
+		<li><%= link_to "サイトマップ", sitemaps_path %></li>
+		<li><%= link_to "RSS" , "/articles/1/posts.rss" %></li>
+	</div>
 <!-- アダルトブログランキング -->
 <a href="http://www.adultblogranking.com/link.php?1699644" title="アダルトブログランキングへ"><img src="http://image.with2.net/img/banner/adultblogranking_banner_b.gif" width="70" height="15" border="0" /></a><br /><a href="http://www.adultblogranking.com/link.php?1699644" style="font-size:12px;"></a>
 
 <div class = "sidebar_index">
-
+<!-- ACRランキング -->
 <SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/js/6683ad.js" charset=utf-8></SCRIPT>
 	全ランキングは<a href = "http://rranking.ziyu.net/html/6683ad.html">こちら</a>から
 </div>
