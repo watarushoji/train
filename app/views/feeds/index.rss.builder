@@ -11,21 +11,17 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
 		@posts.each do |post|
 			xml.item do
 				xml.title post.title
-				xml.description post.content
-				xml.pubDate post.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)
-				if post.crawl_image == nil then
-					xml.image do
-						xml.url post.image
-						xml.width "230"
-						xml.height "150"
-					end
-				else
-					xml.image do
-						xml.url post.crawl_image
-						xml.width "230"
-						xml.height "150"
-					end
+				xml.description do
+				 xml.cdata do
+				 	xml << post.content if post.content
+				 	if post.crawl_image == nil then
+				 		xml << image_tag(post.image)
+				 	else
+				 		xml << image_tag(post.crawl_image)
+				 	end
+				 end
 				end
+				xml.pubDate post.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)
 				xml.guid "http://dive-in-boobs.com/articles/#{post.id}"
 				xml.link "http://dive-in-boobs.com/articles/#{post.id}"
 			end
