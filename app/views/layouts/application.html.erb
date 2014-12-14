@@ -2,6 +2,8 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
+  <meta name="description" content="主に海外の動画投稿サイトから、無料で安心して楽しめる良質なアダルト動画を配信中です。">
+  <meta name="keywords" content="おっぱい,エログ,無料動画,動画,おっぱいの海で泳ぎたい,dive in boobs">
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,10 +15,7 @@
   <![endif]-->
   <!-- bootstrap -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- '/assets/images/favicon.ico' -->
   <%= favicon_link_tag  %>
-  <!-- google_verification --> 
   <meta name="google-site-verification" content="UPY9nTVKhz-rlEPqt1_1pyteNjbCuHM3XR000DqgLM8" />
   <%= analytics_init if Rails.env.production? %>
   <!-- ACRwebランキング用 -->
@@ -37,7 +36,7 @@
 
 </head>
 <body>
-  <!-- ヘッダー -->
+
   <div class="paisea">
 
     <div class="hd"> 
@@ -50,8 +49,8 @@
     </div>
     
 
-    <!-- <div class="row"> -->
-    <!-- 記事はここから -->
+
+
     <div class="content">
       <div class="maincol_index">
         <div class="maincol_index_header">
@@ -82,7 +81,7 @@
       </div>
     </div>
 
-    <!-- </div> -->
+
     <%= render 'layouts/footer' %>
     
 

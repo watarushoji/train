@@ -1,6 +1,6 @@
 
 <!--カテゴリ-->
-<div class="category_sidebar">
+<div class="sidebarbox">
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
 	<ul>
 		<div class="nav nav-pills nav-stacked">
@@ -20,7 +20,7 @@
 		</div>
 	</ul>
 </div>
-<div class="popular_sidebar">
+<div class="sidebarbox_popular">
 	<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
 	<ul>
 		<% popular_sidebar %>
@@ -38,6 +38,7 @@
 		<% end %>
 	</ul>
 </div>
+<div class = "sidebarbox">
 	<h4><%= image_tag "manulist.gif" %>メニュー</h4>
 	<div class="nav nav-pills nav-stacked">
 		<li ><%= link_to "ホーム", root_path %></li>
@@ -50,36 +51,54 @@
 		<li><%= link_to "サイトマップ", sitemaps_path %></li>
 		<li><%= link_to "RSS" , "/articles/1/posts.rss" %></li>
 	</div>
+</div>
+<div class = "sidebarbox">
+	<h4><%= image_tag "manulist.gif" %>他サイト人気記事</h4>
+	<div id="eroterest_parts" class="eroterest_parts"></div><script src="http://bpm.eroterest.net/blogparts/?design=1&keyword=%E3%81%8A%E3%81%A3%E3%81%B1%E3%81%84%20%E6%94%BE%E5%B0%BF%20%E7%BE%8E%E4%BA%BA%20%E3%81%8A%E5%A7%89%E3%81%95%E3%82%93%20%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%20%E5%A5%B3%E5%AD%90%E9%AB%98%E7%94%9F%20%E5%A5%B3%E5%AD%90%E5%A4%A7%E7%94%9F%20%E7%B4%A0%E4%BA%BA%20%E3%83%95%E3%82%A7%E3%83%81%20&arrow=0&num=6&size=200&itemwidth=200&suffix="></script>
+</div>
 <!-- アダルトブログランキング -->
 <a href="http://www.adultblogranking.com/link.php?1699644" title="アダルトブログランキングへ"><img src="http://image.with2.net/img/banner/adultblogranking_banner_b.gif" width="70" height="15" border="0" /></a><br /><a href="http://www.adultblogranking.com/link.php?1699644" style="font-size:12px;"></a>
 
 <div class = "sidebar_index">
-<!-- ACRランキング -->
-<SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/js/6683ad.js" charset=utf-8></SCRIPT>
-	全ランキングは<a href = "http://rranking.ziyu.net/html/6683ad.html">こちら</a>から
+	<div class="sidebarbox">
+		<h4><%= image_tag "manulist.gif" %>アクセスランキング</h4>
+		<!-- ACRランキング -->
+		<SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/js/6683ad.js" charset=utf-8></SCRIPT>
+		全ランキングは<a href = "http://rranking.ziyu.net/html/6683ad.html">こちら</a>から
+	</div>
 </div>
-<!-- 逆アクRSS -->
-<div id="blz_reverse_629_38">
-<script type="text/javascript">
-<!--
-var blzP='reverse',blzU='629',blzT='38';
--->
-</script>
-<script src="https://blozoo.com/js/reversetool/blogparts.js"></script>
-<script src="https://blozoo.com/js/reversetool/analyze.js"></script>
+<div class="sidebarbox">
+	<h4><%= image_tag "manulist.gif" %>逆アクセスRSS</h4>
+	<!-- 逆アクRSS -->
+	<div id="blz_reverse_629_38">
+		<script type="text/javascript">
+		<!--
+		var blzP='reverse',blzU='629',blzT='38';
+		-->
+		</script>
+		<script src="https://blozoo.com/js/reversetool/blogparts.js"></script>
+		<script src="https://blozoo.com/js/reversetool/analyze.js"></script>
+	</div>
+	<!-- https://blozoo.com/ -->
 </div>
-<!-- https://blozoo.com/ -->
 
 <!-- 相互リンク -->
 <%= render 'layouts/mutual_links' %>
-
+<div class="sidebarbox">
+	<h4><%= image_tag "manulist.gif" %>セクロスあんてな</h4>
 	<!--セクロスあんてな-->
 	<li><div id="sekurosu_vertical"></div><script src="http://sekurosu.com/embed?num=6&height=180&type=vertical&genre=all"></script><p class="sekurosu_parts_copyright">powered by <a href="http://sekurosu.com" target="_blank" title="セクロスあんてな">セクロスあんてな</a></p></li>
+</div>
+<div class="sidebarbox">
+	<h4><%= image_tag "manulist.gif" %>DTIブログランキング</h4>
 	<!-- DTIブログランキング -->
 	<iframe src="http://www.dti-ranker.com/rank/8700dc/main.htm" frameborder="0" width="190" height="800" scrolling="auto"></iframe>
-
-<!-- admax -->
-<script src="http://adm.shinobi.jp/s/15da1ebd75a2c77eeeebc8619f1bce32"></script>
-<!-- admax -->
+</div>
+<div class="sidebarbox">
+	<h4>PR</h4>
+	<!-- admax -->
+	<script src="http://adm.shinobi.jp/s/15da1ebd75a2c77eeeebc8619f1bce32"></script>
+	<!-- admax -->
+</div>
 
 </div>

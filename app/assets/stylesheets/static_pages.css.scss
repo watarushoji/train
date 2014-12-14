@@ -168,7 +168,7 @@ h4{
 
 }
 
-.category_sidebar{
+.sidebarbox{
   background-color:white;
   border-width:2px 2px 2px 2px;
   border-color: #cccccc;
@@ -184,11 +184,13 @@ h4{
     padding-left: 5px;
   }
 }
-.popular_sidebar{
+.sidebarbox_popular{
   border-width:2px 2px 2px 2px;
   border-color: #cccccc;
   border-style:solid;
   background-color:white;
+  margin-bottom: 10px;
+
  ul{
   list-style-image: url(/assets/list_popular.gif);
   list-style-position: inside;
