@@ -1,11 +1,12 @@
 <h2>Xvideos新着情報</h2>
+<%= link_to "全件削除", clearall_path , method: "delete", data: { confirm: "You sure?" } %>
 <% @crawl_data.each do |post| %>
 	<p>---------------------------</p>
 	<ul>
 		<li><%= post.id %></li>
 		<li><%= image_tag(post.thumb) %></li>
 		<li><%= post.title %></li>
-		<li><%= post.uri %></li>
+		<li><%= link_to "動画", "#{post.uri}" %></li>
 		<li><%= post.embed %></li>
 		<li><%= post.time %></li>
 		<li><%= post.sitename %></li>

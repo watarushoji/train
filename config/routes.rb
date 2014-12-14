@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   #resources
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
-  resources :crawlsites, only: [:index, :create]
+  resources :crawlsites, only: [:index, :create, :destroy]
 
   #crawlsites
   get '/crawlsites/:id/new', to:'crawlsites#new'
+  match '/clearall', to:'crawlsites#delete_all_records', via:'delete'
 
   #misceranious
   match '/delcontacts', to:'delcontacts#index', via:'get'

@@ -25,6 +25,10 @@ class CrawlsitesController < ApplicationController
 			render 'new'
 		end
 	end
+	def delete_all_records
+		Crawlsite.delete_all
+		redirect_to :action => 'index'
+	end
 end
 
 

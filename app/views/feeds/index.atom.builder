@@ -14,9 +14,9 @@ atom_feed :language => 'ja-JP' do |feed|
       entry.title item.title
       entry.content item.content, :type => 'html'
       if item.crawl_image == nil then
-      	entry.image image_tag(item.image)
+      	entry.logo item.image
       else
-      	entry.image image_tag(item.crawl_image)
+      	entry.logo item.crawl_image
       end
       entry.updated item.updated_at.to_formatted_s(:rfc822)
       entry.published item.updated_at.to_formatted_s(:rfc822)
