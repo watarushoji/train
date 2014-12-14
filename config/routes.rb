@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   #??
   match '/articles/:id/edit', to: 'articles#edit', via: 'put'
   # rss feeds
-  resources :feeds, :format => 'atom', only:[:index]
+  resources :feeds, :format => 'rss', only:[:index]
   # match '/feed', to: 'feeds#feed', via: 'get'
  
   # static_pages

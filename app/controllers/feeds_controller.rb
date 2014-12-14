@@ -6,10 +6,11 @@ class FeedsController < ApplicationController
     	@link = "http://dive-in-boobs.com/"
     	@description = "「オナニータイムは節約せよ」を標語に良質で抜ける動画を配信しています"
     	@subtitle = "I wanna dive in boobs"
+    	@user = User.find(1)
 
     	respond_to do |format|
     		format.html
-    		format.atom{ render :layout => false }
+    		format.rss{ render :layout => false }
     	end
     end
 end
