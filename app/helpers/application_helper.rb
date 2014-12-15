@@ -15,6 +15,9 @@ module ApplicationHelper
 	def popular_sidebar
 		@popular = Article.where(:created_at=> 1.months.ago..Time.now).order("pv DESC")
 	end
+	def new_articles
+		@new = Article.order("created_at DESC")
+	end
 
 	class CommentScrubber < Rails::Html::PermitScrubber
  		def allowed_node?(node)

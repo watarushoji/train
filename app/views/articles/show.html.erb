@@ -15,7 +15,7 @@
 
 		<div class="entry-data-show">
 			<div class="ad-content-show">
-				<%= render 'ad_content_show' %>
+				<%= render 'ad_show_header' %>
 			</div>
 			<div class="entry-description">
 				<h4>動画詳細</h4>
@@ -45,74 +45,43 @@
 				<%= "#{@article.created_at.getlocal}"%>
 			</p>
 		</div>
+		<%= render "ad_show_footer" %>
+
 	</div>
 
 	<div class="entry-sidebar">
-		<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
-		<div class="ninja-recommend-block" id="821bb18b382c26bb047953284277f524">
-			<script type="text/javascript" src="http://rcm.shinobi.jp/js/imp.js"></script>
-			<script type="text/javascript" src="http://rcm.shinobi.jp/r/821bb18b382c26bb047953284277f524"></script>
+		<div class = "display_only_pc">
+			<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
+			<div class="ninja-recommend-block" id="821bb18b382c26bb047953284277f524">
+				<script type="text/javascript" src="http://rcm.shinobi.jp/js/imp.js"></script>
+				<script type="text/javascript" src="http://rcm.shinobi.jp/r/821bb18b382c26bb047953284277f524"></script>
+			</div>
+		</div>
+
+		<div class = "display_only_sp">
+
+			<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
+			<ul>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="popular_sidebar_content_sp">
+					<div class="popular_sidebar_image_sp">
+						<% if popular.crawl_image == nil then %>
+						<%= link_to image_tag(popular.image), article_path(popular.id) %>
+						<% else %>
+						<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+						<% end %>
+					</div>
+					<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+				</div>
+				<% end %>
+			</ul>
 		</div>
 	</div>
 
 </div>
-<!-- 忍者レコメンド -->
-<div class="ninja-recommend-block" id="50c3b92c91468530aa619ace1a8b612c">
-  <script type="text/javascript" src="http://rcm.shinobi.jp/js/imp.js"></script>
-  <script type="text/javascript" src="http://rcm.shinobi.jp/r/50c3b92c91468530aa619ace1a8b612c"></script>
-</div>
 
-<!--エロ動画アンテナ-->
-<div class="eroan_embed" data-category="video" data-direction="horizontal"></div><script src="http://ero-an.net/system/blogparts.js" charset="UTF-8"></script>
-
-<div class = "sitemaps">
-	<div class = "col1">
-		<div class = "innerblock">
-			<h2><%= link_to "ホーム/新着", root_path %></h2>
-			<ul>
-				<li>
-					<%= render :partial => "sitemaps/sitemaparticle", :collection => @sitemaparticles %>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class = "col2">
-		<div class = "innerblock">
-			<h2><%= link_to "カテゴリ", categories_path %></h2>
-			<ul>
-
-				<li><%= link_to "おっぱい" ,:controller => "cgrpages", :action => "index" %></li>
-				<li><%= link_to "AV女優",:controller => "cgrpages", :action => "avactless" %></li>
-				<li><%= link_to "美少女" ,:controller => "cgrpages", :action => "beautifull" %></li>
-				<li><%= link_to "ギャル" ,:controller => "cgrpages", :action => "nowgirls" %></li>
-				<li><%= link_to "素人", :controller => "cgrpages", :action => "amateur" %></li>
-				<li><%= link_to "企画" ,:controller => "cgrpages", :action => "planned" %></li>
-				<li><%= link_to "フェチ" ,:controller => "cgrpages", :action => "fetish" %></li>
-				<li><%= link_to "盗撮" ,:controller => "cgrpages", :action => "peeping" %></li>
-				<li><%= link_to "放尿/脱糞" ,:controller => "cgrpages", :action => "scatology" %></li>
-				<li><%= link_to "女子高生" ,:controller => "cgrpages", :action => "jk" %></li>
-				<li><%= link_to "女子大生" ,:controller => "cgrpages", :action => "jd" %></li>
-				<li><%= link_to "お宝/ハプニング", :controller => "cgrpages", :action => "happenings" %></li>
-				<li><%= link_to "アイドル", :controller => "cgrpages", :action => "idol" %></li>
-
-			</ul>
-		</div>
-	</div>
-	<div class = "col3">
-		<div class = "innerblock">
-			<h2><%= link_to "ニュース", news_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "人気", popmovies_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "風俗入門", '#' %></h2>
-			<hr class="line010">
-			<h2><%= link_to "ヘルプ", about_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "お問い合わせ", contact_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "削除依頼", delcontacts_path %></h2>
-			<hr class="line010">
-		</div>
-	</div>
-
+<%= render "show_footer_recommends" %>
+<div class = "display_only_pc">
+	<%= render "sitemaps/sitemaps" %>
 </div>

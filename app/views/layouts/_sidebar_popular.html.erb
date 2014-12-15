@@ -1,0 +1,37 @@
+	<div class = "display_only_pc">
+		<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
+		<ul>
+			<% popular_sidebar %>
+			<% @popular.first(5).each do |popular| %>
+			<div class="popular_sidebar_content">
+				<div class="popular_sidebar_image">
+					<% if popular.crawl_image == nil then %>
+					<%= link_to image_tag(popular.image), article_path(popular.id) %>
+					<% else %>
+					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+					<% end %>
+				</div>
+				<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+			</div>
+			<% end %>
+		</ul>
+	</div>
+	<div class = "display_only_sp">
+
+		<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
+		<ul>
+			<% popular_sidebar %>
+			<% @popular.first(6).each do |popular| %>
+			<div class="popular_sidebar_content_sp">
+				<div class="popular_sidebar_image_sp">
+					<% if popular.crawl_image == nil then %>
+					<%= link_to image_tag(popular.image), article_path(popular.id) %>
+					<% else %>
+					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+					<% end %>
+				</div>
+				<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+			</div>
+			<% end %>
+		</ul>
+	</div>
