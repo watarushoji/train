@@ -14,7 +14,7 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
 				xml.description do
 					xml << "<![CDATA["
 				 	if post.crawl_image == nil then
-				 		xml << image_tag(post.image)
+				 		xml << "<img src=\"http://dive-in-boobs.com#{post.image}\"\/>"
 				 	else
 				 		xml << image_tag(post.crawl_image)
 				 	end
