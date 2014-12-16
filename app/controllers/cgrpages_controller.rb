@@ -3,8 +3,7 @@ class CgrpagesController < ApplicationController
 		name = "おっぱい"
 		cgrpages_get_paginate(name)
 	end
-	def show
-	end
+
 	def avactless
 		name = "AV女優"
 		cgrpages_get_paginate(name)

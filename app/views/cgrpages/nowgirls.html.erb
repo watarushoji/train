@@ -1,24 +1,7 @@
-<% provide(:title, 'カテゴリ') %>
-     <h2 class="title-container">
-          カテゴリ一覧（タブで切り替えられます） 
-     </h2>
-	 <ul class="nav nav-tabs" role="tablist">
-     <li><%= link_to "おっぱい" ,:controller => "cgrpages", :action => "index" %></li>
-     <li><%= link_to "AV女優",:controller => "cgrpages", :action => "avactless" %></li>
-     <li><%= link_to "美少女" ,:controller => "cgrpages", :action => "beautifull" %></li>
+<% provide(:title, 'ギャル') %>
+<% @category = "ギャル" %>
+<%= render "cgrpages/tab_head" %>
      <li class="active"><%= link_to "ギャル（#{@count}）" ,:controller => "cgrpages", :action => "nowgirls" %></li>
-     <li><%= link_to "素人", :controller => "cgrpages", :action => "amateur" %></li>
-     <li><%= link_to "企画" ,:controller => "cgrpages", :action => "planned" %></li>
-     <li><%= link_to "フェチ" ,:controller => "cgrpages", :action => "fetish" %></li>
-     <li><%= link_to "盗撮" ,:controller => "cgrpages", :action => "peeping" %></li>
-     <li><%= link_to "放尿/脱糞" ,:controller => "cgrpages", :action => "scatology" %></li>
-     <li><%= link_to "女子高生" ,:controller => "cgrpages", :action => "jk" %></li>
-     <li><%= link_to "女子大生" ,:controller => "cgrpages", :action => "jd" %></li>
-     <li><%= link_to "お宝/ハプニング", :controller => "cgrpages", :action => "happenings" %></li>
-     <li><%= link_to "アイドル", :controller => "cgrpages", :action => "idol" %></li>
-</ul>
-<%= render @cgrpages %>
-<%= render "layouts/ad_content_footer" %>
-<%= will_paginate %>
-<%= render "layouts/ad_footer" %>
+<%= render "cgrpages/tab" %>
+ 
 
