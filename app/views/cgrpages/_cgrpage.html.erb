@@ -1,7 +1,7 @@
 <% provide(:title, "#{@name}") %>
 <div class="article-box">
 	<h3>
-		<%= "#{cgrpage.title} " %>
+		<%= "#{cgrpages.title} " %>
 		<% if signed_in? %>
 		| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
 		| <%= link_to "編集", edit_article_path(article), method: "put" %>
@@ -11,45 +11,48 @@
 		<div class="entry-data">		
 			<div class="entry-image">
 
-				<%= link_to image_tag("#{cgrpage.image}", alt:"#{cgrpage.title}"), article_path(article.id) %>
+				<% if article.crawl_image == nil then %>				
+				<%= link_to image_tag("#{cgrpages.image}", alt:"#{cgrpages.title}"), article_path(article.id) %>
+	
+				<% else%>
+				
+					<img src=<%="#{cgrpages.crawl_image}"%> >
+
+				<% end %>
+
+
 			</div>
-
-
 			<p class="description">
-				
-				<%= sanitize "#{cgrpage.content}"%>
-				
+				<%= sanitize "#{cgrpages.content}"%>
 			</p>
-
 		</div>
 		<div class="readmore">
-			<button type = "button" class="btn btn-primary btn-large">
-				<a href = <%="cgrpage/#{cgrpage.id}"%>>動画を見る</a>
-			</button>
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="active"><a href=<%="#{article_path(article.id)}" %>>動画を見る</a></li>
+			
+			</ul>
 
 		</div>
 
 		<div class="entry-meta">
 			<ul class="category">
 				<li>カテゴリ：</li>
-				<li><%= link_to "#{cgrpage.category}", categories_path %></li>
+				<li><%= link_to "#{cgrpages.category}", categories_path %></li>
 				<% if article.category2 %>
-				<li><%= link_to "#{cgrpage.category2}", categories_path %></li>
+				<li><%= link_to "#{cgrpages.category2}", categories_path %></li>
 				<% end %>
 				<% if article.category3 %>
-				<li><%= link_to "#{cgrpage.category3}", categories_path %></li>
+				<li><%= link_to "#{cgrpages.category3}", categories_path %></li>
 				<% end %>
 				<% if article.category4 %>
-				<li><%= link_to "#{cgrpage.category4}", categories_path %></li>
+				<li><%= link_to "#{cgrpages.category4}", categories_path %></li>
 				<% end %>
 			</ul>
 			<p class="date">
-				最終更新: <%= "#{cgrpage.created_at.getlocal.to_formatted_s}"%>
+				最終更新: <%= "#{cgrpages.created_at.getlocal.to_formatted_s}"%>
 			</p>
 			<p class="domain">
-
-				<%= link_to "#{cgrpage.domain}", "#{cgrpage.domain}" %>
-
+				<%= link_to "#{cgrpages.domain}", "#{cgrpages.domain}" %>
 			</p>
 			<ul class = "social_buttons">
 				<li>
@@ -63,4 +66,3 @@
 		</div>
 	</div>
 </div>
-

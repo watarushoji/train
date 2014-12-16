@@ -51,16 +51,32 @@
 
 	<div class="entry-sidebar">
 		<div class = "display_only_pc">
-			<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
-			<div class="ninja-recommend-block" id="821bb18b382c26bb047953284277f524">
-				<script type="text/javascript" src="http://rcm.shinobi.jp/js/imp.js"></script>
-				<script type="text/javascript" src="http://rcm.shinobi.jp/r/821bb18b382c26bb047953284277f524"></script>
-			</div>
+			<h4><%= image_tag "newarticles.png" %>関連記事</h4>
+			<ul>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="popular_sidebar_content">
+					<div class="popular_sidebar_image">
+						<% if popular.crawl_image == nil then %>
+						<%= link_to image_tag(popular.image), article_path(popular.id) %>
+						<% else %>
+						<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+						<% end %>
+					</div>
+					<div class="popular_sidebar_title">
+						<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+					</div>
+					<div class = "popular_sidebar_description">
+						<%= "#{popular.content}" %>
+					</div>
+				</div>
+				<% end %>
+			</ul>
 		</div>
 
 		<div class = "display_only_sp">
 
-			<h4><%= image_tag "newarticles.png" %>当サイト新着記事</h4>
+			<h4><%= image_tag "newarticles.png" %>関連記事</h4>
 			<ul>
 				<% new_articles %>
 				<% @new.first(10).each do |popular| %>
@@ -78,10 +94,10 @@
 			</ul>
 		</div>
 	</div>
-
+				<%= render "show_footer_recommends" %>
 </div>
 
-<%= render "show_footer_recommends" %>
+
 <div class = "display_only_pc">
 	<%= render "sitemaps/sitemaps" %>
 </div>

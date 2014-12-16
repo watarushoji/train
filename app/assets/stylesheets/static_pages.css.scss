@@ -215,7 +215,7 @@ li{
 }
 .popular_sidebar_content{
   width:170px;
-  height:170px;
+  min-height:170px;
   margin:0px 10px 0px 10px;
   border-width:1px 1px 1px 1px;
   border-color: #cccccc;
@@ -230,6 +230,19 @@ li{
   width: 170px;
   height: 128px;
   overflow: hidden;
+}
+.popular_sidebar_title{
+  overflow:hidden;
+  max-height:40px;
+  margin-left:8px;
+  margin-right:8px;
+}
+.popular_sidebar_description{
+  font-size:0.5em;
+  overflow:hidden;
+  max-height:60px;
+  margin-left:10px;
+  margin-right:10px;
 }
 
 /*main_content*/
