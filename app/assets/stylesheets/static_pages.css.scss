@@ -23,7 +23,7 @@ $grayLighter: #fefefe;
 
   body {
     background-color: #fafafa;
-    font-size:94%;
+    font-size:0.9em;
     margin: 0 auto;
     max-width: 1024px;
    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
@@ -188,6 +188,15 @@ iframe{
     padding-left: 5px;
   }
 }
+
+.sidebarbox_inner{
+  margin-top: 3px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  font-size: 0.8em;
+}
+
 .sidebarbox_popular{
   border-width:2px 2px 2px 2px;
   border-color: #cccccc;
@@ -359,7 +368,7 @@ footer {
 
   body {
     background-color: #fafafa;
-    font-size:94%;
+    font-size:0.9em;
     max-width:640px;
     min-width:400px;
     margin:0 auto;
@@ -567,7 +576,6 @@ iframe{
   border-width:1px 1px 1px 1px;
   border-color: #cccccc;
   border-style:solid;
-  margin-right:5px;
  ul{
   list-style-image: url(/assets/list_popular.gif);
   list-style-position: inside;
@@ -596,6 +604,33 @@ li{
   overflow: hidden;
 }
 
+.sidebarbox_sp{
+  background-color:white;
+  border-width:2px 2px 2px 2px;
+  border-color: #cccccc;
+  border-style:solid;
+  margin-bottom:10px;
+  overflow:hidden;
+
+  ul{
+    list-style-image: url(/assets/list.gif);
+    list-style-position: inside;
+  }
+  li{
+    margin-top: 3px;
+    padding-left: 5px;
+  }
+}
+
+.sidebarbox_inner_sp{
+  margin-top: 3px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  font-size: 0.8em;
+}
+
+
 /*main_content*/
 .maincol_index{
   width:100%;
@@ -614,6 +649,11 @@ li{
 .maincol_index_content{
   min-width:400px;
 
+}
+.ad_footer_sp{
+  margin-left: 40px;
+  margin-right: 40px;
+  width: auto;
 }
 
 /* footer */
