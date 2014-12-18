@@ -30,6 +30,7 @@
 				</p>
 			</div>
 			<ul class="entry-category">
+				<li>カテゴリ：</li>
 				<li><%= link_to "#{@article.category}", '#' %></li>
 				<% if @article.category2 %>
 				<li><%= link_to "#{@article.category2}", '#' %></li>
@@ -42,7 +43,7 @@
 				<% end %>
 			</ul>
 			<p class="entry-date">
-				<%= "#{@article.created_at.getlocal}"%>
+				<%= "#{@article.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
 			</p>
 		</div>
 		<%= render "ad_show_footer" %>
@@ -51,7 +52,6 @@
 
 	<div class="entry-sidebar">
 		<div class = "display_only_pc">
-			<h4><%= image_tag "newarticles.png" %>関連記事</h4>
 			<ul>
 				<% new_articles %>
 				<% @new.first(10).each do |popular| %>
@@ -76,7 +76,7 @@
 
 		<div class = "display_only_sp">
 
-			<h4><%= image_tag "newarticles.png" %>関連記事</h4>
+			<h4><%= image_tag "newarticles.png" %>最新記事</h4>
 			<ul>
 				<% new_articles %>
 				<% @new.first(10).each do |popular| %>
@@ -94,7 +94,9 @@
 			</ul>
 		</div>
 	</div>
+	<div class = "show_footer">
 				<%= render "show_footer_recommends" %>
+			</div>
 </div>
 
 

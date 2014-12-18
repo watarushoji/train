@@ -266,6 +266,24 @@ li{
   max-width:814px;
 
 }
+/*footer_ad_pc*/
+.ad_footer_pc{
+  width:800px;
+  overflow:hidden;
+  height:auto;
+}
+.ad_footer_pc_left{
+  float:left;
+  width:490px;
+}
+.ad_footer_pc_right{
+  float:right;
+  width:290px;
+  margin-left:10px;
+  li{
+      line-height:1.9em;
+  }
+}
 
 /* footer */
 
@@ -663,11 +681,6 @@ li{
   min-width:400px;
 
 }
-.ad_footer_sp{
-  margin-left: 40px;
-  margin-right: 40px;
-  width: auto;
-}
 
 /* footer */
 
@@ -710,7 +723,20 @@ footer {
   font-weight: bolder;
 }
 
-
+/*footer_ad_sp*/
+.ad_footer_sp{
+  max-width:640px;
+}
+.ad_footer_sp_top{
+  max-width:640px;
+  margin:10px;
+  li{
+      line-height:1.5em;
+  }
+}
+.ad_footer_sp_bottom{
+  max-width:640px;
+}
 
 /*errors*/
 

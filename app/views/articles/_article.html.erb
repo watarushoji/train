@@ -1,4 +1,4 @@
-<% provide(:title, " ") %>
+
 <div class="article-box">
 	<h3>
 		<%= "#{article.title} " %>
@@ -13,10 +13,10 @@
 
 				<% if article.crawl_image == nil then %>				
 				<%= link_to image_tag("#{article.image}", alt:"#{article.title}"), article_path(article.id) %>
-	
+
 				<% else%>
 				
-					<img src=<%="#{article.crawl_image}"%> >
+				<img src=<%="#{article.crawl_image}"%> >
 
 				<% end %>
 
@@ -29,7 +29,7 @@
 		<div class="readmore">
 			<ul class="nav nav-pills nav-stacked">
 				<li role="presentation" class="active"><a href=<%="#{article_path(article.id)}" %>>動画を見る</a></li>
-			
+
 			</ul>
 
 		</div>
@@ -49,7 +49,7 @@
 				<% end %>
 			</ul>
 			<p class="date">
-				最終更新: <%= "#{article.created_at.getlocal.to_formatted_s}"%>
+				最終更新: <%= "#{article.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
 			</p>
 			<p class="domain">
 				<%= link_to "#{article.domain}", "#{article.domain}" %>
