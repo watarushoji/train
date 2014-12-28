@@ -7,11 +7,6 @@
 	<%= render 'shared/error_messages' %>
 	<div class="float-form-left">
 
-		<% @article.title = "a" %>
-		<% @article.content = "a" %>
-		<% @article.domain = "abc" %>
-		<% @article.sumnail = "a" %>
-
 		<%= f.label :title %>
 		<%= f.text_field :title %>
 
@@ -24,7 +19,6 @@
 		<%= f.text_field :sumnail, :size => "100x15" %>
 		<%= f.label :image %>
 		<%= f.file_field :image %>
-
 
 	</div>
 	<div class = "float-form-right">
