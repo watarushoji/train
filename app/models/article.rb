@@ -3,9 +3,13 @@ require 'carrierwave/orm/activerecord'
 class Article < ActiveRecord::Base
 	validates :title, presence: true
 	validates :content, presence: true
-	validates :category, presence: true
 	validates :domain, presence: true
 	validates :sumnail, presence: true
+
+  has_many :categorizations
+  has_many :categories, through: :categorizations
+  has_many :article_categories, through: :categorizations, source: :category
+
 
 	mount_uploader :image, ImageUploader
 

@@ -4,23 +4,7 @@
 			<nav>
 				<ul class = "nav pull-left">
 					<li ><%= link_to image_tag("home.png", alt: "home"), root_path %></li>
-					<!-- <li class = "dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
-						<%= image_tag "searchform.png" %>
-						<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<form class="form-search ">
-									<span class = "search_description"></span>
-									<%= form_tag articles_path, :method => 'get', :action => 'index' do %> <%#　projects_pathはモデル名で読みかえること %>
-									<%= text_field_tag :search, params[:search] %>
-									<%= submit_tag "全文検索", :name => nil %>
-									<% end %>
-								</form>
-							</li>
-						</ul>								
-					</li>
- -->
+
 					<li class = "dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><%= image_tag("menu.png") %>About<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">

@@ -1,40 +1,96 @@
 
-<h1>Create Article</h1>
+<h2>Edit Article</h2>
 
 
 <div class="form-box">
-		<%= form_for @article do |f| %>
-		<%= render 'shared/error_messages' %>
-		<div class="float-form-left">
+	<%= form_for @article do |f| %>
+	<%= render 'shared/error_messages' %>
+	<div class="float-form-left">
+
+		<% @article.title = "a" %>
+		<% @article.content = "a" %>
+		<% @article.domain = "abc" %>
+		<% @article.sumnail = "a" %>
 
 		<%= f.label :title %>
 		<%= f.text_field :title %>
 
 		<%= f.label :content %>
 		<%= f.text_area :content, :size => "40x10" %>
-
-	</div>
-		<div class="float-form-right">
-
-		<%= f.label :category %>
-		<%= f.select :category, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true %>
-		<%= f.label :category2 %>
-		<%= f.select :category2, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true %>
-		<%= f.label :category3 %>
-		<%= f.select :category3, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true %>
-		<%= f.label :category4 %>
-		<%= f.select :category4, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true %>
-
-		<%= f.label :domain %>
+				<%= f.label :domain %>
 		<%= f.text_field :domain, :size => "200x15" %>
 
 		<%= f.label :sumnail %>
 		<%= f.text_field :sumnail, :size => "100x15" %>
 		<%= f.label :image %>
 		<%= f.file_field :image %>
-				<%= f.submit "Create an Article", class: "btn btn-small" %>
+
+
+	</div>
+	<div class = "float-form-right">
+		<%= f.label :categories %>
+		<%= collection_check_boxes(:article, :category_ids, Category.all, :id, :name) do |b| %>
+			<%= b.label { b.check_box + b.text } %>
+		<% end %>
+
+		<%= f.submit "Edit an Article", class: "btn btn-small" %>
+
 	</div>
 
 		<% end %>
 	</div>
+</div>
+<div class = "float-form-left">
+		<h4>エロタレスト人気ワード20141216</h4>
+		<ul>
+			<li>1. ライブチャット</li>
+			<li>2. マジックミラー号</li>
+			<li>3. レイプ</li>
+			<li>4. センズリ鑑賞</li>
+			<li>5. 中出し</li>
+			<li>6. 素人</li>
+			<li>7. ナンパ</li>
+			<li>8. ロリ</li>
+			<li>9. 人妻</li>
+			<li>10. 媚薬</li>
+			<li>11. 個人撮影</li>
+			<li>12. 巨乳</li>
+			<li>13. 熟女</li>
+			<li>14. オナニー</li>
+			<li>15. マッサージ</li>
+			<li>16. 近親相姦</li>
+			<li>17. 松岡ちな</li>
+			<li>18. 素股</li>
+			<li>19. ギャル</li>
+			<li>20. フェラ</li>
+			<li>21. パイズリ</li>
+			<li>22. レズ</li>
+			<li>23. 麻宮まどかAVdebut</li>
+			<li>24. ヘンリー塚本</li>
+			<li>25. jk</li>
+			<li>26. リモコンバイブ</li>
+			<li>27. アニコス</li>
+			<li>28. 手コキ</li>
+			<li>29. 爆乳</li>
+			<li>30. 母乳</li>
+			<li>31. 帽子君</li>
+			<li>32. 潮吹き</li>
+			<li>33. 痴漢</li>
+			<li>34. videomega</li>
+			<li>35. 盗撮</li>
+			<li>36. 痴女</li>
+			<li>37. 童貞</li>
+			<li>38. 城田理加</li>
+			<li>39. 着衣パイズリ</li>
+			<li>40. アナル</li>
+			<li>41. 女子高生</li>
+			<li>42. ぽっちゃり</li>
+			<li>43. XVIDEOS</li>
+			<li>44. アニメ</li>
+			<li>45. 美少女</li>
+			<li>46. パンチラ</li>
+			<li>47. 黒ギャル</li>
+			<li>48. アナル舐め</li>
+
+</div>
 

@@ -30,17 +30,8 @@
 				</p>
 			</div>
 			<ul class="entry-category">
-				<li>カテゴリ：</li>
-				<li><%= link_to "#{@article.category}", '#' %></li>
-				<% if @article.category2 %>
-				<li><%= link_to "#{@article.category2}", '#' %></li>
-				<% end %>
-				<% if @article.category3 %>
-				<li><%= link_to "#{@article.category3}", '#' %></li>
-				<% end %>
-				<% if @article.category4 %>
-				<li><%= link_to "#{@article.category4}", '#' %></li>
-				<% end %>
+				
+
 			</ul>
 			<p class="entry-date">
 				<%= "#{@article.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>

@@ -159,6 +159,8 @@ ul.entry-social_buttonsj{
 .float-form-right{
 	float:right;
 	width: 250px;
+	max-height: 300px;
+	overflow: scroll;
 }
 .float-form-left-keywords{
 	float:left;
@@ -167,6 +169,10 @@ ul.entry-social_buttonsj{
 	height: 320px;
 	overflow: scroll;
 }
+.checkbox{
+	overflow: auto;
+}
+
 
 .digg_pagination {
   background: #faffff;

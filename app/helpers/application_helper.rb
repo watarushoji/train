@@ -7,6 +7,11 @@ module ApplicationHelper
 			"おっぱいの海で泳ぎたい | #{page_title}"
 		end
 	end
+	def category_count(name)
+		@category_record = Category.where("name = ?", name).first 
+		@count = @category_record.articles.count
+		return @count
+	end
 
 	def cgrpages_count(name)
 		Article.where(["category = ? or category2 = ? or category3 = ? or category4 = ?", name, name, name, name]).count

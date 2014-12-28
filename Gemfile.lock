@@ -27,6 +27,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.4.2)
+      activerecord (>= 3.2, < 5)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
@@ -222,6 +224,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sitemap_generator (5.0.5)
       builder
     slop (3.6.0)
@@ -273,6 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (= 3.4.2)
   bcrypt-ruby (= 3.1.5)
   bootstrap-sass (= 2.3.2.0)
   bootstrap-will_paginate (= 0.0.10)
@@ -306,6 +312,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  simple_form (= 3.0.2)
   sitemap_generator
   spork-rails
   spring

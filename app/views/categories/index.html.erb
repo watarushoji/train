@@ -1,0 +1,20 @@
+<h2>カテゴリ・タグ</h2>
+<table class="sample_02">
+	<tbody>
+			<tr>
+		<th>id</th>
+		<th>カテゴリ</th>
+		<th>スコア</th>
+		<th>編集/削除リンク</th>
+	</tr>
+	<% @category.each do |c| %>
+
+	<tr>
+		<td><%= c.id %></td>
+		<td><%= c.name %> </td>
+		<td><%= c.score %> </td>
+		<td><%= link_to "編集", edit_category_path(c.id) %> <%= link_to "削除", "/categories/#{c.id}", method: "delete",data: { confirm: "You sure?" } %></td>
+	</tr>
+	<% end %>
+</tbody>
+</table>

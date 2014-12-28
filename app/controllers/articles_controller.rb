@@ -7,13 +7,17 @@ class ArticlesController < ApplicationController
 		end
 	end
 	def edit
-		@article = Article.find(params[:id])
+		if signed_in? 
+			@article = Article.find(params[:id])
+		else
+			redirect_to root_path 
+		end
 	end
 	def update
 		   @article = Article.find(params[:id])
     	if @article.update_attributes(article_params)
       		 flash[:success] = "Article updated"
-      		 redirect_to @article
+      		 redirect_to root_path
     	else
       		render 'edit'
     	end
@@ -51,7 +55,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :category,:category2,:category3,:category4, :content, :sumnail, :domain, :image, :pv, :from_crawl, :crawl_image, :site)
+		params.require(:article).permit(:title, :category,:category2,:category3,:category4, :content, :sumnail, :domain, :image, :pv, :from_crawl, :crawl_image, :site, {:category_ids => []})
 	end
 
 end

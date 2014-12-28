@@ -6,7 +6,15 @@ Rails.application.routes.draw do
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
   resources :crawlsites, only: [:index, :create, :destroy]
+  resources :articles, only: [:show] do
+    collection do
+      resources :categories, only: [:show]
+    end
+  end
+  resources :categories
 
+  match '/articles/categories/:id/popular', to: 'categories#popular', via: 'get'
+  
   #crawlsites
   get '/crawlsites/:id/new', to:'crawlsites#new'
   match '/clearall', to:'crawlsites#delete_all_records', via:'delete'

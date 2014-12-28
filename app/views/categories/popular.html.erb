@@ -1,0 +1,16 @@
+<% provide(:title, "#{@category}") %>
+
+<h2>カテゴリ「 <%= "#{@category}" %>  」の記事一覧 （全<%= "#{@categories.count}" %>件）人気順</h2>
+<p>
+【<%= link_to "新着順", category_path(@category) %>】
+【<%= link_to "人気順", "/articles/categories/#{@category}/popular" %>】
+</p>
+<%= render @categories %>
+<%= render "articles/ad_index_footer" %>
+
+<div class = "digg_pagination">
+	<%= will_paginate %>
+</div>
+
+<%= render "layouts/ad_footer" %>
+

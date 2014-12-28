@@ -12,24 +12,11 @@
 		<% @article.domain = "abc" %>
 		<% @article.sumnail = "a" %>
 
-
 		<%= f.label :title %>
 		<%= f.text_field :title %>
 
 		<%= f.label :content %>
 		<%= f.text_area :content, :size => "40x10" %>
-	</div>
-	<div class = "float-form-right">
-
-		<%= f.label :category %>
-		<%= f.select :category, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } %>
-		<%= f.label :category2 %>
-		<%= f.select :category2, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true  %>
-		<%= f.label :category3 %>
-		<%= f.select :category3, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true  %>
-		<%= f.label :category4 %>
-		<%= f.select :category4, {"AV女優" => "AV女優", "美少女" => "美少女","ギャル" => "ギャル","素人" => "素人","企画" => "企画","フェチ"=>"フェチ","おっぱい"=>"おっぱい","フェラ/手コキ"=>"フェラ/手コキ","盗撮"=>"盗撮","放尿/脱糞"=>"放尿/脱糞","女子高生"=>"女子高生","女子大生"=>"女子大生","お宝/ハプニング"=>"お宝/ハプニング","アイドル"=>"アイドル" } , :include_blank => true  %>
-
 		<%= f.label :domain %>
 		<%= f.text_field :domain, :size => "200x15" %>
 
@@ -38,8 +25,17 @@
 		<%= f.label :image %>
 		<%= f.file_field :image %>
 		<%= f.submit "Create an Article", class: "btn btn-small" %>
-		<% end %>
+
 	</div>
+	<div class = "float-form-right">
+		<%= f.label :categories %>
+		<%= collection_check_boxes(:article, :category_ids, Category.all, :id, :name) do |b| %>
+			<%= b.label { b.check_box + b.text } %>
+		<% end %>
+
+		<%= f.submit "Create an Article", class: "btn btn-small" %>
+	</div>
+	<% end %>
 </div>
 <div class = "float-form-left">
 		<h4>エロタレスト人気ワード20141216</h4>
