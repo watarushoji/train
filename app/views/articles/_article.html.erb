@@ -1,7 +1,6 @@
-<% provide(:title, "ホーム/新着") %>
 <div class="article-box">
 	<h3>
-		<%= "#{article.title} " %>
+		<span class = "clicks"><%= "#{article.pv}" %></span><span class = "clicks_clicks">clicks  </span><%= "#{article.title} " %>
 		<% if signed_in? %>
 		| <%= link_to "削除", article, method: "delete",data: { confirm: "You sure?" } %>
 		| <%= link_to "編集", edit_article_path(article), method: "put" %>
