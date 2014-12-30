@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'huzokus/index'
+
+  get 'huzoku/index'
+
   root 'articles#index'
 
   #resources
@@ -12,6 +16,7 @@ Rails.application.routes.draw do
     end
   end
   resources :categories
+  resources :huzokus
 
   match '/articles/categories/:id/popular', to: 'categories#popular', via: 'get'
   
