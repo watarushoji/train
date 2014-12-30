@@ -215,35 +215,28 @@ li{
 } 
 }
 .popular_sidebar_content{
-  width:170px;
-  min-height:170px;
-  margin:0px 10px 0px 10px;
-  border-width:1px 1px 1px 1px;
-  border-color: #cccccc;
-  border-style:solid;
-  background-color:white;
-  li{
-    overflow:hidden;
-    max-height:40px;
-  }
+  width:196px;
 }
 .popular_sidebar_image{
-  width: 170px;
-  height: 128px;
-  overflow: hidden;
+  width: 192px;
+  height: 110px;
+  overflow: scroll;
 }
 .popular_sidebar_title{
-  overflow:hidden;
-  max-height:40px;
-  margin-left:8px;
-  margin-right:8px;
+  font-weight:bold;
+  margin-top: 4px;
+  margin-bottom: 1px;
+  font-size: 13px;
+  max-width: 176px;  
 }
 .popular_sidebar_description{
-  font-size:0.5em;
+  font-size:0.8em;
   overflow:hidden;
+  color: #777;
   max-height:60px;
   margin-left:10px;
   margin-right:10px;
+  text-align:right;
 }
 
 /*main_content*/
@@ -398,6 +391,11 @@ background-color: #fafafa;
 border-right: 1px solid #ccc;
 border-bottom: 1px solid #ccc;
 }
+.next{
+  text-align:right;
+  margin-left:115px;
+  font-weight:bold;
+}
 
 
 
@@ -440,7 +438,7 @@ border-bottom: 1px solid #ccc;
     margin:0 auto;
       margin-left:10px;
     margin-right:10px;
-    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
   }
 
   section {

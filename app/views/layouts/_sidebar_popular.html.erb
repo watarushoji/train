@@ -1,37 +1,47 @@
-	<div class = "display_only_pc">
-		<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
-		<ul>
-			<% popular_sidebar %>
-			<% @popular.first(5).each do |popular| %>
-			<div class="popular_sidebar_content">
-				<div class="popular_sidebar_image">
-					<% if popular.crawl_image == nil then %>
-					<%= link_to image_tag(popular.image), article_path(popular.id) %>
-					<% else %>
-					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
-					<% end %>
-				</div>
-				<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
-			</div>
-			<% end %>
-		</ul>
-	</div>
-	<div class = "display_only_sp">
 
-		<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
-		<ul>
-			<% popular_sidebar %>
-			<% @popular.first(6).each do |popular| %>
-			<div class="popular_sidebar_content_sp">
-				<div class="popular_sidebar_image_sp">
-					<% if popular.crawl_image == nil then %>
-					<%= link_to image_tag(popular.image), article_path(popular.id) %>
-					<% else %>
-					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
-					<% end %>
-				</div>
+<div class = "display_only_pc">
+	<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
+	<ul>
+		<% popular_sidebar %>
+		<% @popular.first(5).each do |popular| %>
+		<div class="popular_sidebar_content">
+			<div class="popular_sidebar_image">
+				<% if popular.crawl_image == nil then %>
+				<%= link_to image_tag(popular.image), article_path(popular.id) %>
+				<% else %>
+				<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+				<% end %>
+			</div>
+			<div class="popular_sidebar_title">
 				<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
 			</div>
-			<% end %>
-		</ul>
-	</div>
+			<div class = "popular_sidebar_description">
+				<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span>
+				<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
+			</div>
+		</div>
+		<% end %>
+		<span class = "next">
+		<%= link_to "続きを見る", "http://dive-in-boobs/popmovies" %>
+		</span>
+	</ul>
+</div>
+<div class = "display_only_sp">
+
+	<h4><%= image_tag "manulist.gif" %>最新の人気記事</h4>
+	<ul>
+		<% popular_sidebar %>
+		<% @popular.first(6).each do |popular| %>
+		<div class="popular_sidebar_content_sp">
+			<div class="popular_sidebar_image_sp">
+				<% if popular.crawl_image == nil then %>
+				<%= link_to image_tag(popular.image), article_path(popular.id) %>
+				<% else %>
+				<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+				<% end %>
+			</div>
+			<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+		</div>
+		<% end %>
+	</ul>
+</div>
