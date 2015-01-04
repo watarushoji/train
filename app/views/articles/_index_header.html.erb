@@ -23,12 +23,14 @@
 
 <form class="form-search ">
 	<span class = "search_description">
-		タイトルと説明文の中から検索し、一致したワードを含む記事を表示します。</br>
+		タイトルと説明文の中から検索し、一致したワードを含む記事を表示します。
 		何も表示されなかった場合は該当記事がなかったということです。キーワードを変えて再検索をお願いします。
+		</br>
 	</span>
 	<%= form_tag articles_path, :method => 'get', :action => 'index' do %> <%#　projects_pathはモデル名で読みかえること %>
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "記事内全文検索", :name => nil %>
 	<% end %>
 </form>
+</br>
 <h2>ホーム/新着</h2>

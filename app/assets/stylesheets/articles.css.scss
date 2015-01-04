@@ -158,21 +158,9 @@ ul.social_buttons{
 	margin-left:10px;
 	font-size:0.7em;
 }
+			
 
-ul.entry-category{
-	margin: 5px 0px 5px 0;
-	font-size: 0.9em;
-		li {
-			display:inline-block;
-			background-color:#f0ffff;
-	}
-}
-p.entry-date{
-	line-height: 12px;
-	font-size:0.7em;
-}				
-
-ul.entry-social_buttonsj{
+.entry-social_buttonsj{
 	li{
 		display:inline-block;
 	}
@@ -380,9 +368,14 @@ li.ad-content-show{
 .entry-data{
 	min-height: 150px;
 }
-p.description{
-	color:#838397;
-
+.entry-description{
+	p{
+		
+	color:#24248F;
+	font-size:13px;
+	margin-left:10px;
+	margin-right:10px;
+	}
 }
 
 .readmore{
