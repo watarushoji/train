@@ -19,7 +19,6 @@ body {
   background-color: $BodyBackground;
   font-size:0.9em;
   margin: 0 auto;
-  max-width: 1044px;
   font-family: 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
   /*font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;*/
 }
@@ -490,15 +489,16 @@ footer {
 
 
   body {
-
-      margin-left:10px;
-    margin-right:10px;
+    max-width:640px;
+    min-width:320px;
   }
 
 
  .paisea{
   max-width:640px;
   min-width:300px;
+        margin-left:5px;
+    margin-right:5px;
 }
 p{
   color:#24248F;
