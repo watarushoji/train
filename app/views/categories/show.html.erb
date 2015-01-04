@@ -4,7 +4,6 @@
 <%= link_to "新着順", category_path(@category) %>
 <%= link_to "人気順", "/articles/categories/#{@category}/popular" %>
 <%= render @categories %>
-<%= render "articles/ad_index_footer" %>
 
 <div class = "digg_pagination">
 	<%= will_paginate %>

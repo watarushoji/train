@@ -12,6 +12,11 @@
     border-color: #cccccc;
     border-style:solid;
 }
+
+
+.article-box-title-container{
+
+}
 .article-content{
 	margin-left:5px;
 	margin-right:5px;
@@ -344,8 +349,7 @@ li.ad-content-show{
 	overflow: auto;
 }
 .entry-footer{
-	width: 600px;
-	float:left;
+	max-width: 600px;
 }
 
 /*article*/

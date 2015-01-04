@@ -1,8 +1,5 @@
 <% provide(:title, "#{@article.title}") %>
 
-<h3>
-	<%= "#{@article.title}" %>
-</h3>
 <div class="entry-box">
 	<!-- 動画埋め込みタグ -->
 	<div class="entry-main">
@@ -14,9 +11,9 @@
 		</div>
 
 		<div class="entry-data-show">
-			<div class="ad-content-show">
-				<%= render 'ad_show_header' %>
-			</div>
+			<h3>
+				<%= "#{@article.title}" %>
+			</h3>
 			<div class="entry-description">
 				<h4>動画詳細</h4>
 				<span class = "entry-social_button">
@@ -41,82 +38,89 @@
 				最終更新：<%= "#{@article.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
 			</p>
 		</div>
-		<%= render "ad_show_footer" %>
 
 	</div>
 
 	<div class="entry-sidebar">
 		<div class = "display_only_pc">
+			<!-- i-mobile for PC client script -->
+			<script type="text/javascript">
+			imobile_pid = "34711"; 
+			imobile_asid = "348946"; 
+			imobile_width = 200; 
+			imobile_height = 200;
+			</script>
+			<script type="text/javascript" src="http://spdeliver.i-mobile.co.jp/script/ads.js?20101001"></script>
 
-			<h4><%= image_tag "manulist.gif" %>ピックアップサイト</h4>
+		</div>
+		<div class = "display_only_pc">
 			<ul>
-				<div class = "entry-sidebar-content">
-					<div class="entry_sidebar_image">		
-						<a href = "http://eronews.ranks1.apserver.net/share/in.php?u=eronews&id=6683pc"><%= image_tag "eroshinbun.png"%> </a>
+				<h4><%= image_tag "manulist.gif" %>新着記事</h4>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="entry-sidebar-content">
+					<div class="entry-sidebar-image">
+						<% if popular.crawl_image == nil then %>
+						<%= link_to image_tag(popular.image), article_path(popular.id) %>
+						<% else %>
+						<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+						<% end %>
 					</div>
 					<div class="entry-sidebar-title">
-						<li><a href = "http://eronews.ranks1.apserver.net/share/in.php?u=eronews&id=6683pc">毎日エロ新聞</a></li>
+						<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
 					</div>
-					<div class="entry-sidebar-description">
-						<p>エロ画像・動画リンクを毎日更新。アダルトサイトのリンク集です。新しいお気に入りサイトを発掘しましょう。</p>
+					<div class = "entry-sidebar-description">
+						<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span>
+						<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
 					</div>
 				</div>
+				<% end %>
+				<span class = "next">
+					<%= link_to "続きを見る", "http://dive-in-boobs.com/?page=2" %>
+				</span>
 			</ul>
 		</div>
-		<ul>
-			<h4><%= image_tag "manulist.gif" %>新着記事</h4>
-			<% new_articles %>
-			<% @new.first(10).each do |popular| %>
-			<div class="entry-sidebar-content">
-				<div class="entry-sidebar-image">
-					<% if popular.crawl_image == nil then %>
-					<%= link_to image_tag(popular.image), article_path(popular.id) %>
-					<% else %>
-					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
-					<% end %>
-				</div>
-				<div class="entry-sidebar-title">
-					<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
-				</div>
-				<div class = "entry-sidebar-description">
-					<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span>
-					<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
-				</div>
-			</div>
-			<% end %>
-			<span class = "next">
-			<%= link_to "続きを見る", "http://dive-in-boobs.com/?page=2" %>
-			</span>
-		</ul>
-	</div>
 
-	<div class = "display_only_sp">
+		<div class = "display_only_sp">
 
-		<h4><%= image_tag "newarticles.png" %>最新記事</h4>
-		<ul>
-			<% new_articles %>
-			<% @new.first(10).each do |popular| %>
-			<div class="popular_sidebar_content_sp">
-				<div class="popular_sidebar_image_sp">
-					<% if popular.crawl_image == nil then %>
-					<%= link_to image_tag(popular.image), article_path(popular.id) %>
-					<% else %>
-					<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
-					<% end %>
+			<h4><%= image_tag "manulist.gif" %>最新記事</h4>
+			<ul>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="hover_image_list">
+					<li>
+						<a href = <%="/articles/#{popular.id}" %>>
+							<div class="popular_sidebar_content_sp">
+
+								<div class="popular_sidebar_image_sp">
+									<% if popular.crawl_image == nil then %>
+									<%= image_tag(popular.image) %>
+									<% else %>
+									<%= image_tag(popular.crawl_image) %>
+									<% end %>
+								</div>
+								<div class="popular_sidebar_title_sp">
+									<%= "#{popular.title}" %>
+								</div>
+								<div class="popular_sidebar_description_sp">
+									<p><%= "#{popular.content}" %></p>
+								</div>
+
+							</div>
+						</a>
+					</li>
 				</div>
-				<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
-			</div>
-			<% end %>
-		</ul>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 	<div class = "entry-footer">
 		<%= render "show_footer_recommends" %>
 	</div>
 
-</div>
 
 
-
-<div class = "display_only_pc">
-	<%= render "sitemaps/sitemaps" %>
+	<div class = "display_only_pc">
+		<%= render "sitemaps/sitemaps" %>
+	</div>
 </div>

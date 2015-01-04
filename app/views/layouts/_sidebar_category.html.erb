@@ -1,28 +1,32 @@
 <div class = "display_only_pc">
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
 
-	<table class = "category_table_pc">
-		<tbody>
+	<div class = "hover_list">
+		<ul>
 			<% @category = Category.all.order("score DESC") %>
 			<% @category.each do |category| %>
-			<tr>
-				<td><%= image_tag("list.png") %>  <%= link_to "#{category.name} （#{category.articles.count}）", "/articles/categories/#{category.name}" %></td>
-			</tr>
+			<li>
+				<a href = <%= "/articles/categories/#{category.name}" %>>
+					  <%=  "#{category.name} （#{category.articles.count}）" %>
+				</a>
+			</li>
 			<% end %>
-		</tbody>
-	</table>
+		</ul>
+	</div>
 </div>
 <div class = "display_only_sp">
 
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
-	<ul>
-		<div class="nav nav-pills nav-stacked">
+	<div class = "hover_list">
+		<ul>
 			<% @category = Category.all.order("score DESC") %>
 			<% @category.each do |category| %>
 			<li>
-				<%= link_to "#{category.name} （#{category.articles.count}）", "/articles/categories/#{category.name}" %>
+				<a href = <%= "/articles/categories/#{category.name}" %>>
+					  <%=  "#{category.name} （#{category.articles.count}）" %>
+				</a>
 			</li>
 			<% end %>
-		</div>
-	</ul>
+		</ul>
+	</div>
 </div>

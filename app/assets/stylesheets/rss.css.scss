@@ -120,8 +120,7 @@ $grayLighter: #fefefe;
     .blogroll-channel,
 .blogroll-channel * {
     max-width: 630px;
-    max-height: 500px;
-    overflow-y:scroll;
+    overflow-y:none;
     margin-left: 0px;
     margin-right: 5px;
     padding: 5px;
@@ -129,13 +128,12 @@ $grayLighter: #fefefe;
     text-align: left;
 }
 .blogroll-channel {
-    max-height: 700px;
+    max-height: 2000px;
     margin-bottom: 5x;
     padding: 5px;
     border-top: solid 1px #ECECEC;
     border-bottom: solid 1px #ECECEC;
     background: #fff;
-    overflow-y: scroll;
 }
 
 .blogroll-channel .blogroll-list-wrap {
