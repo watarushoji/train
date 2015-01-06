@@ -280,9 +280,15 @@ ul.social_buttons{
 
 
 @media screen and (max-width: 640px){
+.spwords{
+	margin-left:10px;
+	margin-right:10px;
+	line-height:15px;
+	font-size:10px;
+}
 
 h3{
-	line-height:15px;
+	line-height:20px!important;
 	font-size:13px;
 }
 h2{
@@ -409,19 +415,14 @@ p.date{
 }				
 .entry-meta{
 	text-align:right;
+	min-width:300px;
+	overflow:hidden;
 
 }
-li.domain{
-	margin-right: 20px;
-	font-family: 'Arial';
-	font-size: 12px;
-	height: 16px;
+
+.domain{
 	overflow: hidden;
-	max-width:390px;
-}
-p.domain{
-	overflow: hidden;
-	max-width:400px;
+	width:300px;
 
 }
 ul.social_buttons{
