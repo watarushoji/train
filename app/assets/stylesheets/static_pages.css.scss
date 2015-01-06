@@ -36,6 +36,7 @@ ul {
 }
 p{
   line-height:1.7em;
+  font-size:13px;
 }
 h1{
   display:block;
@@ -252,6 +253,20 @@ footer {
   text-align:center;
 }
 
+.nav-container{
+  max-width:1044px;
+  margin:0 auto;
+}
+
+.pcwords{
+  margin-left:15px;
+  margin-left:15px;
+  line-height:1.7em;
+  font-size:13px;
+  p{
+    margin-bottom:15px;
+  }
+}
 
 /*------------------------*//*------------------------*/
 /*------------------------*//*------------------------*/
@@ -501,7 +516,7 @@ footer {
     margin-right:5px;
 }
 p{
-  color:#24248F;
+  color:#222;
 }
 
 h2{

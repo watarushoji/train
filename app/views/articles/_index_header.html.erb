@@ -39,8 +39,10 @@
 
 <form class="form-search ">
 	<div class = "spwords">
+		<p>
 		タイトルと説明文の中から検索し、一致したワードを含む記事を表示します。
 		何も表示されなかった場合は該当記事がなかったということです。キーワードを変えて再検索をお願いします。
+		</p>
 	</div>
 </br>
 	<%= form_tag articles_path, :method => 'get', :action => 'index' do %> <%#　projects_pathはモデル名で読みかえること %>
