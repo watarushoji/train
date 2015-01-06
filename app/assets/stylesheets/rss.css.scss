@@ -25,15 +25,12 @@ $grayLighter: #fefefe;
     width: auto;
     max-height: 2000px;
     overflow-y:scroll;
-    margin: 0;
-    padding: 5px;
+    margin: 3px;
     border: none;
     text-align: left;
 }
 .blogroll-channel {
     max-height: 2000px;
-    margin-bottom: 15px;
-    padding: 8px;
     border-top: solid 1px #ECECEC;
     border-bottom: solid 1px #ECECEC;
     background: #fff;
@@ -41,14 +38,14 @@ $grayLighter: #fefefe;
 }
 
 .blogroll-channel .blogroll-list-wrap {
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     list-style-position: outside;
 }
 
 .blogroll-channel .blogroll-list {
     list-style-type: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
     font-size: 14px;
     line-height: 1.4;
 
@@ -121,16 +118,12 @@ $grayLighter: #fefefe;
 .blogroll-channel * {
     max-width: 630px;
     overflow-y:none;
-    margin-left: 0px;
-    margin-right: 5px;
-    padding: 5px;
     border: none;
     text-align: left;
 }
 .blogroll-channel {
     max-height: 2000px;
-    margin-bottom: 5x;
-    padding: 5px;
+    margin: 3px;
     border-top: solid 1px #ECECEC;
     border-bottom: solid 1px #ECECEC;
     background: #fff;
@@ -143,8 +136,6 @@ $grayLighter: #fefefe;
 
 .blogroll-channel .blogroll-list {
     list-style-type: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
     font-size: 12px;
     line-height: 1.3;
     border-style: solid;
@@ -194,7 +185,7 @@ $grayLighter: #fefefe;
 .blogroll-channel .blogroll-ad-text {
     margin-top: 5px;
     color: #ccc;
-    font-size: 8px;
+    font-size: 4px;
     text-align:right;
 }
 

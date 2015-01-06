@@ -103,7 +103,9 @@
 									<%= "#{popular.title}" %>
 								</div>
 								<div class="popular_sidebar_description_sp">
-									<p><%= "#{popular.content}" %></p>
+									<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span></br>
+									<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
+
 								</div>
 
 							</div>
