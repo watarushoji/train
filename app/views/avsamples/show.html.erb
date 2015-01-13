@@ -1,0 +1,129 @@
+<% provide(:title, "#{@avsample.title}") %>
+
+<div class="entry-box">
+	<!-- 動画埋め込みタグ -->
+	<div class="entry-main">
+		<div class="entry-movie">
+			<%= @avsample.sumnail.html_safe %>
+		</div>
+		<div class="entry-original">
+			<p>見れない場合はこちらから（元サイトへ）→ <%= link_to "#{@avsample.domain}", "#{@avsample.domain}" %></p>
+		</div>
+
+		<div class="entry-data-show">
+			<h3>
+				<%= "#{@avsample.title}" %>
+			</h3>
+			<div class="entry-description">
+				<h4>動画詳細</h4>
+				<span class = "entry-social_button">
+					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/avsamples/#{@avsample.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{@avsample.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</span>
+				<p>
+					<%= sanitize "#{@avsample.content}"%>
+				</p>
+			</div>
+			<ul class="category">
+				カテゴリ：
+				<li><%= link_to "無料AV動画", avsamples_path %></li>
+
+			</ul>
+			<p class="date">
+				最終更新：<%= "#{@avsample.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
+			</p>
+		</div>
+
+	</div>
+
+	<div class="entry-sidebar">
+		<div class = "display_only_pc">
+			<!-- i-mobile for PC client script -->
+			<script type="text/javascript">
+			imobile_pid = "34711"; 
+			imobile_asid = "348946"; 
+			imobile_width = 200; 
+			imobile_height = 200;
+			</script>
+			<script type="text/javascript" src="http://spdeliver.i-mobile.co.jp/script/ads.js?20101001"></script>
+
+		</div>
+		<div class = "display_only_pc">
+			<ul>
+				<h4><%= image_tag "manulist.gif" %>新着記事</h4>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="entry-sidebar-content">
+					<div class="entry-sidebar-image">
+						<% if popular.crawl_image == nil then %>
+						<%= link_to image_tag(popular.image), article_path(popular.id) %>
+						<% else %>
+						<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+						<% end %>
+					</div>
+					<div class="entry-sidebar-title">
+						<li><%= link_to "#{popular.title}", article_path(popular.id) %></li>
+					</div>
+					<div class = "entry-sidebar-description">
+						<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span>
+						<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
+					</div>
+				</div>
+				<% end %>
+				<span class = "next">
+					<%= link_to "続きを見る", "http://dive-in-boobs.com/?page=2" %>
+				</span>
+			</ul>
+		</div>
+
+		<div class = "display_only_sp">
+			<!-- i-mobile for SmartPhone client script -->
+			<script type="text/javascript">
+			imobile_tag_ver = "0.2"; 
+			imobile_pid = "34711"; 
+			imobile_asid = "353624"; 
+			imobile_type = "inline";
+			</script>
+			<script type="text/javascript" src="http://spad.i-mobile.co.jp/script/adssp.js?20110215"></script>
+
+
+			<h4><%= image_tag "manulist.gif" %>最新記事</h4>
+			<ul>
+				<% new_articles %>
+				<% @new.first(10).each do |popular| %>
+				<div class="hover_image_list">
+					<li>
+						<a href = <%="/articles/#{popular.id}" %>>
+							<div class="popular_sidebar_content_sp">
+
+								<div class="popular_sidebar_image_sp">
+									<% if popular.crawl_image == nil then %>
+									<%= image_tag(popular.image) %>
+									<% else %>
+									<%= image_tag(popular.crawl_image) %>
+									<% end %>
+								</div>
+								<div class="popular_sidebar_title_sp">
+									<%= "#{popular.title}" %>
+								</div>
+								<div class="popular_sidebar_description_sp">
+									<span class = "clicks"><%= "#{popular.pv}" %></span><span class = "clicks_clicks">clicks</span></br>
+									<span class = "last_updated"><%= "#{popular.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%></span>
+
+								</div>
+
+							</div>
+						</a>
+					</li>
+				</div>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+	<div class = "entry-footer">
+		<%= render "articles/show_footer_recommends" %>
+	</div>
+
+</div>

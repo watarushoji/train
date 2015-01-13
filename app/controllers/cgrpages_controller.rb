@@ -1,134 +1,82 @@
 class CgrpagesController < ApplicationController
 	def index
-		name = "おっぱい"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 
 	def avactless
-		name = "AV女優"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def beautifull
-		name = "美少女"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def nowgirls
-		name = "ギャル"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def amateur
-		name = "素人"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def planned
-		name = "企画"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def fetish
-		name = "フェチ"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path		
 	end
 	def peeping
-		name = "盗撮"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def scatology
-		name = "放尿/脱糞"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def jk
-		name = "女子高生"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def jd
-		name = "女子大生"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def happenings
-		name = "ハプニング"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def idol
-		name = "アイドル"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def bigboobs
-		name = "巨乳"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def beauty
-		name = "美女"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def dynamiteboobs
-		name = "爆乳"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def tinyboobs
-		name = "貧乳"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def wellshapedboobs
-		name = "美乳"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def publicexposure
-		name = "野外露出"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def accident
-		name = "放送事故"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def fellahandjob
-		name = "フェラ/手コキ"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 	def incest
-		name = "近親相姦"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def pies
-		name = "中出し"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path
 	end
 	def livechat
-		name = "ライブチャット"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path		
 	end
 	def pantyshots
-		name = "パンチラ"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path		
 	end
 	def downblouse
-		name = "胸チラ"
-		cgrpages_get_paginate(name)
-		cgrpages_get_pv_paginate(name)
+		redirect_to root_path	
 	end
 
 

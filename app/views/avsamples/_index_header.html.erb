@@ -1,0 +1,29 @@
+<div class="first_read">
+	<div class="spwords">
+		<h2>メーカー物無料AV動画</h2>
+		<p>
+			このページでは、メーカー物の無料サンプル動画を１日1本配信しています。
+			少しマニアックなAVもピックアップしています。
+			新たな趣向の開拓にご使用ください。動画本編へのリンクもご用意しております。
+		</p>
+	</div>
+</div>
+
+<h4>検索</h4>
+
+<form class="form-search ">
+	<div class = "spwords">
+		<p>
+		タイトルと説明文の中から検索し、一致したワードを含むメーカー物AVの記事を表示します。
+		何も表示されなかった場合は該当記事がなかったということです。キーワードを変えて再検索をお願いします。
+		</p>
+	</div>
+</br>
+	<%= form_tag articles_path, :method => 'get', :action => 'index' do %> <%#　projects_pathはモデル名で読みかえること %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "メーカー物AV検索", :name => nil %>
+	<% end %>
+</form>
+</br>
+<h2>無料AV動画/新着</h2>
+</br>

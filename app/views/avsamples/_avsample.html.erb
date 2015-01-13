@@ -1,0 +1,53 @@
+<div class="article-box">
+	<div class="article-box-title-container">
+	<h3>
+		<span class = "clicks"><%= "#{avsample.pv}" %></span><span class = "clicks_clicks">clicks  </span><%= "#{avsample.title} " %>
+		<% if signed_in? %>
+		| <%= link_to "削除", avsample, method: "delete",data: { confirm: "You sure?" } %>
+		| <%= link_to "編集", edit_avsample_path(avsample), method: "put" %>
+		<% end %>
+	</h3>
+	</div>
+	<div class="article-content">
+		<div class="entry-data">		
+			<div class="entry-image">
+				<%= link_to image_tag("#{avsample.image}", alt:"#{avsample.title}"), aavsample_path(avsample.id) %>
+			</div>
+			<p class="description">
+				<%= sanitize "#{avsample.content}"%>
+			</p>
+		</div>
+		<div class="readmore">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="active"><a href=<%="#{avsample_path(avsample.id)}" %>>動画を見る</a></li>
+			</ul>
+
+		</div>
+
+		<div class="entry-meta">
+			<ul class="category">
+				<li><%= link_to "無料AV動画", avsamples_path %></li>
+			</ul>
+			<p class="date">
+				最終更新: <%= "#{avsample.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
+			</p>
+			<p class="domain">
+				<%= link_to "全部見たい", "#{avsample.affi_link}" %>
+			</p>
+			<ul class = "social_buttons">
+				<li>
+					<a href= <%="http://b.hatena.ne.jp/entry/http://dive-in-boobs.com/avsamples/#{avsample.id}" %> class="hatena-bookmark-button" data-hatena-bookmark-title=<%= "#{avsample.title}" %> data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+				</li>
+				<li>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-hashtags="dive_in_boobs">ツイート</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>		
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- サイトごとのサムネイル数を編集 ここまで-->					

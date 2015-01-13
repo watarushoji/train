@@ -14,6 +14,7 @@
       <% if signed_in? %>
       <li><%= link_to "SignOut", signout_path, method: "delete" %></li>
       <li><%= link_to "New", new_article_path %></li>
+      <li><%= link_to "NewAv", new_avsample_path %></li>
       <li><%= link_to "Crawl", crawlsites_path %></li>
       <li><%= link_to "Category", categories_path %></li>
       <% else %>

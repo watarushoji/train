@@ -1,0 +1,40 @@
+
+<h2>Create Article</h2>
+
+
+<div class="form-box">
+	<%= form_for @avsample do |f| %>
+	<%= render 'shared/error_messages' %>
+	<div class="float-form-left">
+
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+
+		<%= f.label :content %>
+		<%= f.text_area :content, :size => "40x10" %>
+
+		<%= f.label :affi_title %>
+		<%= f.text_field :affi_title, :size => "200x15" %>
+		<%= f.label :affi_link %>
+		<%= f.text_field :affi_link, :size => "100x15" %>
+
+		<%= f.label :actress_name %>
+		<%= f.text_field :actress_name, :size => "100x15" %>
+
+		<%= f.label :sumnail %>
+		<%= f.text_field :sumnail, :size => "100x15" %>		
+
+		<%= f.label :site %>
+		<%= f.text_field :site, :size => "100x15" %>	
+			
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+		<%= f.submit "Create an Article", class: "btn btn-small" %>
+
+	</div>
+	<% end %>
+</div>
+
+
+
+

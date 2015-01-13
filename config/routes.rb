@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :sessions, only: [:new, :create, :destroy]
   resources :crawlsites, only: [:index, :create, :destroy]
+  resources :avsamples
   resources :articles, only: [:show] do
     collection do
       resources :categories, only: [:show]
