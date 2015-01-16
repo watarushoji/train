@@ -1,8 +1,8 @@
 <% provide(:title, "#{@category}") %>
 
 <h2>カテゴリ「 <%= "#{@category}" %>  」の記事一覧 （全<%= "#{@categories.count}" %>件）新着順</h2>
-<%= link_to "新着順", category_path(@category) %>
-<%= link_to "人気順", "/articles/categories/#{@category}/popular" %>
+【<%= link_to "新着順", category_path(@category) %>】
+【<%= link_to "人気順", "/articles/categories/#{@category}/popular" %>】
 <%= render @categories %>
 
 <div class = "digg_pagination">

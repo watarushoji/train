@@ -8,7 +8,7 @@ $grayMediumLight: #eaeaea;
 $grayLight: #999;
 $grayDarker: #222;
 $grayLighter: #fefefe;
-$BodyBackground: #eee;
+$BodyBackground: #fff;
 
 /* common_style */
 
@@ -133,7 +133,7 @@ iframe{
 /*content*/
 .content {
   overflow: hidden;
-  margin-top:10px;
+  margin-top:50px;
   width: 100%;
   float:none;
 }
@@ -267,6 +267,12 @@ footer {
     margin-bottom:15px;
   }
 }
+
+.clicks_container{
+  margin-left:5px;
+  font-size:1.5em;
+}
+
 
 /*------------------------*//*------------------------*/
 /*------------------------*//*------------------------*/

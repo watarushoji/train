@@ -4,7 +4,7 @@ module ApplicationHelper
 		if (page_title == "")
 			"おっぱいの海で泳ぎたい"
 		else
-			"おっぱいの海で泳ぎたい | #{page_title}"
+			"#{page_title} | おっぱいの海で泳ぎたい"
 		end
 	end
 	def category_count(name)

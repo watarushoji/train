@@ -1,38 +1,38 @@
 <div class="navbar navbar-fixed-top navbar-collapse">
 	<div class="navbar-inner">
 		<div class="nav-container">
-		<nav>
-			<ul class = "nav pull-left">
-				<div id="logo">
-					<a href = "/">
-					<li>
-						<h1>おっぱいの海で泳ぎたい</h1>
+			<nav>
+				<ul class = "nav pull-left">
+					<div id="logo">
+						<a href = "/">
+							<li>
+								<h1>おっぱいの海で泳ぎたい</h1>
+							</li>
+							<li><h1>I wanna Dive In Boobs</h1></li>
+						</a>
+					</div>
+				</ul>
+				<ul class = "nav pull-right"> 
+
+					<li ><%= link_to image_tag("home.png", alt: "home"), root_path %></li>
+
+					<li class = "dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><%= image_tag("icon-menu.png") %><span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li ><%= link_to "ニュース（工事中）", news_path %></li>
+							<li ><%= link_to "人気" , popmovies_path %></li>
+							<li ><%= link_to "風俗入門（工事中）" %></li>
+							<li><%= link_to "ヘルプ", about_path %></li>
+							<li><%= link_to "お問い合わせ", contact_path %></li>
+							<li><%= link_to "削除依頼", delcontacts_path %></li>
+							<li><%= link_to "サイトマップ", sitemaps_path %></li>
+							<li><%= link_to "RSS" , feeds_path %></li>
+
+						</ul>
 					</li>
-					<li><h1>I wanna Dive In Boobs</h1></li>
-					</a>
-				</div>
-			</ul>
-			<ul class = "nav pull-right"> 
 
-				<li ><%= link_to image_tag("home.png", alt: "home"), root_path %></li>
-
-				<li class = "dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><%= image_tag("icon-menu.png") %><span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li ><%= link_to "ニュース（工事中）", news_path %></li>
-						<li ><%= link_to "人気" , popmovies_path %></li>
-						<li ><%= link_to "風俗入門（工事中）" %></li>
-						<li><%= link_to "ヘルプ", about_path %></li>
-						<li><%= link_to "お問い合わせ", contact_path %></li>
-						<li><%= link_to "削除依頼", delcontacts_path %></li>
-						<li><%= link_to "サイトマップ", sitemaps_path %></li>
-						<li><%= link_to "RSS" , feeds_path %></li>
-
-					</ul>
-				</li>
-
-			</ul>
-		</nav>
+				</ul>
+			</nav>
 		</div>
 
 	</div>

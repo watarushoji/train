@@ -2,9 +2,8 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <meta name="description" content="初心者でも無料で安心して楽しめる良質なアダルト動画を配信中です。様々なおっぱいを楽しめるように動画をピックアップしていますが、
-  フェチ系動画も加えてスパイスを効かせております。１日3つ以上の動画を紹介中。"/>
-  <meta name="keywords" content="おっぱい,エログ,無料動画,動画,おっぱいの海で泳ぎたい,dive in boobs"/>
+  <meta name="description" content="おっぱいの海で泳ぎたいではおっぱい動画と無料AVを厳選して配信中。騙しリンク・課金は一切なし。老若男女問わず誰でも安心して楽しめる超優良アダルトサイトです。管理人の気まぐれでフェチ動画を配信することも。毎日3記事以上更新中！"/>
+  <meta name="keywords" content="おっぱい,エログ,動画,AV,dive in boobs"/>
   <meta name="msvalidate.01" content="4C1403001833461E973D693C67EF68EA" />
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -26,73 +25,42 @@
   <SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683ad"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
   <!-- SP -->
   <SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683sp"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
-  <!-- blozoo 解析 -->
-  <!-- IN・OUT管理ツール -->
-  <script type="text/javascript">
-  <!--
-  var  blzP='inout',blzT='315',blzU='629';
-  -->
-  </script>
-  <script src="https://blozoo.com/js/inouttool/blogparts.js"></script>
-  <!-- https://blozoo.com/ -->
 
 </head>
 <body>
+ <%= render 'layouts/navbar' %>
+ <div class="paisea">
+  <div class="content">
+    <div class="maincol_index_sidebar display_only_pc">
 
-  <div class="paisea">
+      <%= render 'layouts/sidebar_ads'%>
 
-    <div class="hd"> 
-      <div class="header">
-
-        <%= render 'layouts/header_text' %>
-        <%= render 'layouts/navbar' %>
-
-      </div>
     </div>
-    
+    <div class="maincol_index_sidebar_sp display_only_sp">
 
+      <%= render 'layouts/sidebar_sp' %>
 
+    </div>
+    <div class="maincol_index">
 
-    <div class="content">
-      <div class="maincol_index">
-        <div class="maincol_index_header">
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+      <% end %>
 
-          <%= render 'layouts/content_header' %>
-
-          <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>">
-            <%= value %>
-          </div>
-          <% end %>
-        </div>
-        <div class="maincol_index_content">
-          <%= yield %>
-        </div>
-
+      <div class="maincol_index_content">
+        <%= yield %>
       </div>
 
-      <div class="maincol_index_sidebar display_only_pc">
-
-        <%= render 'layouts/sidebar_ads'%>
-
-      </div>
-      <div class="maincol_index_sidebar_sp display_only_sp">
-
-        <%= render 'layouts/sidebar_sp' %>
-
-      </div>
     </div>
 
-
-    <%= render 'layouts/footer' %>
-    
 
   </div>
-
-    <%= debug(params) if Rails.env.development? %>
-
+  <%= render 'layouts/footer' %>
+</div>
+<%= debug(params) if Rails.env.development? %>
 </body>
-
 </html>
 
 

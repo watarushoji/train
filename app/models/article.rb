@@ -10,7 +10,6 @@ class Article < ActiveRecord::Base
   has_many :categories, through: :categorizations
   has_many :article_categories, through: :categorizations, source: :category
 
-
 	mount_uploader :image, ImageUploader
 
   def self.search(search) #self.でクラスメソッドとしている

@@ -4,7 +4,7 @@
 
 <div class="form-box">
 	<%= form_for @avsample do |f| %>
-	<%= render 'shared/error_messages' %>
+	<%= render 'shared/av_error_messages' %>
 	<div class="float-form-left">
 
 		<%= f.label :title %>
@@ -26,7 +26,7 @@
 
 		<%= f.label :site %>
 		<%= f.text_field :site, :size => "100x15" %>	
-			
+
 		<%= f.label :image %>
 		<%= f.file_field :image %>
 		<%= f.submit "Create an Article", class: "btn btn-small" %>

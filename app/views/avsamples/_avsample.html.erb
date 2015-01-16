@@ -11,7 +11,7 @@
 	<div class="article-content">
 		<div class="entry-data">		
 			<div class="entry-image">
-				<%= link_to image_tag("#{avsample.image}", alt:"#{avsample.title}"), aavsample_path(avsample.id) %>
+				<%= link_to image_tag("#{avsample.image}", alt:"#{avsample.title}"), avsample_path(avsample.id) %>
 			</div>
 			<p class="description">
 				<%= sanitize "#{avsample.content}"%>
@@ -25,14 +25,15 @@
 		</div>
 
 		<div class="entry-meta">
+			
 			<ul class="category">
-				<li><%= link_to "無料AV動画", avsamples_path %></li>
+			カテゴリ； <li><%= link_to "無料AV動画", avsamples_path %></li>
 			</ul>
 			<p class="date">
 				最終更新: <%= "#{avsample.created_at.in_time_zone("Tokyo").to_formatted_s(:without_second)}"%>
 			</p>
 			<p class="domain">
-				<%= link_to "全部見たい", "#{avsample.affi_link}" %>
+				<%= link_to "全部見たい？", "#{avsample.affi_link}" %>
 			</p>
 			<ul class = "social_buttons">
 				<li>

@@ -21,14 +21,14 @@ class AvsamplesController < ApplicationController
 
 	def edit
 		if signed_in? 
-			@article = Avsample.find(params[:id])
+			@avsample = Avsample.find(params[:id])
 		else
 			redirect_to root_path 
 		end
 	end
 	def update
-		   @article = Avsample.find(params[:id])
-    	if @article.update_attributes(avsample_params)
+		   @avsample = Avsample.find(params[:id])
+    	if @avsample.update_attributes(avsample_params)
       		 flash[:success] = "Avsample updated"
       		 redirect_to root_path
     	else
@@ -37,8 +37,8 @@ class AvsamplesController < ApplicationController
 	end
 
 	def create
-		@article = Avsample.new(avsample_params)
-		if @article.save
+		@avsample = Avsample.new(avsample_params)
+		if @avsample.save
 			flash.now[:success] = "Successfully Posted!"
 			redirect_to new_avsample_path
 		else
