@@ -281,7 +281,7 @@ footer {
 /*----------PC------------*//*-----------PC-----------*/
 /*------------------------*//*------------------------*/
 /*------------------------*//*------------------------*/
-@media screen and (min-width: 640px){
+@media screen and (min-width: 640px) {
 
   body{
     max-width: 1044px;
@@ -488,7 +488,7 @@ footer {
 /*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*/
 /*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*/
 /*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*//*---CSS for SmartPhone Site---*/
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px) and (min-width: 300px){
 
  /*ads*/
  .ad_sp{
