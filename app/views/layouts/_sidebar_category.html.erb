@@ -7,7 +7,7 @@
 			<% @category.each do |category| %>
 			<li>
 				<a href = <%= "/articles/categories/#{category.name}" %>>
-					  <%=  "#{category.name} （#{category.articles.count}）" %>
+					<%=  "#{category.name} （#{category.articles.count}）" %>
 				</a>
 			</li>
 			<% end %>
@@ -15,18 +15,19 @@
 	</div>
 </div>
 <div class = "display_only_sp">
-
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
+	<div class = "center_sp">
 	<div class = "hover_list">
 		<ul>
 			<% @category = Category.all.order("score DESC") %>
 			<% @category.each do |category| %>
 			<li>
 				<a href = <%= "/articles/categories/#{category.name}" %>>
-					  <%=  "#{category.name} （#{category.articles.count}）" %>
+					<%=  "#{category.name} （#{category.articles.count}）" %>
 				</a>
 			</li>
 			<% end %>
 		</ul>
+	</div>
 	</div>
 </div>
