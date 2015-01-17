@@ -22,25 +22,16 @@
   <%= analytics_init if Rails.env.production? %>
   <!-- ACRwebランキング用 -->
   <!-- PC -->
-  <SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683ad"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
+  <SCRIPT async TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683ad"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
   <!-- SP -->
-  <SCRIPT TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683sp"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
+  <SCRIPT async TYPE="text/javascript" SRC="http://rranking.ziyu.net/rank.php?6683sp"></SCRIPT><A href="http://www.ziyu.net/" target=_blank><IMG SRC="http://rranking.ziyu.net/rranking.gif" alt="アクセスランキング" border=0 width=35 height=11></A><NOSCRIPT><A href="http://www.ziyu.net/" target=_blank>アクセスランキング</A></NOSCRIPT>
 
 </head>
 <body>
  <%= render 'layouts/navbar' %>
  <div class="paisea">
   <div class="content">
-    <div class="maincol_index_sidebar display_only_pc">
 
-      <%= render 'layouts/sidebar_ads'%>
-
-    </div>
-    <div class="maincol_index_sidebar_sp display_only_sp">
-
-      <%= render 'layouts/sidebar_sp' %>
-
-    </div>
     <div class="maincol_index">
 
       <% flash.each do |key, value| %>
@@ -52,6 +43,16 @@
       <div class="maincol_index_content">
         <%= yield %>
       </div>
+
+    </div>
+    <div class="maincol_index_sidebar display_only_pc">
+
+      <%= render 'layouts/sidebar_ads'%>
+
+    </div>
+    <div class="maincol_index_sidebar_sp display_only_sp">
+
+      <%= render 'layouts/sidebar_sp' %>
 
     </div>
 
