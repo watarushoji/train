@@ -53,7 +53,7 @@ h2{
   line-height: 40px;
   font-weight:bold;
   letter-spacing:-1px;
-  background: linear-gradient(white, #eee);
+  background: linear-gradient(white, #E0FFFF);
   border-width:0px 0px 0px 5px;
   border-color: #cc0000;
   border-style:solid;
@@ -77,7 +77,7 @@ h4{
   font-size: 16px;
   line-height: 30px;
   font-weight:bold;
-  background: linear-gradient(white, #eee);
+  background: linear-gradient(white, #E0FFFF);
   border-width:0px 0px 1px 0px;
   border-color: #cccccc;
   border-style:solid;
@@ -103,7 +103,7 @@ iframe{
 }
 .form-search{
   margin-top:5px;
-  margin-bottom:-5px;
+  margin-bottom:15px;
 }
 .guide_pc {
 
@@ -214,14 +214,14 @@ footer {
 
 .item{
     margin:5px!important;
-    width:140px!important;
+    width:135px!important;
     height:auto!important;
     overflow:hidden;
 
   }
 .item img{
-    min-width:140px!important;
-    max-width:140px;
+    min-width:135px!important;
+    max-width:135px;
     height:100px;
   }
 
@@ -511,20 +511,27 @@ footer {
 
   body {
     max-width:640px;
-    min-width:320px;
+    min-width:300px;
   }
 
 
  .paisea{
-  max-width:640px;
-  min-width:300px;
-        margin-left:5px;
+    margin-left:5px;
     margin-right:5px;
 }
 p{
   color:#222;
 }
 
+h1{
+  font-size:0.8em;
+}
+.content{
+  margin-top:20px !important;
+}
+.first_read{
+  height:150px !important;
+}
 h2{
   margin: 5px 2px 5px 2px;
   line-height: 30px;
@@ -590,7 +597,6 @@ h3{
 }
 
 .category_sidebar_sp{
-  min-width:300px;
   border-width:1px 1px 1px 1px;
   border-color: #cccccc;
   border-style:solid;
@@ -605,13 +611,11 @@ h3{
   }
 }
 .popular_sidebar_sp{
-  min-width:300px;
   border-width:1px 1px 1px 1px;
   border-color: #cccccc;
   border-style:solid;
 }
 .popular_sidebar_content_sp{
-  min-width:300px;
   height:auto;
   margin:5px 0px 5px 0px;
   border-width:1px 1px 1px 1px;
@@ -689,12 +693,10 @@ h3{
 }
 
 .maincol_index_header{
-  min-width:300px;
   background-color:white;
 }
 
 .maincol_index_content{
-  min-width:300px;
 
 }
 
