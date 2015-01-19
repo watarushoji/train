@@ -7,6 +7,7 @@
 			<% @category.each do |category| %>
 			<li>
 				<a href = <%= "/articles/categories/#{category.name}" %>>
+					<%= image_tag "list.png" %>
 					<%=  "#{category.name} （#{category.articles.count}）" %>
 				</a>
 			</li>
@@ -17,17 +18,19 @@
 <div class = "display_only_sp">
 	<h4><%= image_tag "manulist.gif" %>カテゴリ</h4>
 	<div class = "center_sp">
-	<div class = "hover_list">
-		<ul>
-			<% @category = Category.all.order("score DESC") %>
-			<% @category.each do |category| %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% end %>
-		</ul>
-	</div>
+		<div class = "hover_list">
+			<ul>
+				<% @category = Category.all.order("score DESC") %>
+				<% @category.each do |category| %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 </div>

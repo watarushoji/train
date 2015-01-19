@@ -7,9 +7,9 @@
 		<div class="popular_sidebar_content">
 			<div class="popular_sidebar_image">
 				<% if popular.crawl_image == nil then %>
-				<%= link_to image_tag(popular.image), article_path(popular.id) %>
+				<%= link_to image_tag(popular.image, alt:"#{popular.title}"), article_path(popular.id) %>
 				<% else %>
-				<%= link_to image_tag(popular.crawl_image), article_path(popular.id) %>
+				<%= link_to image_tag(popular.crawl_image, alt:"#{popular.title}"), article_path(popular.id) %>
 				<% end %>
 			</div>
 			<div class="popular_sidebar_title">
@@ -39,9 +39,9 @@
 
 						<div class="popular_sidebar_image_sp">
 							<% if popular.crawl_image == nil then %>
-							<%= image_tag(popular.image) %>
+							<%= image_tag(popular.image, alt:"#{popular.title}") %>
 							<% else %>
-							<%= image_tag(popular.crawl_image) %>
+							<%= image_tag(popular.crawl_image, alt:"#{popular.title}") %>
 							<% end %>
 						</div>
 						<div class="popular_sidebar_title_sp">

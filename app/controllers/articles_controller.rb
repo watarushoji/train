@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
 		@article.save
 		@sitemaparticles = Article.all.order("created_at DESC")
 	end
+
 	def create
 		@article = Article.new(article_params)
 		if @article.save
@@ -38,13 +39,16 @@ class ArticlesController < ApplicationController
 			render 'new'
 		end
 	end
+
 	def index
 		@articles = Article.search(params[:search]).order("created_at DESC").paginate(page: params[:page], :per_page => 10)
 		@search_words = params[:search]
+		@avsample = Avsample.order("created_at DESC").first
 		# @articles = Article.order("created_at DESC")
 		# @first_article = @orderd_article.first
 
     end
+
     def destroy
     	Article.find(params[:id]).destroy
     	flash[:success] = "Article destroyed."
