@@ -96,7 +96,8 @@ ul.social_buttons{
 }
 .entry-movie{
 	/*youtubeの設定を引用*/
-	height: 420px;
+	height: auto;
+	max-width: 600px;
 	border-width:1px 0px 1px 0px;
   	border-color: #cccccc;
   	border-style:solid;
@@ -252,14 +253,21 @@ ul.social_buttons{
 	font-style:italic;
 }
 
+/************************//************************//************************/
+/************************//************************//************************/
+/************************//************************//************************/
+/************************//************************//************************/
 
-
-@media screen and (max-width: 640px) and (min-width: 300px){
+@media screen and (max-width: 640px) {
 .spwords{
 	margin-left:10px;
 	margin-right:10px;
 	line-height:15px;
 	font-size:10px;
+}
+
+.affi_movie{
+	width:auto !important;
 }
 
 h3{
