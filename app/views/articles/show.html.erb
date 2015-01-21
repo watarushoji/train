@@ -14,11 +14,24 @@
 			<h3>
 				<%= "#{@article.title}" %>
 			</h3>
-			<div class="entry-description">
+			<div class="display_only_pc">				
+				<div class="entry-description">
+					<h4>動画詳細</h4>					
+					<p>
+						<%= sanitize "#{@article.content}"%>
+					</p>
+				</div>
+			</div>
+			<div class="display_only_sp">
 				<h4>動画詳細</h4>
-				<p>
-					<%= sanitize "#{@article.content}"%>
-				</p>
+
+				<div class="entry-description">
+					<div class="spwords">
+						<p>
+							<%= sanitize "#{@article.content}"%>
+						</p>
+					</div>
+				</div>
 			</div>
 			<ul class="category">
 				カテゴリ：

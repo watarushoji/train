@@ -14,7 +14,6 @@ $BodyBackground: #fff;
 
 html {
   overflow: auto;
-      min-width:300px;
 }
 body {
   background-color: $BodyBackground;
@@ -117,7 +116,6 @@ iframe{
 .nav{
   font-weight:bolder;
   font-size:1.0em;
-  float:none;
   padding-bottom:0px;
   margin-bottom:0px;
 }
@@ -213,15 +211,15 @@ footer {
 
 .item{
     margin:5px!important;
-    width:135px!important;
+    width:46%!important;
     height:auto!important;
     overflow:hidden;
-
+    text-align:center;
   }
 .item img{
-    min-width:135px!important;
-    max-width:135px;
-    height:100px;
+    min-width:100%!important;
+    max-width:100%;
+    height:150px;
   }
 
 .itemTitle{
@@ -498,7 +496,9 @@ footer {
 
   }
 
+.nav{
 
+}
  .paisea{
     margin-left:5px;
     margin-right:5px;
@@ -511,7 +511,7 @@ h1{
   font-size:0.8em;
 }
 .content{
-  margin-top:20px !important;
+  margin-top:35px !important;
 }
 .first_read{
 
@@ -610,7 +610,8 @@ h3{
     margin-top: 4px;
     margin-bottom: 1px;
     font-size: 13px;
-
+    height: 70px;
+    overflow:hidden;
 }
 .popular_sidebar_description_sp{
   font-size:0.8em;
