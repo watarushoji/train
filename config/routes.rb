@@ -50,19 +50,24 @@ Rails.application.routes.draw do
   match '/category', to:'cgrpages#show', via:'get'
   match '/categories', to:'cgrpages#index', via:'get'
   # categories_each
-  match '/avactless', to:'cgrpages#avactless', via:'get'
-  match '/beautifull', to:'cgrpages#beautifull', via:'get'
-  match '/nowgirls', to:'cgrpages#nowgirls', via:'get'
-  match '/amateur', to:'cgrpages#amateur', via:'get'
-  match '/planned', to:'cgrpages#planned', via:'get'
-  match '/fetish', to:'cgrpages#fetish', via:'get'
-  match '/peeping', to:'cgrpages#peeping', via:'get'
-  match '/scatology', to:'cgrpages#scatology', via:'get'
-  match '/jk', to:'cgrpages#jk', via:'get'
-  match '/jd', to:'cgrpages#jd', via:'get'
-  match '/happenings', to:'cgrpages#happenings', via:'get'
-  match '/idol', to:'cgrpages#idol', via:'get' 
+
+  # redirect
+  get '/assets/list_popular.gif', to:'static_pages#home'
+  match '/avactless', to:'static_pages#home', via:'get'
+  match '/beautifull', to:'static_pages#home', via:'get'
+  match '/nowgirls', to:'static_pages#home', via:'get'
+  match '/amateur', to:'static_pages#home', via:'get'
+  match '/planned', to:'static_pages#home', via:'get'
+  match '/fetish', to:'static_pages#home', via:'get'
+  match '/peeping', to:'static_pages#home', via:'get'
+  match '/scatology', to:'static_pages#home', via:'get'
+  match '/jk', to:'static_pages#home', via:'get'
+  match '/jd', to:'static_pages#home', via:'get'
+  match '/happenings', to:'static_pages#home', via:'get'
+  match '/idol', to:'static_pages#home', via:'get' 
+  get '/articles/1/posts.rss', to:'feeds#index', :format=>"rss"
   
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

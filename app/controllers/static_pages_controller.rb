@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController  
-  add_breadcrumb 'Home', :root_path
+  
   def home
-
+  	redirect_to root_path
   end
   def contact
   
