@@ -68,7 +68,7 @@ class CategoriesController < ApplicationController
 	private
 
 	def category_params
-		params.require(:category).permit(:name, :score)
+		params.require(:category).permit(:name, :score, :maincateogry)
 	end
 
 end
