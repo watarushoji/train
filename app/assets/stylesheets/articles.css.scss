@@ -38,6 +38,7 @@ p.description{
 }
 .readmore{
 	width:30%;
+	margin-bottom:20px;
 	text-align:center;
 	a{
 		color:white;
@@ -46,10 +47,6 @@ p.description{
       text-decoration: underline;
       }
 	}	
-}
-.entry-meta{
-	text-align:right;
-
 }
 
 li.domain{
@@ -371,6 +368,7 @@ li.ad-content-show{
 .readmore{
 	width:60%;
 	text-align:center;
+		margin-bottom:10px;
 	a{
 		color:white;
 	   &:hover {
@@ -393,11 +391,7 @@ ul.category{
 	font-size:0.7em;
 	margin-left:10px;
 }				
-.entry-meta{
-	text-align:right;
-	overflow:hidden;
 
-}
 
 .domain{
 	overflow: hidden;

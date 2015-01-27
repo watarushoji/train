@@ -270,6 +270,36 @@ footer {
   font-size:1.5em;
 }
 
+.sitemap_category_articles{
+  margin-left:30px;
+  ul{
+    list-style-type:square;
+  }
+  li{
+    line-height:15px !important;
+    font-size:0.8em !important;
+  }
+  a{
+    color:#0088cc;
+  }
+}
+
+.PRs{
+  overflow:hidden;
+  text-align:center;
+}
+
+.left_PR{
+  float:left;
+  width:300px;
+}
+
+.right_PR{
+  float:right;
+  width:300px;
+}
+
+
 
 /*------------------------*//*------------------------*/
 /*------------------------*//*------------------------*/

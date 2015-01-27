@@ -7,29 +7,35 @@
 					<%= render :partial => "sitemaps/sitemaparticle", :collection => @sitemaparticles %>
 				</li>
 			</ul>
+			<div class="next">
+				<%= link_to "続きを読む", root_path %>
+			</div>
+
+			<hr class="line010">
+			<h2><%= link_to "人気", popmovies_path %></h2>
+			<ul>
+				<li>
+					<%= render :partial =>'sitemaps/sitemappopular', :collection => @sitemappopulars %>
+				</li>
+			</ul>
+			<div class="next">
+				<%= link_to "続きを読む", popmovies_path %>
+			</div>
+			<hr class="line010">
+
+			<h2><%= link_to "風俗入門", '#' %></h2>
+			<hr class="line010">
+			
 			<%= image_tag "favicon.png" %>
 		</div>
 	</div>
 	<div class = "col2">
 		<div class = "innerblock">
-			<h2><%= link_to "カテゴリ", categories_path %></h2>
-			<ul>
-
-			<% @category = Category.all.order("score DESC") %>
-			<% @category.each do |category| %>
-				<li> <%= link_to "#{category.name} （#{category.articles.count}）", "/articles/categories/#{category.name}" %></li>
-			<% end %>
-			</ul>
+			<%= render 'sitemaps/category' %>
 		</div>
 	</div>
 	<div class = "col3">
 		<div class = "innerblock">
-			<h2><%= link_to "ニュース", news_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "人気", popmovies_path %></h2>
-			<hr class="line010">
-			<h2><%= link_to "風俗入門", '#' %></h2>
-			<hr class="line010">
 			<h2><%= link_to "ヘルプ", about_path %></h2>
 			<hr class="line010">
 			<h2><%= link_to "お問い合わせ", contact_path %></h2>
