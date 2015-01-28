@@ -38,6 +38,9 @@
       <% end %>
 
       <div class="maincol_index_content">
+        <ol class="breadcrumb">
+         <%= render_breadcrumbs :tag => :li,:separator => ' / '  %>
+        </ol>
         <%= yield %>
       </div>
 

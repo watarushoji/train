@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  add_breadcrumb "おっぱいの海で泳ぎたい | ホーム/新着", :root_path
 	def new
 		if signed_in? 
 			@article = Article.new
@@ -28,6 +29,7 @@ class ArticlesController < ApplicationController
 		@article.increment(:pv, by = 1)
 		@article.save
 		@sitemaparticles = Article.all.order("created_at DESC")
+		  add_breadcrumb "#{@article.title}", article_path(params[:id])
 	end
 
 	def create

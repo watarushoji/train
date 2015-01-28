@@ -1,9 +1,18 @@
 crumb :root do
-  link "ホーム", root_path
+  link "おっぱいの海で泳ぎたい | Home", root_path
 end
-crumb :article do
-	link "#{Article.find(params[:id]).title}", article_path
+
+crumb :
+
 end
+
+カテゴリ
+人気
+風俗入門
+ヘルプ
+お問い合わせ
+削除依頼
+サイトマップ
 
 # crumb :projects do
 #   link "Projects", projects_path

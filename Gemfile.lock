@@ -296,7 +296,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   google-analytics-rails
-  gretel
+  gretel (= 3.0.8)
   guard-spork
   jbuilder (~> 2.0)
   jquery-rails

@@ -1,22 +1,470 @@
-<h2>カテゴリ・タグ</h2>
-<table class="sample_02">
-	<tbody>
-			<tr>
-		<th>id</th>
-		<th>カテゴリ</th>
-		<th>スコア</th>
-		<th>上位カテゴリ</th>
-		<th>編集/削除リンク</th>
-	</tr>
-	<% @category.each do |c| %>
 
-	<tr>
-		<td><%= c.id %></td>
-		<td><%= c.name %> </td>
-		<td><%= c.score %> </td>
-		<td><%= c.maincateogry %></td>
-		<td><%= link_to "編集", edit_category_path(c.id) %> <%= link_to "削除", "/categories/#{c.id}", method: "delete",data: { confirm: "You sure?" } %></td>
-	</tr>
-	<% end %>
-</tbody>
-</table>
+<h2>カテゴリ</h2>
+<div class = "sitemaps">
+	<div class = "col1">
+		<div class = "innerblock">
+
+			<ul>
+				<h4><%= image_tag "manulist.gif" %>おっぱい種別</h4>
+				<% @category = Category.all.order("score DESC") %>
+				<h5>お乳</h5>
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "おっぱい" then %>
+				<li>
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+				<h5>大きさ</h5>
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "大きさ" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+				<h5>形状</h5>
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "形状" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>質感</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "質感" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>乳首</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "乳首" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>乳輪</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "大きさ" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+			</ul>
+
+		</div>
+	</div>
+
+	<div class = "col2">
+		<div class = "innerblock">
+
+			<ul>
+				<h4><%= image_tag "manulist.gif" %>他カテゴリ</h4>
+
+				<h5>体型</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "体型" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>女の子のタイプ</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "女の子のタイプ" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>チラリズム</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "チラリズム" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>プレイのタイプ</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "プレイのタイプ" then %>
+				<li>
+					<div class = "hover_list">
+						<a href = <%= "/articles/categories/#{category.name}" %>>
+							<%= image_tag "list.png" %>
+							<%=  "#{category.name} （#{category.articles.count}）" %>
+						</a>
+					</div>
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>フェチ</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "フェチ" then %>
+				<li>
+					<div class = "hover_list">
+						<a href = <%= "/articles/categories/#{category.name}" %>>
+							<%= image_tag "list.png" %>
+							<%=  "#{category.name} （#{category.articles.count}）" %>
+						</a>
+					</div>
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>スカトロ</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "スカトロ" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+
+
+				<h5>AV女優名</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "AV女優名" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+	<div class = "col2">
+		<div class = "innerblock">
+			
+			<ul>
+				<h4><%= image_tag "manulist.gif" %>AV女優（固有名詞）</h4>
+				<h5>AV女優名</h5>
+
+				<% @category.each do |category| %>
+				<% if category.maincateogry == "AV女優名" then %>
+				<li>
+
+					<a href = <%= "/articles/categories/#{category.name}" %>>
+						<%= image_tag "list.png" %>
+						<%=  "#{category.name} （#{category.articles.count}）" %>
+					</a>
+
+					<% @category_articles = category.articles.order("created_at DESC").limit(5) %>
+					<div class="sitemap_category_articles">
+						<ul>
+							<% @category_articles.each do |category_article| %>
+							<li>
+								<a href = <%= "/articles/#{category_article.id}"%>>
+									<%= "#{category_article.title}" %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						<div class="next">
+							<%= link_to "続きを読む", "/categories/#{category.name}" %>
+						</div>			
+					</div>
+				</li>
+				<% else %>
+				<% end %>
+				<% end %>
+			</ul>
+
+		</div>
+	</div>
+</div>

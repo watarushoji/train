@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :avsamples
   resources :articles, only: [:show] do
     collection do
-      resources :categories, only: [:show]
+      resources :categories, only: [:show,:index]
     end
   end
   resources :categories
@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   match '/happenings', to:'static_pages#home', via:'get'
   match '/idol', to:'static_pages#home', via:'get' 
   get '/articles/1/posts.rss', to:'feeds#index', :format=>"rss"
+  match '/articles_categories', to:'categories#articles_categories', via:'get'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

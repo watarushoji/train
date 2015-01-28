@@ -1,172 +1,102 @@
 <div class = "display_only_pc">
-	<h4><%= image_tag "manulist.gif" %>おっぱい種別</h4>
+	<h4><%= image_tag "manulist.gif" %>人気カテゴリ</h4>
 
 	<div class = "hover_list">
-		<ul>
-			<% @category = Category.all.order("score DESC") %>
-
-			<h5>お乳</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "おっぱい" then %>
+		<ul>						
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/巨乳" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					巨乳
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>大きさ</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "大きさ" then %>
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/美乳" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					美乳
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>形状</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "形状" then%>
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/マシュマロ" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					マシュマロおっぱい
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>質感</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "質感" then %>
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/むっちり" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					むっちり
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>乳首</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "乳首" then %>
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/jk" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					jk
+				</a>
+			</li>			
+			<li>
+				<a href = <%= "/articles/categories/素人" %>>
+					<%= image_tag "list.png" %>
+					素人
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>乳輪</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "乳輪" then %>
 			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
+				<a href = <%= "/articles/categories/美少女" %>>
 					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
+					美少女
+				</a>
+			</li>					
+			<li>
+				<a href = <%= "/articles/categories/フェラ" %>>
+					<%= image_tag "list.png" %>
+					フェラ
 				</a>
 			</li>
-			<% else %>
-			<% end %>
-			<% end %>
+			<li>
+				<a href = <%= "/articles/categories/手コキ" %>>
+					<%= image_tag "list.png" %>
+					手コキ
+				</a>
+			</li>					
+			<li>
+				<a href = <%= "/articles/categories/野外露出" %>>
+					<%= image_tag "list.png" %>
+					野外露出
+				</a>
+			</li>
+			<li>
+				<a href = <%= "/articles/categories/個人撮影" %>>
+					<%= image_tag "list.png" %>
+					個人撮影
+				</a>
+			</li>
+			<li>
+				<a href = <%= "/articles/categories/フェチ" %>>
+					<%= image_tag "list.png" %>
+					フェチ
+				</a>
+			</li>
+			<li>
+				<a href = <%= "/articles/categories/ハプニング" %>>
+					<%= image_tag "list.png" %>
+					ハプニング
+				</a>
+			</li>
+			<li>
+				<a href = <%= "/articles/categories/お宝" %>>
+					<%= image_tag "list.png" %>
+					お宝
+				</a>
+			</li>
+			<li>
+				<a href = <%= "/articles/categories/放尿" %>>
+					<%= image_tag "list.png" %>
+					放尿
+				</a>
+			</li>						
 		</ul>
-	</div>
-	<div class = "hover_list">
-		<ul>
-			<h4><%= image_tag "manulist.gif" %>他カテゴリ</h4>
-			<h5>体型</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "体型" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>女の子のタイプ</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "女の子のタイプ" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>チラリズム</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "チラリズム" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>プレイのタイプ</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "プレイのタイプ" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>フェチ</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "フェチ" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>スカトロ</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "スカトロ" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-			<h5>AV女優名</h5>
-			<% @category.each do |category| %>
-			<% if category.maincateogry == "AV女優名" then %>
-			<li>
-				<a href = <%= "/articles/categories/#{category.name}" %>>
-					<%= image_tag "list.png" %>
-					<%=  "#{category.name} （#{category.articles.count}）" %>
-				</a>
-			</li>
-			<% else %>
-			<% end %>
-			<% end %>
-		</ul>
+		<div class="next">
+			<%= link_to "全カテゴリ", "/categories/" %>
+		</div>
 	</div>
 </div>
 <div class = "display_only_sp">

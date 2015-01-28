@@ -13,7 +13,8 @@
       <li><%= link_to "New", new_article_path %></li>
       <li><%= link_to "NewAv", new_avsample_path %></li>
       <li><%= link_to "Crawl", crawlsites_path %></li>
-      <li><%= link_to "Category", categories_path %></li>
+      <li><%= link_to "Category", "/articles_categories" %></li>
+      <li><%= link_to "NewCategory", "/categories/new" %></li>
       <% else %>
       <li><%= link_to "Admin", signin_path %></li>
       <% end %>
