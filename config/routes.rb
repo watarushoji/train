@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :avsamples
   resources :articles, only: [:show] do
     collection do
-      resources :categories, only: [:show,:index]
+      resources :categories, only: [:show]
     end
   end
   resources :categories
@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   # categories_each
 
   # redirect
+  get '/articles/categories', to:'static_pages#home'
   get '/assets/list_popular.gif', to:'static_pages#home'
   match '/avactless', to:'static_pages#home', via:'get'
   match '/beautifull', to:'static_pages#home', via:'get'

@@ -60,7 +60,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 		if @category.update_attributes(category_params)
 			flash[:success] = "Category updated"
-			redirect_to categories_path
+			redirect_to '/articles_categories'
 		else
 			render 'edit'
 		end
@@ -69,7 +69,7 @@ class CategoriesController < ApplicationController
 		@category = Category.new(category_params)
 		if @category.save
 			flash[:success] = "Successfully Created!"
-			redirect_to new_category_path
+			redirect_to '/articles_categories'
 		else
 			render 'new'
 		end
@@ -77,7 +77,7 @@ class CategoriesController < ApplicationController
 	def destroy
 		Category.find(params[:id]).destroy
 		flash[:success] = "Article destroyed."
-		redirect_to categories_path
+		redirect_to '/articles_categories'
 	end
 
 	private
